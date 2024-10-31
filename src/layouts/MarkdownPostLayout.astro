@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+import NavigationBar from "../components/NavigationBar.astro";
+const { frontmatter } = Astro.props;
+
+const title = `${frontmatter.title} | taxevaiden's website`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={frontmatter.description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <NavigationBar links="home,../../;about,../../about;blog,../../blog;projects../../projects" />
+  
+    <div class="main_content">
+      <a href="../../blog">go back!</a>
+      <h1>{frontmatter.title}</h1>
+      <p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>
+  
+      <slot />
+    </div>
+  </body>
+</html>
+

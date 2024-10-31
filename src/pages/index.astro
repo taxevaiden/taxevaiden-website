@@ -1,35 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import MainContent from '../components/MainContent.astro';
+import '../styles/global.css'
+
 ---
 
-<Layout title="home | taxevaiden's website">
-	<main>
-		<MainContent>
+<Layout title="home | taxevaiden's website" description="honey i'm home!">
+	<body>
+		
+
+		<div class="main_content"> 
+			<h1>hey yo, what's the important stuff that's happening yo?</h1>
+			<p>this is the new tax evader website!
+			i was too lazy to port the posts from the old website to this new one, so you can view them on the old one
+			you can view the old one in all its glory here: </p>
+		</div>
+
+		<div class="main_content">
 			<h1>hello!</h1>
 
-		<p>what's up skbidis</p>
-		</MainContent>
+			<p>welcome to my web. usually i just post to my blog or put pointless new stuff on this website.</p>
+			<p>why did i make this?</p>
+
+			<li>I wanted to</li>
+			<li>I'm somewhat good at coding</li>
+			<li>I don't know</li>
+		</div>
+
+		<div class="main_content">
+			<h1>IMPORTANT NOTES!!!</h1>
+
+			<li>enable javascript. please<br>this website will not function</li>
+			<li>you should try refreshing without cache often <b>(ctrl+shift+r)</b> to see the "pointless new stuff" on this website.</li>
+			<li>this website is not mobile friendly. at all. it's not designed for it yet and i plan to work on other things other than mobile support for this website. you can probably just use a tablet for now.</li>
+		</div>
 		
-	</main>
+	</body>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: rgb(0, 0, 0);
-		font-size: 20px;
-		line-height: 1.6;
-	}
-
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-</style>

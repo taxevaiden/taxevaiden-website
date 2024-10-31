@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlogPost from '../components/BlogPost.astro';
+import '../styles/global.css'
+const allPosts = await Astro.glob('./posts/*.md');
+---
+
+<Layout title="blog | taxevaiden's website" description="honey i'm home!">
+	<body>
+
+		<div class="main_content">
+			<h1>blog..</h1>
+            <p>welcome to the best blog of All Time</p>
+            <p>normally i just post about stuff that's been going on in my life. i really don't know what else to say on here :pensive:</p>
+
+            <!-- <ul>
+                {allPosts.map((post) => 
+                <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+            </ul> -->
+
+            {allPosts.map((post) => 
+            <BlogPost title={post.frontmatter.title} description={post.frontmatter.description} date={post.frontmatter.pubDate.toString().slice(0,10)} link={post.frontmatter.url}></BlogPost>)}
+            
+		</div>
+
+	</body>
+</Layout>
