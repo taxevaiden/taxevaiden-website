@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
+import { Code } from 'astro:components';
 
 const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning as i am typing this!)"]
 ---
@@ -22,10 +23,30 @@ const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning
 				{mainLanguages.map((mainLanguage) => <li>{mainLanguage}</li>)}
 			</ul>
 
+			<p>if you would like to link this website onto your own, here is the button + code:</p>
 
+			<a href="https://taxevaiden.pages.dev"><img src="/src/images/misc/88x31button.gif"></a>
+			
+			
+			<Code code="&lt;a href=&quot;https://taxevaiden.pages.dev&quot;&gt;&lt;img src=&quot;/src/images/misc/88x31button.gif&quot;&gt;&lt;/a&gt;" lang="html"></Code>
+
+			
 		</div>
 
-		
+		<div class="main_content">
+			<h1>may i have source code pls :shy:</h1>
+
+			<p>sure, go ahead i don't care</p>
+			<p>you can use inspect element to get the source code for this website. you can also use this at <a href="https://oldevaiden.pages.dev">oldevaiden.pages.dev</a></p>
+			<p>OR if you want the <i>full</i> source code, here you go:</p>
+
+			<ul>
+				<li><a href="https://github.com/taxevaiden/taxevaiden-website">taxevaiden-website</a></li>
+				<li><a href="https://github.com/taxevaiden/taxevaiden-website-old">taxevaiden-website-old</a></li>
+			</ul>
+
+
+		</div>
 		
 	</body>
 </Layout>

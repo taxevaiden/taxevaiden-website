@@ -1,0 +1,14 @@
+#statuscafe {
+    padding: 1em;
+    background-color: white;
+    border: 1px dotted black;
+
+    box-shadow: 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}

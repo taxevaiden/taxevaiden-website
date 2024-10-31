@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import '../styles/global.css'
 const allPosts = await Astro.glob('./posts/*.md');
+
+allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
 ---
 
 <Layout title="blog | taxevaiden's website" description="i love posting">
