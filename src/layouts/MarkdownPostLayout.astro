@@ -19,7 +19,7 @@ const title = `${frontmatter.title} | taxevaiden's website`;
   <body>
     <NavigationBar links='home,/;about,/about;blog,/blog;projects,/projects/'></NavigationBar>
   
-    <div class="main_content">
+    <div class="max-w-xl p-4 m-auto mb-5 bg-white border border-black border-dotted shadow-[0_10px_rgba(0,0,0,0.5)]">
       <a href="../../blog">go back!</a>
       <h1>{frontmatter.title}</h1>
       <p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>

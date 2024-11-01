@@ -9,57 +9,17 @@ interface Props {
 const { links } = Astro.props;
 const linksArray = links.split(";");
 ---
-<div class="navigation_base">
-  <div class="banner_container">
-    <Image src={banner} alt="the banner." class="banner" width="594" loading="eager"></Image>
+<div class="m-auto mb-5 max-w-xl bg-white border border-dotted border-black shadow-[0_10px_rgba(0,0,0,0.5)]">
+  <div class="overflow-hidden">
+    <Image src={banner} alt="the banner." class="object-cover" width="594" loading="eager"></Image>
   </div>
   
-  <div id="navigationBar" class="navigation_bar">
+  <div class="p-4 border-t border-t-black border-dotted">
     {linksArray.map(link => {
       const [text, url] = link.split(",");
-      return <a href={url} class="navigation_bar_item">{text}</a>;
+      return <a href={url} class="inline px-2 !m-0">{text}</a>;
     })}
 
-    <p class="navigation_bar_item" style="float: right;">taxevaiden</p>
+    <p class="inline px-2 !m-0 float-right">taxevaiden</p>
   </div>
 </div>
-
-
-<style>
-    .banner_container {
-      overflow: hidden;
-    }
-
-    .banner {
-      object-fit: cover;
-    }
-
-    .navigation_base {
-      margin: auto;
-		  margin-bottom: 20px;
-		  max-width: 37em;
-
-      background-color: white;
-
-      border-style: dotted;
-		  border-width: 1px;
-		  border-color: black;
-
-      box-shadow: 0px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .navigation_bar {
-      padding: 1em;
-      border-top: 1px dotted black;
-    }
-
-    .navigation_bar_item {
-        display: inline;
-
-        padding-left: .5em;
-        padding-right: .5em;
-
-        margin: 0em !important;
-    }
-    
-</style>
