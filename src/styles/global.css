@@ -1,85 +1,58 @@
-html {
-    font-family: 'MS PGothic', system-ui, sans-serif;
-    background-color: #2c2c2e;
-    background-image: linear-gradient(#1c1c1c, #2c2c2e);
-    background-repeat: no-repeat;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer base {
+    html {
+        @apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-no-repeat
+    }
     
-}
-
-pre {
-    padding: 1em;
-    background-color: #2c2c2e;
-    background-image: linear-gradient(#1c1c1c, #2c2c2e);
-
-    border-style: dotted;
-    border-width: 1px;
-    border-color: black;
-
-    box-shadow: 0px 10px rgba(0, 0, 0, 0.5);
-
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-code {
-    font-family: 'MS PGothic', system-ui, sans-serif;
-    overflow-x: scroll;
-}
-
-body {
-    padding: 1rem;
-    max-width: calc(100% - 2rem);
-    color: rgb(0, 0, 0);
-    line-height: 1.25;
-
+    pre {
+        @apply p-4 my-4 border border-dotted border-default-light-border dark:border-default-dark-border bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-no-repeat shadow-d
+    }
     
+    code {
+        @apply overflow-scroll
+    }
+    
+    body {
+        @apply p-4 leading-5
+    }
+    
+    h1 {
+        @apply text-4xl font-bold my-2
+    }
+    
+    h2 {
+        @apply text-2xl font-bold my-2
+    }
+    
+    h3 {
+        @apply text-xl font-bold my-2
+    }
+    
+    
+    p {
+        @apply mb-4
+    }
+    
+    small {
+        @apply text-xs
+    }
+    
+    ul {    
+        @apply mb-4 list-disc list-inside
+    }
+    
+    a {
+        @apply text-default-light-a dark:text-default-dark-a
+    }
+    
+    a:hover {
+        color: #0b78bc;
+        text-decoration: underline;
+
+        @apply text-default-light-ahover dark:text-default-dark-ahover
+    }
 }
 
-h1 {
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 1;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    line-height: 1;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-h3 {
-    font-size: 1.25em;
-    font-weight: 700;
-    line-height: 1;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-
-p {
-    margin-bottom: 1em;
-}
-
-small {
-    font-size: 0.75em;
-}
-
-ul {    
-    list-style-type: disc;
-    list-style-position: inside;
-    margin-bottom: 1em;
-}
-
-a {
-    color: rgb(13, 92, 141);
-}
-
-a:hover {
-    color: rgb(11, 120, 188);
-    text-decoration: underline;
-}
