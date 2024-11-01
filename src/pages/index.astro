@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
 import '../styles/global.css'
 
 ---
@@ -20,10 +21,12 @@ import '../styles/global.css'
 
 			<p>welcome to my web. usually i just post to my blog or put pointless new stuff on this website.</p>
 			<p>why did i make this?</p>
-
-			<li>I wanted to</li>
-			<li>I'm somewhat good at coding</li>
-			<li>I don't know</li>
+			
+			<ul>
+				<li>I wanted to</li>
+				<li>I'm somewhat good at coding</li>
+				<li>I don't know</li>
+			</ul>
 
 			<h2><a href="https://status.cafe/">status.cafe</a></h1>
 
@@ -31,7 +34,7 @@ import '../styles/global.css'
 
 			<h2><a href="https://internetometer.com/">internetometer</a></h1>
 
-			<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/image/50492.png'/></a>
+			<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/image/50492.png' alt="internetometer"/></a>
 		</div>
 
 		<div class="main_content">

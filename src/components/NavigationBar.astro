@@ -1,4 +1,7 @@
 ---
+import Image from 'astro/components/Image.astro';
+import banner from '../images/banner.png';
+
 interface Props {
   links: string; //home,index;about,about
 }
@@ -6,34 +9,57 @@ interface Props {
 const { links } = Astro.props;
 const linksArray = links.split(";");
 ---
+<div class="navigation_base">
+  <div class="banner_container">
+    <Image src={banner} alt="the banner." class="banner" width="594" loading="eager"></Image>
+  </div>
+  
+  <div id="navigationBar" class="navigation_bar">
+    {linksArray.map(link => {
+      const [text, url] = link.split(",");
+      return <a href={url} class="navigation_bar_item">{text}</a>;
+    })}
 
-<div id="navigationBar" class="navigation_bar">
-  {linksArray.map(link => {
-    const [text, url] = link.split(",");
-    return <a href={url} class="navigation_bar_item">{text}</a>;
-  })}
+    <p class="navigation_bar_item" style="float: right;">taxevaiden</p>
+  </div>
 </div>
 
+
 <style>
+    .banner_container {
+      overflow: hidden;
+    }
+
+    .banner {
+      object-fit: cover;
+    }
+
+    .navigation_base {
+      margin: auto;
+		  margin-bottom: 20px;
+		  max-width: 37em;
+
+      background-color: white;
+
+      border-style: dotted;
+		  border-width: 1px;
+		  border-color: black;
+
+      box-shadow: 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
     .navigation_bar {
-        margin: auto;
-		margin-bottom: 20px;
-		max-width: 35em;
-
-		padding: 1em;
-
-		border-style: dotted;
-		border-width: 1px;
-		border-color: black;
-		
-		background-color: white;
-
-		box-shadow: 0px 10px rgba(0, 0, 0, 0.5);
+      padding: 1em;
+      border-top: 1px dotted black;
     }
 
     .navigation_bar_item {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        display: inline;
+
+        padding-left: .5em;
+        padding-right: .5em;
+
+        margin: 0em !important;
     }
     
 </style>

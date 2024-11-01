@@ -15,7 +15,7 @@ this will be the new website from now on. i'll uh explain why i rewrote the site
 
 ## the code sucks bro :sob:
 
-when i first made the og site, i was sort of a beginner. yes, i did have experience, but it was kinda limited. i didn't know the **secert cool practices of html**. that kinda resulted in me having pretty terrible code. and i continued to do this :') most of the code was somewhat good, but it felt very unorganized even with those little folders i put in to *attempt* to organize the code. (you can see these folders at [the old website's repo on github.](https://github.com/taxevaiden/taxevaiden-website-old))
+when i first made the og site, i was sort of a beginner. yes, i did have experience, but it was kinda limited. i didn't know the **secret cool practices of html**. that kinda resulted in me having pretty terrible code. and i continued to do this :') most of the code was somewhat good, but it felt very unorganized even with those little folders i put in to *attempt* to organize the code. (you can see these folders at [the old website's repo on github.](https://github.com/taxevaiden/taxevaiden-website-old))
 
 it was also just, spaghetti
 
