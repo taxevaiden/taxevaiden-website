@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
 import { Code } from 'astro:components';
 
+import websiteButton from '../images/88x31button.gif';
+
 const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning as i am typing this!)"]
 ---
 
@@ -25,7 +27,7 @@ const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning
 
 			<p>if you would like to link this website onto your own, here is the button + code:</p>
 
-			<a href="https://taxevaiden.pages.dev"><img src="/src/images/misc/88x31button.gif" alt="the website button!"></a>
+			<a href="https://taxevaiden.pages.dev"><img src={websiteButton.src} alt="the website button!"></a>
 			
 			
 			<Code code="&lt;a href=&quot;https://taxevaiden.pages.dev&quot;&gt;&lt;img src=&quot;/src/images/misc/88x31button.gif&quot;&gt;&lt;/a&gt;" lang="html"></Code>
