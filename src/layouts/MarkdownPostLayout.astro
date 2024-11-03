@@ -1,6 +1,8 @@
 ---
 import Image from 'astro/components/Image.astro';
 import banner from '../images/banner.png'
+import { Code } from 'astro:components';
+import websiteButton from '../images/88x31button.gif';
 import MainDiv from "../components/MainDiv.astro";
 import "../styles/global.css";
 import NavigationDiv from "../components/NavigationDiv.astro";
@@ -25,6 +27,11 @@ const title = `${frontmatter.title} | taxevaiden's website`;
 			<div class="m-auto flex flex-row max-w-fit gap-4">
 				<div class="w-[16rem] basis-auto">
 					<NavigationDiv links="home,/;about,/about;projects,/projects;blog,/blog" />
+          <MainDiv>
+						<h1>link me!</h1>
+						<a href="https://taxevaiden.pages.dev"><img src={websiteButton.src} alt="the website button!"></a>
+						<Code code="&lt;a href=&quot;https://taxevaiden.pages.dev&quot;&gt;&lt;img src=&quot;/src/images/misc/88x31button.gif&quot;&gt;&lt;/a&gt;" lang="html"></Code>
+					</MainDiv>
 				</div>
 				<div class="w-[36rem] basis-auto">
 					<MainDiv>
@@ -42,7 +49,7 @@ const title = `${frontmatter.title} | taxevaiden's website`;
 					
 							<h2><a href="https://internetometer.com/">internetometer</a></h1>
 				
-							<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/imagesmall/50492.png' alt="internetometer"/></a>
+							<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/image/50492.png' alt="internetometer"/></a>
 					</MainDiv>
 				</div>
 				

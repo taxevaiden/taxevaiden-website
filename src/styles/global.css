@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        @apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-no-repeat
+        @apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-repeat-x
     }
     
     pre {
