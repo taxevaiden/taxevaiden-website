@@ -1,22 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import MainDiv from '../components/MainDiv.astro';
 import Image from 'astro/components/Image.astro';
 import '../styles/global.css'
 
 ---
 
 <Layout title="home | taxevaiden's website" description="honey i'm home!">
-	<body>
-		
-
-		<div class="max-w-xl p-4 m-auto mb-5 bg-default-light-div dark:bg-default-dark-div border border-default-light-border dark:border-default-dark-border border-dotted shadow-d"> 
+		<MainDiv> 
 			<h1>hey yo, what's the important stuff that's happening yo?</h1>
-			<p>this is the new tax evader website!
-			i was too lazy to port the posts from the old website to this new one, so you can view them on the old one
-			you can view the old one in all its glory here: <a href="https://oldevaiden.pages.dev">oldevaiden.pages.dev</a></p>
-		</div>
+			<p>nothing's happening :pensive:</p>
+		</MainDiv>
 
-		<div class="max-w-xl p-4 m-auto mb-5 bg-default-light-div dark:bg-default-dark-div border bg-default-dark-border border-dotted shadow-d">
+		<MainDiv>
 			<h1>hello!</h1>
 
 			<p>welcome to my web. usually i just post to my blog or put pointless new stuff on this website.</p>
@@ -28,23 +24,35 @@ import '../styles/global.css'
 				<li>I don't know</li>
 			</ul>
 
-			<h2><a href="https://status.cafe/">status.cafe</a></h1>
-
-			<div id="statuscafe" class="p-4 bg-default-light-div dark:bg-default-dark-div border border-dotted border-default-light-border dark:border-default-dark-border shadow-d mb-5"><div id="statuscafe-username" class="mb-2"></div><div id="statuscafe-content" class="mx-4 mb-2"></div></div><script src="https://status.cafe/current-status.js?name=aiden20121" defer></script>
-
-			<h2><a href="https://internetometer.com/">internetometer</a></h1>
-
-			<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/image/50492.png' alt="internetometer"/></a>
-		</div>
-
-		<div class="max-w-xl p-4 m-auto mb-5 bg-default-light-div dark:bg-default-dark-div border bg-default-dark-border border-dotted shadow-d">
 			<h1>IMPORTANT NOTES!!!</h1>
 
 			<li>enable javascript. please<br>this website will not function</li>
 			<li>you should try refreshing without cache often <b>(ctrl+shift+r)</b> to see the "pointless new stuff" on this website.</li>
 			<li>this website is not mobile friendly. at all. it's not designed for it yet and i plan to work on other things other than mobile support for this website. you can probably just use a tablet for now.</li>
 			<li>adding onto that, this website is intended to be viewed on windows.</li>
-		</div>
-		
-	</body>
+
+
+			
+		</MainDiv>
+
+		<MainDiv>
+			<h1>Q&A</h1>
+
+			<p>Q: what did you use to make this website?<br>
+			A: for my code editor i used vscode mostly (i know i said i would switch to nvim but i'm lazy :)) along with that i use cloudflare pages to host this website, and i used astro and tailwind css to make this website. for the cool arts that are in here i use procreate</p>
+
+			<p>Q: what happened to the old website?<br>
+			A: originally when i coded the website i was still a beginner so the code wasn't that great. over time it was just a pain to manage if i'm being honest so i made a new one<br>
+			you can still view the old website at <a href="https://oldevaiden.pages.dev">oldevaiden.pages.dev</a> <br>
+			there are more reasons as to why i made a new one, so you can go to <a href="./posts/new-website">this post</a> to know more :)</p>
+			
+			<p>Q: why couldn't you host stuff like this on neocities or nekoweb?<br>
+			A: cloudflare i feel just gave me a lot more control.. along with the git stuff it was a good option for me. and also the storage is like almost infinite</p>
+			
+			<p>Q: why doesn't this website have stuff that the old one had yet?<br>
+			A: this website is still a WIP. i'm still working on stuff!!</p>
+
+			<p>Q: are you ever adding comments?<br>
+			A: maybe, maybe not. the service i used for comments was uhh,, weird i guess. it was good but oh my god i HATED THAT WATERMARK.... i had to pay to get rid of that i'm POOR</p>
+		</MainDiv>
 </Layout>

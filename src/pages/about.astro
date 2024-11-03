@@ -1,9 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import MainDiv from '../components/MainDiv.astro';
 import '../styles/global.css'
-import { Code } from 'astro:components';
-
-import websiteButton from '../images/misc/88x31button.gif';
 
 const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning as i am typing this!)"]
 ---
@@ -11,7 +9,7 @@ const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning
 <Layout title="about | taxevaiden's website" description="hey, who am i?">
 	<body>
 
-		<div class="max-w-xl p-4 m-auto mb-5 bg-default-light-div dark:bg-default-dark-div border bg-default-dark-border border-dotted shadow-d">
+		<MainDiv>
 			<h1>about</h1>
 
 			<p>hello, i'm aiden.</p>
@@ -24,18 +22,9 @@ const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning
 			<ul>
 				{mainLanguages.map((mainLanguage) => <li>{mainLanguage}</li>)}
 			</ul>
+		</MainDiv>
 
-			<p>if you would like to link this website onto your own, here is the button + code:</p>
-
-			<a href="https://taxevaiden.pages.dev"><img src={websiteButton.src} alt="the website button!"></a>
-			
-			
-			<Code code="&lt;a href=&quot;https://taxevaiden.pages.dev&quot;&gt;&lt;img src=&quot;/src/images/misc/88x31button.gif&quot;&gt;&lt;/a&gt;" lang="html"></Code>
-
-			
-		</div>
-
-		<div class="max-w-xl p-4 m-auto mb-5 bg-default-light-div dark:bg-default-dark-div border bg-default-dark-border border-dotted shadow-d">
+		<MainDiv>
 			<h1>may i have source code pls :shy:</h1>
 
 			<p>sure, go ahead i don't care</p>
@@ -48,7 +37,7 @@ const mainLanguages = ["c++", "c#", "lua", "html", "css", "js", "astro (learning
 			</ul>
 
 
-		</div>
+		</MainDiv>
 		
 	</body>
 </Layout>

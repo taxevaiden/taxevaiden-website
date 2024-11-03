@@ -1,0 +1,23 @@
+---
+import MainDiv from './MainDiv.astro';
+import Image from 'astro/components/Image.astro';
+import banner from '../images/banner.png';
+
+interface Props {
+  links: string; //home,index;about,about
+}
+
+const { links } = Astro.props;
+const linksArray = links.split(";");
+---
+
+<MainDiv>
+    <h1>navigation</h1>
+
+    <ul class="list-none">
+        {linksArray.map(link => {
+            const [text, url] = link.split(",");
+            return <li><a href={url} class="inline px-2 !m-0">{text}</a></li>;
+        })}
+    </ul>
+</MainDiv>

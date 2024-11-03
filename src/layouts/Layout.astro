@@ -1,6 +1,10 @@
 ---
-import background_image from '../images/backgrounds/3.gif';
-import NavigationBar from '../components/NavigationBar.astro';
+import Image from 'astro/components/Image.astro';
+import { Code } from 'astro:components';
+import websiteButton from '../images/88x31button.gif';
+import banner from '../images/banner.png'
+import NavigationDiv from '../components/NavigationDiv.astro';
+import MainDiv from '../components/MainDiv.astro';
 
 interface Props {
 	title: string;
@@ -22,8 +26,34 @@ const { description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<NavigationBar links='home,/;about,/about;blog,/blog;projects,/projects/'></NavigationBar>
-		<slot />
+		<div class="flex justify-center min-w-screen gap-4 flex-col">
+			<Image src={banner} alt="the banner!" loading='eager' class="w-[70rem] mx-auto border bg-default-dark-border border-dotted shadow-d"></Image>
+			<div class="m-auto flex flex-row max-w-fit gap-4">
+				<div class="w-[16rem] basis-auto">
+					<NavigationDiv links="home,/;about,/about;projects,/projects;blog,/blog" />
+					<MainDiv>
+						<h1>link me!</h1>
+						<a href="https://taxevaiden.pages.dev"><img src={websiteButton.src} alt="the website button!"></a>
+						<Code code="&lt;a href=&quot;https://taxevaiden.pages.dev&quot;&gt;&lt;img src=&quot;/src/images/misc/88x31button.gif&quot;&gt;&lt;/a&gt;" lang="html"></Code>
+					</MainDiv>
+				</div>
+				<div class="w-[36rem] basis-auto">
+					<slot />
+				</div>
+				<div class="w-[16rem] basis-auto">
+					<MainDiv>
+						<h2><a href="https://status.cafe/">status.cafe</a></h1>
+	
+							<div id="statuscafe" class="p-4 bg-default-light-div dark:bg-default-dark-div border border-dotted border-default-light-border dark:border-default-dark-border shadow-d mb-5"><div id="statuscafe-username" class="mb-2"></div><div id="statuscafe-content" class="mx-4 mb-2"></div></div><script src="https://status.cafe/current-status.js?name=aiden20121" defer></script>
+					
+							<h2><a href="https://internetometer.com/">internetometer</a></h1>
+				
+							<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/imagesmall/50492.png' alt="internetometer"/></a>
+					</MainDiv>
+				</div>
+				
+			</div>
+		</div>
 		
 	</body>
 </html>

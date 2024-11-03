@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import MainDiv from '../components/MainDiv.astro';
 import BlogPost from '../components/BlogPost.astro';
 import '../styles/global.css'
 const allPosts = await Astro.glob('./posts/*.md');
@@ -10,7 +11,7 @@ allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.f
 <Layout title="blog | taxevaiden's website" description="i love posting">
 	<body>
 
-		<div class="max-w-xl p-4 m-auto mb-5 bg-default-light-div dark:bg-default-dark-div border bg-default-dark-border border-dotted shadow-d">
+		<MainDiv>
 			<h1>blog..</h1>
             <p>welcome to the best blog of All Time</p>
             <p style="margin-bottom: 2em;">normally i just post about stuff that's been going on in my life. i really don't know what else to say on here :pensive:</p>
@@ -23,7 +24,7 @@ allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.f
             {allPosts.map((post) => 
             <BlogPost title={post.frontmatter.title} description={post.frontmatter.description} date={post.frontmatter.pubDate.toString().slice(0,10)} link={post.frontmatter.url}></BlogPost>)}
             
-		</div>
+		</MainDiv>
 
 	</body>
 </Layout>

@@ -1,27 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import MainDiv from '../components/MainDiv.astro';
 import '../styles/global.css'
+
+const projectTitles = [
+    "this website",
+    "the old website",
+    "cool sandbox game",
+    "a swordfight game"
+]
+
+const projectDescriptions = [
+    "i really don't know what else to say here. it's this website",
+    "ah, the good old days..",
+    "i used to make roblox games back in the day. this is one of them! (it's kinda bad)",
+    "another roblox game (it's kinda bad"
+]
 
 ---
 
 <Layout title="projects | taxevaiden's website" description="neeerrrd">
-	<body>
-		
-
-		<div class="max-w-xl p-4 m-auto mb-5 bg-default-light-div dark:bg-default-dark-div border bg-default-dark-border border-dotted shadow-d"> 
+    <MainDiv> 
 			<h1>projects</h1>
             <p>just know:<br>most of these aren't really projects at all LMAO</p>
-            <p>they're mostly just experiments. ok</p>
-            <p>this will be in bullet points for now it's 10:45 PM :')'</p>
+            <p style="margin-bottom: 2em;">they're mostly just experiments. ok</p>
 
-            <ul>
-                <li>this website</li>
-                <li>the old website :(</li>
-                <li>cool sandbox game</li>
-                <li>a swordfight game</li>
-                
-            </ul>
-		</div>
-		
-	</body>
+            <div class="project-list">
+                {projectTitles.map((title, index) => (
+                  <ProjectCard 
+                    title={title} 
+                    description={projectDescriptions[index]} 
+                  />
+                ))}
+              </div>
+		</MainDiv>
 </Layout>
