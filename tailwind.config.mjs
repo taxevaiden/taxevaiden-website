@@ -16,6 +16,7 @@ export default {
 						bg2: '#2c2c2e',
 
 						div: 'white',
+						div2: '#111112',
 						border: 'black',
 
 						text: 'black',
@@ -29,6 +30,7 @@ export default {
 						bg2: '#2c2c2e',
 
 						div: '#19191a',
+						div2: '#111112',
 						border: 'white',
 
 						text: 'white',
