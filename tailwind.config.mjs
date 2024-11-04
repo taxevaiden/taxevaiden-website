@@ -4,19 +4,22 @@ export default {
 
 	theme: {
 		fontFamily: {
-			'sans': ['MS PGothic', 'system-ui', 'sans-serif'],
-			'mono': ['MS PGothic', 'system-ui'],
+			'sans': ['MS PGothic', 'DotGothic16', 'system-ui', 'sans-serif'],
+			'mono': ['MS PGothic', 'DotGothic16', 'system-ui'],
 		},
 
 		extend: {
 			colors: {
 				default: {
 					light: {
-						bg1: '#1c1c1c',
-						bg2: '#2c2c2e',
+						bg1: 'white',
+						bg2: '#ededed',
+
+						codebg1: '#1c1c1c',
+						codebg2: '#2c2c2e',
 
 						div: 'white',
-						div2: '#111112',
+						div2: '#e8e8e8',
 						border: 'black',
 
 						text: 'black',
@@ -28,6 +31,9 @@ export default {
 					dark: {
 						bg1: '#1c1c1c',
 						bg2: '#2c2c2e',
+
+						codebg1: '#1c1c1c',
+						codebg2: '#2c2c2e',
 
 						div: '#19191a',
 						div2: '#111112',

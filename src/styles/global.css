@@ -8,7 +8,7 @@
     }
     
     pre {
-        @apply p-4 my-4 border border-dotted border-default-light-border dark:border-default-dark-border bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-no-repeat shadow-d
+        @apply p-4 my-4 border border-dotted border-default-light-border dark:border-default-dark-border bg-default-light-codebg2 dark:bg-default-dark-codebg2 bg-gradient-to-b from-default-light-codebg1 dark:from-default-dark-codebg1 to-default-light-codebg2 dark:to-default-dark-codebg2 bg-no-repeat shadow-d
     }
     
     code {

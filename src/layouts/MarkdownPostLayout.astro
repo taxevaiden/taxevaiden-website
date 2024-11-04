@@ -2,10 +2,13 @@
 import Image from 'astro/components/Image.astro';
 import banner from '../images/banner.png'
 import { Code } from 'astro:components';
-import websiteButton from '../images/88x31button.gif';
 import MainDiv from "../components/MainDiv.astro";
 import "../styles/global.css";
 import NavigationDiv from "../components/NavigationDiv.astro";
+
+import websiteButton from '../images/88x31button.gif';
+import websiteIcon from '../images/icons/icon.png'
+
 const { frontmatter } = Astro.props;
 
 const title = `${frontmatter.title} | taxevaiden's website`;
@@ -14,20 +17,26 @@ const title = `${frontmatter.title} | taxevaiden's website`;
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={frontmatter.description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>{title}</title>
+	<meta name="description" content={frontmatter.description} />
+	<meta name="generator" content={Astro.generator} />
+	<meta content="#ffffff" data-react-helmet="true" name="theme-color">
+	<meta content={websiteIcon.src} property="og:image" />
+	<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
   </head>
   <body>
-    <div class="flex justify-center min-w-screen gap-4 flex-col">
-      <Image src={banner} alt="the banner!" loading='eager' class="w-[70rem] mx-auto border bg-default-dark-border border-dotted shadow-d"></Image>
-			<div class="m-auto flex flex-row max-w-fit gap-4">
+		<div class="max-w-fit mx-auto flex justify-center min-w-screen gap-4 flex-col bg-default-light-div2 dark:bg-default-dark-div2 border border-default-light-border dark:border-default-dark-border border-dotted shadow-d p-4">
+			<Image src={banner} alt="the banner!" loading='eager' class="w-[70rem] border border-default-light-border dark:border-default-dark-border border-dotted shadow-d"></Image>
+			<div class="flex flex-row max-w-fit gap-4">
 				<div class="w-[16rem] basis-auto">
 					<NavigationDiv links="home,/;about,/about;projects,/projects;blog,/blog" />
-          <MainDiv>
+					<MainDiv>
 						<h1>link me!</h1>
 						<a href="https://taxevaiden.pages.dev"><img src={websiteButton.src} alt="the website button!"></a>
 						<Code code="&lt;a href=&quot;https://taxevaiden.pages.dev&quot;&gt;&lt;img src=&quot;/src/images/misc/88x31button.gif&quot;&gt;&lt;/a&gt;" lang="html"></Code>
@@ -35,19 +44,19 @@ const title = `${frontmatter.title} | taxevaiden's website`;
 				</div>
 				<div class="w-[36rem] basis-auto">
 					<MainDiv>
-            <a href="../../blog">go back!</a>
-            <h1>{frontmatter.title}</h1>
-            <p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>
-            <slot />
-          </MainDiv>
+						<a href="../../blog">go back!</a>
+						<h1>{frontmatter.title}</h1>
+						<p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>
+						<slot />
+					</MainDiv>
 				</div>
 				<div class="w-[16rem] basis-auto">
 					<MainDiv>
-						<h2><a href="https://status.cafe/">status.cafe</a></h1>
+						<h1><a href="https://status.cafe/">status.cafe</a></h1>
 	
 							<div id="statuscafe" class="p-4 bg-default-light-div dark:bg-default-dark-div border border-dotted border-default-light-border dark:border-default-dark-border shadow-d mb-5"><div id="statuscafe-username" class="mb-2"></div><div id="statuscafe-content" class="mx-4 mb-2"></div></div><script src="https://status.cafe/current-status.js?name=aiden20121" defer></script>
 					
-							<h2><a href="https://internetometer.com/">internetometer</a></h1>
+							<h1><a href="https://internetometer.com/">internets</a></h1>
 				
 							<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/image/50492.png' alt="internetometer"/></a>
 					</MainDiv>
