@@ -4,8 +4,8 @@ export default {
 
 	theme: {
 		fontFamily: {
-			'sans': ['MS PGothic', 'DotGothic16', 'system-ui', 'sans-serif'],
-			'mono': ['MS PGothic', 'DotGothic16', 'system-ui'],
+			'sans': ['MS Gothic', 'DotGothic16', 'system-ui', 'sans-serif'],
+			'mono': ['MS Gothic', 'DotGothic16', 'system-ui'],
 		},
 
 		extend: {
