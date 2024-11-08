@@ -19,7 +19,7 @@ export default {
 						codebg2: '#2c2c2e',
 
 						div: 'white',
-						div2: '#e8e8e8',
+						div2: '#e8e8e8cc',
 						border: 'black',
 
 						text: 'black',
@@ -36,7 +36,7 @@ export default {
 						codebg2: '#2c2c2e',
 
 						div: '#19191a',
-						div2: '#111112',
+						div2: '#111112cc',
 						border: 'white',
 
 						text: 'white',
@@ -51,6 +51,14 @@ export default {
 
 			boxShadow: {
 				'd': '0 10px rgba(0,0,0,0.5)',
+			},
+
+			backgroundImage: {
+				'order': 'url("../images/backgrounds/7.png")',
+			},
+
+			dropShadow: {
+				'bigtitle': ['0px 10px rgba(0,0,0,0.05)', '1px 0px rgba(0,0,0,1)', '-1px 0px rgba(0,0,0,1)', '0px 1px rgba(0,0,0,1)', '0px -1px rgba(0,0,0,1)']
 			}
 		},
 	},

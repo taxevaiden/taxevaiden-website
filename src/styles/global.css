@@ -4,7 +4,8 @@
 
 @layer base {
     html {
-        @apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-repeat-x
+        /*@apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
+        @apply bg-order bg-fixed bg-[center_top_115rem] text-default-light-text dark:text-default-dark-text;
     }
     
     pre {
@@ -20,15 +21,15 @@
     }
     
     h1 {
-        @apply text-4xl font-bold my-2
+        @apply text-4xl font-bold my-4
     }
     
     h2 {
-        @apply text-2xl font-bold my-2
+        @apply text-2xl font-bold my-4
     }
     
     h3 {
-        @apply text-xl font-bold my-2
+        @apply text-xl font-bold my-4
     }
     
     

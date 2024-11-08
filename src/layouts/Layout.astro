@@ -34,8 +34,11 @@ const { description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
 	</head>
 	<body>
-		<div class="max-w-fit mx-auto flex justify-center min-w-screen gap-4 flex-col bg-default-light-div2 dark:bg-default-dark-div2 border border-default-light-border dark:border-default-dark-border border-dotted shadow-d p-4">
-			<Image src={banner} alt="the banner!" loading='eager' class="w-[70rem] border border-default-light-border dark:border-default-dark-border border-dotted shadow-d"></Image>
+		<div class="max-w-fit mx-auto flex justify-center min-w-screen gap-4 flex-col bg-default-light-div2 dark:bg-default-dark-div2 border border-default-light-border dark:border-default-dark-border border-solid shadow-d p-4 backdrop-blur-sm">
+			<div class="relative text-center">
+				<Image src={banner} alt="the banner!" loading='eager' class="w-[70rem] border border-default-light-border dark:border-default-dark-border border-dotted shadow-d"></Image>
+				<h1 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl drop-shadow-bigtitle">taxevaiden</h1>
+			</div>
 			<div class="flex flex-row max-w-fit gap-4">
 				<div class="w-[16rem] basis-auto">
 					<NavigationDiv links="home,/;about,/about;projects,/projects;blog,/blog" />
