@@ -35,12 +35,12 @@ const { description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
 	</head>
 	<body>
-		<div class="max-w-fit mx-auto flex justify-center min-w-screen gap-4 flex-col bg-default-light-div2 dark:bg-default-dark-div2 border border-default-light-border dark:border-default-dark-border border-solid shadow-d p-4">
+		<div class="max-w-fit mx-auto flex justify-center min-w-screen gap-2 flex-col p-2">
 			<div class="relative text-center">
-				<Image src={banner} alt="the banner!" loading='eager' class="w-[47rem] border border-default-light-border dark:border-default-dark-border border-dotted shadow-d"></Image>
+				<Image src={banner} alt="the banner!" loading='eager' class="w-[46.5rem] rounded-lg backdrop-blur-sm bg-default-light-div border border-default-light-border border-solid shadow-d"></Image>
 				<h1 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl text-white drop-shadow-bigtitle">taxevaiden</h1>
 			</div>
-			<div class="flex flex-row max-w-fit gap-4">
+			<div class="flex flex-row max-w-fit gap-2">
 				<div class="w-[14rem] basis-auto">
 					
 					<NavigationDiv links="home,/;about,/about;projects,/projects;blog,/blog" />
@@ -55,7 +55,7 @@ const { description } = Astro.props;
 					<MainDiv>
 						<h1><a href="https://status.cafe/">status.cafe</a></h1>
 	
-							<div id="statuscafe" class="p-4 bg-default-light-div dark:bg-default-dark-div border border-dotted border-default-light-border dark:border-default-dark-border shadow-d mb-4"><div id="statuscafe-username" class="mb-2"></div><div id="statuscafe-content" class="mx-2 mb-2"></div></div><script src="https://status.cafe/current-status.js?name=aiden20121" defer></script>
+							<div id="statuscafe" class="p-4 rounded-lg backdrop-blur-sm bg-default-light-div border border-default-light-border border-solid shadow-d mb-4"><div id="statuscafe-username" class="mb-2"></div><div id="statuscafe-content" class="mx-2 mb-2"></div></div><script src="https://status.cafe/current-status.js?name=aiden20121" defer></script>
 					
 							<h1><a href="https://internetometer.com/">internets</a></h1>
 				

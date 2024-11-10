@@ -5,11 +5,11 @@
 @layer base {
     html {
         /*@apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
-        @apply bg-order bg-fixed bg-[center_top_1840px] text-default-light-text dark:text-default-dark-text;
+        @apply bg-order bg-fixed bg-[center_top_1840px] text-default-light-text;
     }
     
     pre {
-        @apply p-4 my-4 border border-dotted border-default-light-border dark:border-default-dark-border bg-default-light-codebg2 dark:bg-default-dark-codebg2 bg-gradient-to-b from-default-light-codebg1 dark:from-default-dark-codebg1 to-default-light-codebg2 dark:to-default-dark-codebg2 bg-no-repeat shadow-d
+        @apply p-4 my-4 rounded-lg bg-default-light-pre bg-no-repeat shadow-d
     }
     
     code {
@@ -18,6 +18,10 @@
     
     body {
         @apply p-4 leading-5
+    }
+
+    h1,h2,h3,p,li,small {
+        @apply drop-shadow-t
     }
     
     h1 {
@@ -32,7 +36,6 @@
         @apply text-xl font-bold my-3
     }
     
-    
     p {
         @apply mb-4
     }
@@ -46,14 +49,14 @@
     }
     
     a {
-        @apply text-default-light-a dark:text-default-dark-a
+        @apply text-default-light-a
     }
     
     a:hover {
         color: #0b78bc;
         text-decoration: underline;
 
-        @apply text-default-light-ahover dark:text-default-dark-ahover
+        @apply text-default-light-ahover
     }
 }
 
