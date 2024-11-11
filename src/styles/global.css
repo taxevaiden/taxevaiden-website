@@ -5,7 +5,8 @@
 @layer base {
     html {
         /*@apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
-        @apply bg-order bg-fixed bg-[center_top_1840px] text-default-light-text;
+        @apply bg-peak bg-fixed bg-center text-default-light-text;
+        /*bg-[center_top_1840px]*/
     }
     
     pre {
@@ -23,17 +24,21 @@
     h1,h2,h3,p,li,small {
         @apply drop-shadow-t
     }
+
+    h1,h2,h3 {
+        @apply font-semibold my-3
+    }
     
     h1 {
-        @apply text-3xl font-bold my-3
+        @apply text-3xl
     }
     
     h2 {
-        @apply text-2xl font-bold my-3
+        @apply text-2xl
     }
     
     h3 {
-        @apply text-xl font-bold my-3
+        @apply text-xl
     }
     
     p {

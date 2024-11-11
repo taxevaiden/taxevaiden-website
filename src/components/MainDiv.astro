@@ -2,6 +2,8 @@
 import '../styles/global.css'
 ---
 
-<div class="p-4 mb-2 rounded-lg backdrop-blur-sm bg-default-light-div border border-default-light-border border-solid shadow-d">
+<div class="p-4 mb-4 rounded-lg backdrop-blur-sm bg-default-light-div bg-gradient-to-t from-[#87ccee65] to-transparent border border-default-light-border border-solid shadow-d relative">
+    <div class="absolute inset-0 w-[175px] h-[175px] bg-gradient-to-br from-[#ffffff2c] from-20% to-transparent to-40% rounded-tl-lg"></div>
+    <div class="absolute right-0 top-0 w-[175px] h-[175px] bg-gradient-to-bl from-[#ffffff2c] from-20% to-transparent to-40% rounded-tr-lg"></div>
     <slot />
 </div>
