@@ -15,8 +15,8 @@ export default {
 						bg1: 'white',
 						bg2: '#ededed',
 
-						div: 'rgba(245,245,255,0.025)',
-						pre: 'rgba(10,10,0,0.25)',
+						div: 'rgba(240,240,255,0.25)',
+						pre: 'rgba(15,15,0,0.25)',
 						border: 'rgba(1,1,1,0.5)',
 
 						text: 'black',
@@ -30,7 +30,7 @@ export default {
 			},
 
 			boxShadow: {
-				'd': ['0 0 8px rgba(0,0,0,0.5)', '0 0 4px rgba(0,0,0,1)', '0 0 2px rgba(0,0,0,1)', 'inset 0 0 16px rgba(255,255,255,0.75)', 'inset 0 0 8px rgba(255,255,255,0.75)'],
+				'd': ['0 0 8px rgba(0,0,0,0.5)', '0 0 4px rgba(0,0,0,1)', '0 0 2px rgba(0,0,0,1)', 'inset 0 0 16px rgba(255,255,255,0.5)', 'inset 0 0 8px rgba(255,255,255,0.5)', 'inset 0 16px 32px -6px rgba(0,0,0,0.5)', 'inset 0 4px 16px -1px rgba(0,0,0,0.5)', 'inset 0 2px 4px -1px rgba(0,0,0,1)', 'inset 0 -2px 4px -1px rgba(0,0,0,1)', 'inset 0 -4px 8px -1px rgba(0,0,0,1)', 'inset 0 0px 2px rgba(0,0,0,1)'],
 			},
 
 			backgroundImage: {
@@ -38,7 +38,7 @@ export default {
 			},
 
 			dropShadow: {
-				'bigtitle': ['0px 0px 8px rgba(0,0,0,0.125)', '1px 0px rgba(0,0,0,1)', '-1px 0px rgba(0,0,0,1)', '0px 1px rgba(0,0,0,1)', '0px -1px rgba(0,0,0,1)'],
+				'bigtitle': ['0px 0px 16px rgba(0,0,0,0.025)', '0px 0px 2px rgba(0,0,0,0.25)',  '1px 0px rgba(0,0,0,1)', '-1px 0px rgba(0,0,0,1)', '0px 1px rgba(0,0,0,1)', '0px -1px rgba(0,0,0,1)'],
 				't': ['0 0 8px rgb(255,255,255)', '0 0 2px rgba(255,255,255,0.5)']
 			}
 		},
