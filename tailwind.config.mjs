@@ -30,7 +30,7 @@ export default {
 			},
 
 			boxShadow: {
-				'd': ['0 0 8px rgba(0,0,0,0.5)', '0 0 4px rgba(0,0,0,1)', '0 0 2px rgba(0,0,0,1)', 'inset 0 0 16px rgba(255,255,255,0.5)', 'inset 0 0 8px rgba(255,255,255,0.5)', 'inset 0 16px 32px -6px rgba(0,0,0,0.5)', 'inset 0 4px 16px -1px rgba(0,0,0,0.5)', 'inset 0 2px 4px -1px rgba(0,0,0,1)', 'inset 0 -2px 4px -1px rgba(0,0,0,1)', 'inset 0 -4px 8px -1px rgba(0,0,0,1)', 'inset 0 0px 2px rgba(0,0,0,1)'],
+				'd': ['0 0 8px rgba(0,0,0,0.5)', '0 0 4px rgba(0,0,0,0.75)', '0 0 2px rgba(0,0,0,1)', 'inset 0 16px 32px -6px rgba(0,0,0,0.65)', 'inset 0 4px 16px -1px rgba(0,0,0,0.5)', 'inset 0 2px 4px -1px rgba(0,0,0,0.5)', 'inset 0 -2px 4px -1px rgba(0,0,0,0.5)', 'inset 0 -4px 8px -1px rgba(0,0,0,0.75)', 'inset 0 0px 2px rgba(0,0,0,0.5)', 'inset 0 0 16px rgba(255,255,255,1)', 'inset 0 0 8px rgba(255,255,255,1)', 'inset 0 0 2px rgba(255,255,255,1)', 'inset 0 1px 2px -1px rgba(255,255,255,1)'],
 			},
 
 			backgroundImage: {
