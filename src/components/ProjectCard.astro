@@ -1,4 +1,6 @@
 ---
+import MainDiv from './MainDiv.astro';
+
 interface Props {
     title: string;
     description: string;
@@ -6,7 +8,9 @@ interface Props {
 
 ---
 
-<article class="pl-0 pr-4 mb-5">
+
+
+<MainDiv>
     <h3>{Astro.props.title}</h3>
     <p>{Astro.props.description}</p>
-</article>
+</MainDiv>

@@ -1,4 +1,6 @@
 ---
+import MainDiv from './MainDiv.astro';
+
 interface Props {
     title: string;
     date: string;
@@ -8,8 +10,8 @@ interface Props {
 
 ---
 
-<article class="pl-0 pr-4 mb-5">
-    <h3><a href={Astro.props.link}>{Astro.props.title}</a></h3>
-    <p>{Astro.props.description}</p>
-    <p><small>{Astro.props.date}</small></p>
-</article>
+<MainDiv>
+    <h3 class="my-2"><a href={Astro.props.link}>{Astro.props.title}</a></h3>
+    <p class="my-1">{Astro.props.description}</p>
+    <p class="my-1"><small class="my-0">{Astro.props.date}</small></p>
+</MainDiv>
