@@ -15,7 +15,7 @@ export default {
 						bg1: 'white',
 						bg2: '#ededed',
 
-						div: 'rgba(165,192,211,0.5)',
+						div: 'rgba(173,192,204,0.5)',
 						pre: 'rgba(15,15,0,0.25)',
 						border: 'rgba(1,1,1,0.5)',
 
@@ -32,13 +32,10 @@ export default {
 			boxShadow: {
 				'd': [
 					//Dropdown shadow
-					'0 0 16px rgba(0,0,15,0.5)', 
-					'0 0 8px rgba(0,0,15,0.5)', 
-					'0 0 4px rgba(0,0,15,0.75)', 
+					'0 0 8px rgba(0,0,15,1)', 
 					'0 0 2px rgba(0,0,15,1)', 
 
 					//Shadow
-					'inset 0 16px 32px -6px rgba(0,0,15,0.025)', 
 					'inset 0 4px 16px -1px rgba(0,0,15,0.125)', 
 					'inset 0 2px 4px -1px rgba(0,0,15,0.125)', 
 					'inset 0 -2px 4px -1px rgba(0,0,15,0.025)', 
