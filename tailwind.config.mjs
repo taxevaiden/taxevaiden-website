@@ -4,7 +4,7 @@ export default {
 
 	theme: {
 		fontFamily: {
-			'sans': ['Segoe UI', 'Open Sans', 'sans-serif'],
+			'sans': ['MS Gothic', 'Open Sans', 'sans-serif'],
 			'mono': ['Consolas', 'Roboto Mono', 'mono'],
 		},
 
@@ -15,11 +15,12 @@ export default {
 						bg1: 'white',
 						bg2: '#ededed',
 
-						div: 'rgba(173,192,204,0.5)',
+						div: 'rgba(255,255,255,1)',
 						pre: 'rgba(15,15,0,0.25)',
 						border: 'rgba(1,1,1,0.5)',
 
 						text: 'black',
+						text2: 'gray',
 
 						a: "#0d5c8d",
 						ahover: "#0b78bc",
@@ -29,30 +30,11 @@ export default {
 
 			},
 
-			boxShadow: {
-				'd': [
-					//Dropdown shadow
-					'0 0 8px rgba(0,0,15,1)', 
-					'0 0 2px rgba(0,0,15,1)', 
-
-					//Shadow
-					'inset 0 4px 16px -1px rgba(0,0,15,0.125)', 
-					'inset 0 2px 4px -1px rgba(0,0,15,0.125)', 
-					'inset 0 -2px 4px -1px rgba(0,0,15,0.025)', 
-					'inset 0 -4px 8px -1px rgba(0,0,15,0.025)', 
-					'inset 0 0px 2px rgba(0,0,15,0.125)', 
-
-					//i forgor
-					'inset 0 0 16px rgba(240,240,255,0.125)', 
-					'inset 0 0 8px rgba(240,240,255,0.125)', 
-					'inset 0 0 2px rgba(240,240,255,0.125)', 
-					'inset 0 1px 2px -1px rgba(240,240,255,0.125)'
-				],
-			},
 
 			backgroundImage: {
 				'order': 'url("../images/backgrounds/7.png")',
 				'peak': 'url("../images/backgrounds/8.jpg")',
+				'repeatingrepating': 'url("../images/backgrounds/6.gif")',
 			},
 
 			dropShadow: {

@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import "../styles/global.css";
+import MainDiv from "./MainDiv.astro";
+
+const siteButtons = [
+  {
+    href: "https://mango-ki.nekoweb.org",
+    src: "https://mango-ki.nekoweb.org/images/banner.png",
+    alt: "mango-ki on nekoweb",
+  },
+  {
+    href: "https://joetroll.is-a.dev",
+    src: "https://joetroll.is-a.dev/button.gif",
+    alt: "joetroll's button",
+  },
+  {
+    href: "https://dimden.dev/",
+    src: "https://dimden.dev/services/images/88x31.gif",
+    alt: "Dimden's button",
+  },
+  {
+    href: "https://status.cafe",
+    src: "https://status.cafe/assets/button.png",
+    alt: "Status Cafe",
+  },
+  {
+    href: "https://nekoweb.org/",
+    src: "https://nekoweb.org/assets/buttons/button6.gif",
+    alt: "NekoWeb button by s1nez",
+  },
+  {
+    href: "https://natu.moe",
+    src: "https://natu.moe/img/natumoe.gif",
+    alt: "Natu.moe button",
+  },
+  {
+    href: "https://cinni.net",
+    src: "https://cinni.net/images/button/cinni-88x31-hamham.gif",
+    alt: "Cinni.net button",
+  },
+  {
+    href: "https://melonking.net",
+    src: "https://melonking.net/images/badges/MELON-BADGE-2.GIF",
+    alt: "Visit Melonking.Net!",
+  },
+  {
+    href: "https://afellowu.neocities.org/",
+    src: "https://afellowu.neocities.org/images/buttons/mebi_county.gif",
+    alt: "Mebi County",
+  },
+];
+---
+
+<div class="w-[46rem] overflow-hidden relative border border-default-light-border border-dotted">
+  <div class="flex flex-nowrap h-[31px] animate-scroll hover:animate-pause">
+    {/* Original buttons */}
+    {
+      siteButtons.map((button) => (
+        <a
+          href={button.href}
+          target="_blank"
+          class="inline-block w-[88px] h-[31px] p-0 flex-shrink-0"
+        >
+          <img src={button.src} alt={button.alt} />
+        </a>
+      ))
+    }
+    {/* Duplicate the buttons for seamless loop */}
+    {
+      siteButtons.map((button) => (
+        <a
+          href={button.href}
+          target="_blank"
+          class="inline-block w-[88px] h-[31px] p-0 flex-shrink-0"
+        >
+          <img src={button.src} alt={button.alt} />
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-88px * 9)); /* Replace with the total width of one set of buttons */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+.hover\:animate-pause:hover {
+  animation-play-state: paused;
+}
+</style>

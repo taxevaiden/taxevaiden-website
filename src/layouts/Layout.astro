@@ -5,6 +5,7 @@ import banner from '../images/banner.png'
 import NavigationDiv from '../components/NavigationDiv.astro';
 import SocialsDiv from '../components/SocialsDiv.astro';
 import MainDiv from '../components/MainDiv.astro';
+import SiteButtonContainer from '../components/SiteButtonContainer.astro';
 
 import websiteButton from '../images/88x31button.gif';
 import websiteIcon from '../images/icons/icon.png'
@@ -35,13 +36,12 @@ const { description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
 	</head>
 	<body>
-		<div class="max-w-fit mx-auto flex justify-center min-w-screen gap-4 flex-col p-4">
-			<div class="relative text-center z-20 mb-24 mt-12">
-				<h1 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl text-white drop-shadow-bigtitle z-20">
-					taxevaiden
-				</h1>
+		<div class="max-w-fit mx-auto flex justify-center min-w-screen flex-col bg-default-light-div border border-default-light-border border-dotted">
+			<div class="relative text-center z-20 overflow-visible w-[46rem] h-[12.9375rem]">
+				<Image src={banner} alt="banner" loading="eager" width="736" class="absolute m-0 pointer-events-none"></Image>
 			</div>
-			<div class="flex flex-row max-w-fit gap-4">
+			<SiteButtonContainer class="w-[46rem]"></SiteButtonContainer>
+			<div class="flex flex-row max-w-fit">
 				<div class="w-[14rem] basis-auto">
 					
 					<NavigationDiv links="home,/;about,/about;projects,/projects;blog,/blog" />

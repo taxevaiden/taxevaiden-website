@@ -5,12 +5,12 @@
 @layer base {
     html {
         /*@apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
-        @apply bg-peak bg-fixed bg-center text-default-light-text;
+        @apply bg-repeatingrepating bg-[length:64px_64px] text-default-light-text;
         /*bg-[center_top_1840px]*/
     }
     
     pre {
-        @apply p-4 my-4 rounded-lg bg-default-light-pre bg-no-repeat shadow-d
+        @apply p-4 my-4 bg-default-light-pre bg-no-repeat
     }
     
     code {
@@ -18,7 +18,7 @@
     }
     
     body {
-        @apply p-4 leading-5
+        @apply leading-5
     }
 
     h1,h2,h3,p,li,small {
