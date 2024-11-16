@@ -36,8 +36,8 @@ const { description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
 	</head>
 	<body>
-		<div class="max-w-fit mx-auto flex justify-center min-w-screen flex-col bg-default-div border border-default-border border-dotted">
-			<div class="relative text-center z-20 overflow-visible w-[46rem] h-[12.9375rem]">
+		<div class="max-w-fit mx-auto flex justify-center min-w-screen flex-col bg-bit bg-[length:8px_8px] border border-default-border border-dotted shadow-d" style="image-rendering: pixelated;">
+			<div class="relative text-center z-20 overflow-visible shadow-d w-[46rem] h-[12.9375rem]">
 				<Image src={banner} alt="banner" loading="eager" width="736" class="absolute m-0 pointer-events-none"></Image>
 			</div>
 			<SiteButtonContainer class="w-[46rem]"></SiteButtonContainer>

@@ -16,7 +16,7 @@ export default {
 
 					div: 'rgba(255,255,255,1)',
 					pre: 'rgba(15,15,0,0.25)',
-					border: 'rgba(1,1,1,0.5)',
+					border: 'rgba(0,0,0,1)',
 
 					text: 'black',
 					text2: 'gray',
@@ -26,11 +26,17 @@ export default {
 				},
 			},
 
+			boxShadow: {
+				'd': ['inset 2px 2px rgba(0,0,0,0.75)', 'inset -2px -2px rgba(0,0,0,0.5)'],
+				
+			},
 
 			backgroundImage: {
 				'order': 'url("../images/backgrounds/7.png")',
 				'peak': 'url("../images/backgrounds/8.jpg")',
 				'repeatingrepating': 'url("../images/backgrounds/6.gif")',
+				'bit': 'url("../images/backgrounds/9.png")',
+				'bit2': 'url("../images/backgrounds/10.png")'
 			},
 
 			dropShadow: {
