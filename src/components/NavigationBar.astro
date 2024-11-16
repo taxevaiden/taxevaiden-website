@@ -9,12 +9,12 @@ interface Props {
 const { links } = Astro.props;
 const linksArray = links.split(";");
 ---
-<div class="m-auto mb-5 max-w-xl bg-default-light-div dark:bg-default-dark-div border-default-light-border dark:border-default-dark-border border border-dotted">
+<div class="m-auto mb-5 max-w-xl bg-default-div dark:bg-default-dark-div border-default-border dark:border-default-dark-border border border-dotted">
   <div class="overflow-hidden">
     <Image src={banner} alt="the banner." class="object-cover" width="594" loading="eager"></Image>
   </div>
   
-  <div class="p-4 border-t border-t-default-light-border dark:border-t-default-dark-border border-dotted">
+  <div class="p-4 border-t border-t-default-border dark:border-t-default-dark-border border-dotted">
     {linksArray.map(link => {
       const [text, url] = link.split(",");
       return <a href={url} class="inline px-2 !m-0">{text}</a>;

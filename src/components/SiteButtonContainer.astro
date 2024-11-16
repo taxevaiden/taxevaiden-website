@@ -3,6 +3,16 @@ import { Image } from "astro:assets";
 import "../styles/global.css";
 import MainDiv from "./MainDiv.astro";
 
+import b1 from "../images/buttons/e26f5c9e.gif"
+import b2 from "../images/buttons/a (52).gif"
+import b3 from "../images/buttons/FS5k82E.png"
+import b4 from "../images/buttons/nowebp.gif"
+import b5 from "../images/buttons/webdesign.gif"
+import b6 from "../images/buttons/000010.gif"
+import b7 from "../images/buttons/amd_powered.gif"
+import b8 from "../images/buttons/best_chrome.gif"
+import b9 from "../images/buttons/bestlandscape.gif"
+
 const siteButtons = [
   {
     href: "https://mango-ki.nekoweb.org",
@@ -49,10 +59,54 @@ const siteButtons = [
     src: "https://afellowu.neocities.org/images/buttons/mebi_county.gif",
     alt: "Mebi County",
   },
+  {
+    href: "https://99gifshop.neocities.org",
+    src: "https://99gifshop.neocities.org/img/88x31.png",
+    alt: "99gifshop"
+  }
 ];
+
+const buttons = [
+    {
+        src: b1.src,
+        alt: "best viewed on desktop"
+    },
+    {
+        src: b2.src,
+        alt: "html! learn it NOW!!"
+    },
+    {
+        src: b3.src,
+        alt: "internet archive"
+    },
+    {
+        src: b4.src,
+        alt: "no webp, just use png!!"
+    },
+    {
+        src: b5.src,
+        alt: "web design is my passion"
+    },
+    {
+        src: b6.src,
+        alt: "000010"
+    },
+    {
+        src: b7.src,
+        alt: "AMD powered"
+    },
+    {
+        src: b8.src,
+        alt: "best viewed with chrome"
+    },
+    {
+        src: b9.src,
+        alt: "best viewed in landscape"
+    }
+]
 ---
 
-<div class="w-[46rem] overflow-hidden relative border border-default-light-border border-dotted">
+<div class="w-[46rem] overflow-hidden relative border border-default-border border-dotted">
   <div class="flex flex-nowrap h-[31px] animate-scroll hover:animate-pause">
     {/* Original buttons */}
     {
@@ -79,6 +133,20 @@ const siteButtons = [
       ))
     }
   </div>
+  <div class="flex flex-nowrap h-[31px] animate-scroll2 hover:animate-pause">
+    {/* Original buttons */}
+    {
+      buttons.map((button) => (
+          <img src={button.src} alt={button.alt} />
+      ))
+    }
+    {/* Duplicate the buttons for seamless loop */}
+    {
+      buttons.map((button) => (
+          <img src={button.src} alt={button.alt} />
+      ))
+    }
+  </div>
 </div>
 
 <style>
@@ -87,12 +155,25 @@ const siteButtons = [
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-88px * 9)); /* Replace with the total width of one set of buttons */
+    transform: translateX(calc(-88px * 10)); /* Replace with the total width of one set of buttons */
+  }
+}
+
+@keyframes scroll2 {
+  from {
+    transform: translateX(calc(-88px * 9));
+  }
+  to {
+    transform: translateX(0); /* Replace with the total width of one set of buttons */
   }
 }
 
 .animate-scroll {
   animation: scroll 10s linear infinite;
+}
+
+.animate-scroll2 {
+  animation: scroll2 10s linear infinite;
 }
 
 .hover\:animate-pause:hover {

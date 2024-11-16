@@ -4,13 +4,13 @@
 
 @layer base {
     html {
-        /*@apply text-default-light-text dark:text-default-dark-text bg-default-light-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-light-bg1 dark:from-default-dark-bg1 to-default-light-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
-        @apply bg-repeatingrepating bg-[length:64px_64px] text-default-light-text;
+        /*@apply text-default-text dark:text-default-dark-text bg-default-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-bg1 dark:from-default-dark-bg1 to-default-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
+        @apply bg-repeatingrepating bg-[length:64px_64px] text-default-text;
         /*bg-[center_top_1840px]*/
     }
     
     pre {
-        @apply p-4 my-4 bg-default-light-pre bg-no-repeat
+        @apply p-4 my-4 bg-default-pre bg-no-repeat
     }
     
     code {
@@ -54,14 +54,14 @@
     }
     
     a {
-        @apply text-default-light-a
+        @apply text-default-a
     }
     
     a:hover {
         color: #0b78bc;
         text-decoration: underline;
 
-        @apply text-default-light-ahover
+        @apply text-default-ahover
     }
 }
 

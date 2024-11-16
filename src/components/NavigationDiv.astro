@@ -1,24 +1,104 @@
 ---
 import MainDiv from './MainDiv.astro';
 
-interface Props {
-  links: string; //home,index;about,about
-}
+//interface Props {
+//  links: string; //home,index;about,about
+//}
 
-const { links } = Astro.props;
-const linksArray = links.split(";");
+//const { links } = Astro.props;
+//const linksArray = links.split(";");
+
+const links = [
+    {
+        name: "home",
+        link: "/",
+        subLinks: [
+            {
+                name: "IMPORANT NOTES!!",
+                includePage: true,
+                link: "#important-notes"
+            },
+
+            {
+                name: "Q&A",
+                includePage: true,
+                link: "#qna"
+            }
+        ]
+    },
+
+    {
+        name: "about",
+        link: "/about",
+        subLinks: [
+            {
+                name: "source code",
+                includePage: true,
+                link: "#source-code"
+            },
+        ]
+    },
+
+    {
+        name: "projects",
+        link: "/projects",
+        subLinks: []
+    },
+
+    {
+        name: "changelog",
+        link: "/changelog",
+        subLinks: []
+    },
+
+    {
+        name: "blog",
+        link: "/blog",
+        subLinks: [
+            {
+                name: "rss",
+                includePage: false,
+                link: "/rss.xml"
+            }
+        ]
+    }
+]
 ---
 
 <MainDiv>
-    <p class="w-[9rem] mt-6 text-default-light-text2">
-        i had to move "navigation" because of the arm covering it,,, sigh. idk what to do with this blank space so here u go 
+    <p class="w-[9.5rem] mt-6 text-default-text2">
+        the arm was covering "navigation." idk what to do with this blank space so here u go 
     </p>
     <h1 class="">navigation</h1>
 
     <ul class="list-none">
-        {linksArray.map(link => {
-            const [text, url] = link.split(",");
-            return <li><a href={url} class="inline px-2 !m-0">{text}</a></li>;
-        })}
+        {links.map((link => 
+            <li><a href={link.link} class="inline px-2">{link.name}</a></li>
+            <ul class="list-none mb-0">
+                {link.subLinks.map(((subLink, index) => 
+                    <li>
+                        {subLink.includePage ? (
+                            <span><a href={link.link + subLink.link} class="inline px-2">
+                            {index === link.subLinks.length - 1 ? (
+                                <span>&#9492;</span>
+                            ) : (
+                                <span>&#9500;</span>
+                            )}
+                            {subLink.name}
+                            </a></span>
+                        ) : (
+                            <span><a href={subLink.link} class="inline px-2">
+                            {index === link.subLinks.length - 1 ? (
+                                <span>&#9492;</span>
+                            ) : (
+                                <span>&#9500;</span>
+                            )}
+                            {subLink.name}
+                            </a></span>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        ))}
     </ul>
 </MainDiv>

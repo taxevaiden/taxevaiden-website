@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainDiv from '../components/MainDiv.astro';
-import BlogPost from '../components/BlogPost.astro';
+import Post from '../components/Card.astro';
 import '../styles/global.css'
 const allPosts = await Astro.glob('./posts/*.md');
 
@@ -22,7 +22,7 @@ allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.f
             </ul> -->
 
             {allPosts.map((post) => 
-            <BlogPost title={post.frontmatter.title} description={post.frontmatter.description} date={post.frontmatter.pubDate.toString().slice(0,10)} link={post.frontmatter.url}></BlogPost>)}
+            <Post title={post.frontmatter.title} description={post.frontmatter.description} date={post.frontmatter.pubDate.toString().slice(0,10)} link={post.frontmatter.url}></Post>)}
             
 		</MainDiv>
 

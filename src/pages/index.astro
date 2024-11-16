@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MainDiv from '../components/MainDiv.astro';
+import ChangelogDiv from '../components/ChangelogDiv.astro';
 import Image from 'astro/components/Image.astro';
 import '../styles/global.css'
 
@@ -24,7 +25,7 @@ import '../styles/global.css'
 				<li>I don't know</li>
 			</ul>
 
-			<h1>IMPORTANT NOTES!!!</h1>
+			<h1 id="important-notes">IMPORTANT NOTES!!!</h1>
 		
 			<ul>
 				<li>this website was made with a 1920x1080 screen using arc (chromium) as the browser</li>
@@ -35,19 +36,19 @@ import '../styles/global.css'
 			</ul>
 		</MainDiv>
 
+		<ChangelogDiv small/>
+
 		<MainDiv>
-			<h1>Q&A</h1>
+			<h1 id="qna">Q&A</h1>
 
 			<p>Q: what did you use to make this website?<br>
-			A: for my code editor i used vscode mostly (i know i said i would switch to nvim but i'm lazy :)) along with that i use cloudflare pages to host this website, and i used astro and tailwind css to make this website. for the cool arts that are in here i use procreate</p>
+			A: i used cloudflare pages to host, astro to make the website, vscode to code the website, and procreate for the cool arts (i feel like i'm missing out for not using ibisPaint X,,)</p>
 
 			<p>Q: what happened to the old website?<br>
-			A: originally when i coded the website i was still a beginner so the code wasn't that great. over time it was just a pain to manage if i'm being honest so i made a new one<br>
-			you can still view the old website at <a href="https://oldevaiden.pages.dev">oldevaiden.pages.dev</a> <br>
-			there are more reasons as to why i made a new one, so you can go to <a href="./posts/new-website">this post</a> to know more :)</p>
+			A: the old website's code was terrible. i hated managing it. ok that's all
 			
 			<p>Q: why couldn't you host stuff like this on neocities or nekoweb?<br>
-			A: cloudflare i feel just gave me a lot more control.. along with the git stuff it was a good option for me. and also the storage is like almost infinite</p>
+			A: cloudflare gave me a lot more control, i can do ANything</p>
 			
 			<p>Q: why doesn't this website have stuff that the old one had yet?<br>
 			A: this website is still a WIP. i'm still working on stuff!!</p>

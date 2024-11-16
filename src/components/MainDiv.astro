@@ -1,7 +1,12 @@
 ---
 import '../styles/global.css'
+
+interface Props {
+    class?: string;
+}
+
 ---
 
-<div class="p-4 mb-0 bg-default-light-div border border-default-light-border border-dotted overflow-hidden relative">
+<div class=`p-4 mb-0 bg-default-div border border-default-border border-dotted overflow-hidden ${Astro.props.class}`>
     <slot />
 </div>

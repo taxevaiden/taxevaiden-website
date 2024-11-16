@@ -36,7 +36,7 @@ const { description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
 	</head>
 	<body>
-		<div class="max-w-fit mx-auto flex justify-center min-w-screen flex-col bg-default-light-div border border-default-light-border border-dotted">
+		<div class="max-w-fit mx-auto flex justify-center min-w-screen flex-col bg-default-div border border-default-border border-dotted">
 			<div class="relative text-center z-20 overflow-visible w-[46rem] h-[12.9375rem]">
 				<Image src={banner} alt="banner" loading="eager" width="736" class="absolute m-0 pointer-events-none"></Image>
 			</div>
@@ -44,7 +44,7 @@ const { description } = Astro.props;
 			<div class="flex flex-row max-w-fit">
 				<div class="w-[14rem] basis-auto">
 					
-					<NavigationDiv links="home,/;about,/about;projects,/projects;blog,/blog" />
+					<NavigationDiv links="home,/;about,/about;projects,/projects;changelog,/changelog;blog,/blog" />
 					<MainDiv>
 						<h1>link me!</h1>
 						<a href="https://taxevaiden.pages.dev"><img src={websiteButton.src} alt="taxevaiden's website"></a>
@@ -69,6 +69,15 @@ const { description } = Astro.props;
 				
 				
 			</div>
+
+			<MainDiv class="text-center">
+				<p class="m-0 leading-3">
+					<small>
+						| est. june 9, 2024 :: &COPY; 2024 taxevaiden :: powered by astro, github, and with love :3 |
+
+					</small>
+				</p>
+			</MainDiv>
 		</div>
 		
 	</body>

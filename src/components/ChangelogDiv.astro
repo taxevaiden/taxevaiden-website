@@ -1,0 +1,54 @@
+---
+import MainDiv from './MainDiv.astro';
+import Card from './Card.astro';
+
+const changes = [
+    {
+        title: "new changelog! + minor changes,,",
+        date: "2024-11-15",
+        description: "new shiny new changelog. this will be used to know what uh, changes happened. some other changes are:",
+        descriptionBulleted: [
+            "made adding stuff to the socials tab and navigation tab WAY easier for me at least, you won't tell the difference",
+            "i also made the navigation bar have some sublinks, you can check them out",
+            "new footer at the bottom!",
+            "added one site button, and a new button section (these are not sites)",
+            "new blog rss! view it with the navigation bar",
+            "for more info view the repo because i am too lazy ok ty :)",
+        ]
+    },
+]
+
+interface Props {
+    small?: boolean;
+}
+
+const { small = false } = Astro.props;
+
+changes.sort((a, b) => (new Date(b.date).getTime()) - (new Date(a.date).getTime()));
+
+---
+
+<MainDiv>
+    {small ? (
+        //this is assuming the "small" version is on another page that's not changelog
+        <span><a href="/blog"><h1>changelog</h1></a></span>
+    ) : (
+        <span><h1>changelog</h1></span>
+    )}
+    
+
+    <slot />
+
+    <MainDiv class=` ${small && 'overflow-scroll h-48'}`>
+        {changes.map((change) => (
+            <Card title={change.title} date={change.date} description={change.description}>
+                <ul>
+                    {change.descriptionBulleted.map((bullet) => (
+                        <li class="pl-2">{bullet}</li>
+                    ))}
+                </ul>
+            </Card>
+        ))}
+    </MainDiv>
+
+</MainDiv>

@@ -11,23 +11,19 @@ export default {
 		extend: {
 			colors: {
 				default: {
-					light: {
-						bg1: 'white',
-						bg2: '#ededed',
+					bg1: 'white',
+					bg2: '#ededed',
 
-						div: 'rgba(255,255,255,1)',
-						pre: 'rgba(15,15,0,0.25)',
-						border: 'rgba(1,1,1,0.5)',
+					div: 'rgba(255,255,255,1)',
+					pre: 'rgba(15,15,0,0.25)',
+					border: 'rgba(1,1,1,0.5)',
 
-						text: 'black',
-						text2: 'gray',
+					text: 'black',
+					text2: 'gray',
 
-						a: "#0d5c8d",
-						ahover: "#0b78bc",
-					},
+					a: "#0d5c8d",
+					ahover: "#0b78bc",
 				},
-
-
 			},
 
 
