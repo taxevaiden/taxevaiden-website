@@ -1,18 +1,21 @@
 ---
-import Image from 'astro/components/Image.astro';
-import { Code } from 'astro:components';
-import banner from '../images/banner.png'
-import NavigationDiv from '../components/NavigationDiv.astro';
-import SocialsDiv from '../components/SocialsDiv.astro';
-import MainDiv from '../components/MainDiv.astro';
-import SiteButtonContainer from '../components/SiteButtonContainer.astro';
+import Image from "astro/components/Image.astro";
+import { Code } from "astro:components";
+import banner from "../images/banner.png";
+import NavigationDiv from "../components/NavigationDiv.astro";
+import SocialsDiv from "../components/SocialsDiv.astro";
+import MainDiv from "../components/MainDiv.astro";
+import SiteButtonContainer from "../components/SiteButtonContainer.astro";
 
-import websiteButton from '../images/88x31button.gif';
-import websiteIcon from '../images/icons/icon.png'
+import websiteButton from "../images/88x31button.gif";
+import websiteIcon from "../images/icons/icon.png";
+
+import "../styles/global.css";
+import "../styles/themes.css";
 
 interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
 const { title } = Astro.props;
@@ -20,65 +23,195 @@ const { description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<html lang="en" class="theme-default">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+            rel="stylesheet"
+        />
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="generator" content={Astro.generator} />
-		<meta content="#ffffff" data-react-helmet="true" name="theme-color">
-		<meta content={websiteIcon.src} property="og:image" />
-		<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
-	</head>
-	<body>
-		<div class="max-w-fit mx-auto flex justify-center min-w-screen flex-col bg-bit bg-[length:8px_8px] border border-default-border border-dotted shadow-d" style="image-rendering: pixelated;">
-			<div class="relative text-center z-20 overflow-visible shadow-d w-[46rem] h-[12.9375rem]">
-				<Image src={banner} alt="banner" loading="eager" width="736" class="absolute m-0 pointer-events-none"></Image>
-			</div>
-			<SiteButtonContainer class="w-[46rem]"></SiteButtonContainer>
-			<div class="flex flex-row max-w-fit">
-				<div class="w-[14rem] basis-auto">
-					
-					<NavigationDiv links="home,/;about,/about;projects,/projects;changelog,/changelog;blog,/blog" />
-					<MainDiv>
-						<h1>link me!</h1>
-						<a href="https://taxevaiden.pages.dev"><img src={websiteButton.src} alt="taxevaiden's website"></a>
-						<Code code="&lt;a href=&quot;https://taxevaiden.pages.dev&quot;&gt;&lt;img src=&quot;/src/images/misc/88x31button.gif&quot; alt=&quot;taxevaiden's website&quot;&gt;&lt;/a&gt;" lang="html"></Code>
-					</MainDiv>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="generator" content={Astro.generator} />
+        <meta content="#ffffff" data-react-helmet="true" name="theme-color" />
+        <meta content={websiteIcon.src} property="og:image" />
+        <link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
+    </head>
+    <body>
+        <div
+            class="absolute inset-0 h-full bg-gradient-to-b from-default-bg1 to-default-bg2 bg-no-repeat -z-20"
+        >
+        </div>
+        <div class="w-screen h-screen bg-dither-10 fixed -z-20"></div>
+        <div
+            class="max-w-fit mx-auto flex justify-center min-w-screen flex-col border border-default-border border-solid shadow-d relative"
+            style="image-rendering: pixelated;"
+        >
+            <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] -z-10"></div>
+            <div class="fixed inset-0 bg-dither-6 -z-10"></div>
+            <div
+                class="relative text-center z-20 overflow-visible shadow-d w-[46rem] h-[12.9375rem]"
+            >
+                <Image
+                    src={banner}
+                    alt="banner"
+                    loading="eager"
+                    width="736"
+                    class="absolute m-0 pointer-events-none z-20"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-default-banner1 to-default-banner2"
+                >
+                </div>
+                <div class="absolute inset-0 bg-dither-14"></div>
+                <div
+                    class="border border-default-border border-solid shadow-d h-full z-10"
+                >
+                </div>
+            </div>
+            <SiteButtonContainer class="w-[46rem]" />
+            <div class="flex flex-row max-w-fit">
+                <div class="w-[14rem] basis-auto">
+                    <NavigationDiv />
 
-					<SocialsDiv links="bluesky,https://bsky.app/profile/taxevaiden.pages.dev;twitter,https://x.com/taxevaiden;youtube,https://www.youtube.com/@taxevaiden" />
+                    <MainDiv>
+                        <h1>theme</h1>
+                        <p class="text-default-text2">
+                            <small>
+                                ooOOOHHhh my GOD. i am SO BLINDED by this
+                                DEFAULT THEME!!
+                            </small>
+                        </p>
 
-					<MainDiv>
-						<h1><a href="https://status.cafe/">status.cafe</a></h1>
-	
-							<div id="statuscafe" class="mb-4"><div id="statuscafe-username" class="mb-2 drop-shadow-t"></div><div id="statuscafe-content" class="mx-2 mb-2 drop-shadow-t"></div></div><script src="https://status.cafe/current-status.js?name=aiden20121" defer></script>
-					
-							<h1><a href="https://internetometer.com/">internets</a></h1>
-				
-							<a href='http://internetometer.com/give/50492'><img src='http://internetometer.com/image/50492.png' alt="internetometer"/></a>
-					</MainDiv>
-				</div>
-				<div class="w-[32rem] basis-auto">
-					<slot />
-				</div>
-				
-				
-			</div>
+                        <select id="theme-select" class="bg-transparent">
+                            <option value="theme-default"
+                                >default (light)</option
+                            >
+                            <option value="theme-dark">dark</option>
+                            <option value="theme-sunset">sunset</option>
+                            <option value="theme-matcha">matcha</option>
+							<option value="theme-durpy">DurpyDoo</option>
+                        </select>
 
-			<MainDiv class="text-center">
-				<p class="m-0 leading-3">
-					<small>
-						| est. june 9, 2024 :: &COPY; 2024 taxevaiden :: powered by astro, github, and with love :3 |
+                        <script>
+                            function changeTheme(event) {
+                                const theme = event.target.value;
 
-					</small>
-				</p>
-			</MainDiv>
-		</div>
-		
-	</body>
+                                // Remove all theme classes
+                                document.documentElement.classList.remove(
+                                    "theme-dark",
+                                    "theme-sunset",
+                                    "theme-matcha",
+									"theme-durpy",
+                                    "theme-default"
+                                );
+
+                                // Add the selected theme class
+                                document.documentElement.classList.add(theme);
+
+                                // Store the selected theme in localStorage to persist the selection
+                                localStorage.setItem("theme", theme);
+                            }
+
+                            function loadTheme() {
+                                // Get the saved theme from localStorage or default to 'theme-default'
+                                const savedTheme =
+                                    localStorage.getItem("theme") ||
+                                    "theme-default";
+
+                                // Set the theme class on the root element
+                                document.documentElement.classList.add(
+                                    savedTheme
+                                );
+
+                                // Set the selected value in the <select> menu
+                                document.getElementById("theme-select").value =
+                                    savedTheme;
+                            }
+
+                            // Add event listener after the DOM has loaded
+                            document.addEventListener(
+                                "DOMContentLoaded",
+                                () => {
+                                    // Attach event listener to the theme select dropdown
+                                    document
+                                        .getElementById("theme-select")
+                                        .addEventListener(
+                                            "change",
+                                            changeTheme
+                                        );
+
+                                    // Call loadTheme to apply the saved theme
+                                    loadTheme();
+                                }
+                            );
+                        </script>
+                    </MainDiv>
+
+                    <MainDiv>
+                        <h1>link me!</h1>
+                        <a href="https://taxevaiden.pages.dev"
+                            ><img
+                                src={websiteButton.src}
+                                alt="taxevaiden's website"
+                            /></a
+                        >
+                        <Code
+                            code='<a href="https://taxevaiden.pages.dev"><img src="/src/images/misc/88x31button.gif" alt="taxevaiden&apos;s website"></a>'
+                            lang="html"
+                        />
+                    </MainDiv>
+
+                    <SocialsDiv
+                        links="bluesky,https://bsky.app/profile/taxevaiden.pages.dev;twitter,https://x.com/taxevaiden;youtube,https://www.youtube.com/@taxevaiden"
+                    />
+
+                    <MainDiv>
+                        <h1><a href="https://status.cafe/">status.cafe</a></h1>
+
+                        <div id="statuscafe" class="mb-4">
+                            <div
+                                id="statuscafe-username"
+                                class="mb-2 drop-shadow-t"
+                            >
+                            </div><div
+                                id="statuscafe-content"
+                                class="mx-2 mb-2 drop-shadow-t"
+                            >
+                            </div>
+                        </div><script
+                            src="https://status.cafe/current-status.js?name=aiden20121"
+                            defer></script>
+
+                        <h1>
+                            <a href="https://internetometer.com/">internets</a>
+                        </h1>
+
+                        <a href="http://internetometer.com/give/50492"
+                            ><img
+                                src="http://internetometer.com/image/50492.png"
+                                alt="internetometer"
+                            /></a
+                        >
+                    </MainDiv>
+                </div>
+                <div class="w-[32rem] basis-auto">
+                    <slot />
+                </div>
+            </div>
+
+            <MainDiv class="text-center">
+                <p class="m-0 leading-3">
+                    <small>
+                        | est. june 9, 2024 :: &COPY; 2024 taxevaiden :: powered
+                        by astro, github, and with love :3 |
+                    </small>
+                </p>
+            </MainDiv>
+        </div>
+    </body>
 </html>

@@ -1,0 +1,69 @@
+:root {
+    --bg1: #ffffff;
+    --bg2: #808080;
+    --banner1: #ffffff;
+    --banner2: #bfbfbf;
+    --div: #ffffff;
+    --pre: #0000004d;
+    --border: #000000;
+    --text: #000000;
+    --text2: #808080;
+    --a: #0d5c8d;
+    --ahover: #0b78bc;
+}
+
+.theme-dark {
+    --bg1: #3a3d40;
+    --bg2: #202024;
+    --banner1: #939393;
+    --banner2: #555555;
+    --div: #212122;
+    --pre: #0000004d;
+    --border: #aaacae;
+    --text: #ffffff;
+    --text2: #686868;
+    --a: #2983bb;
+    --ahover: #3b9dda;
+}
+
+.theme-sunset {
+    --bg1: #ff7e5f;
+    --bg2: #feb47b;
+    --banner1: #ff9a8b;
+    --banner2: #f7d5a1;
+    --div: #ffc896d9;
+    --pre: #0f0f0080;
+    --border: #ffffffb3;
+    --text: #61312c;
+    --text2: #a8856b;
+    --a: #8a6156;
+    --ahover: #4b3c37;
+}
+
+.theme-matcha {
+    --bg1: #87b073;
+    --bg2: #839e6d;
+    --banner1: #537450;
+    --banner2: #71975e;
+    --div: #5e7d4dcc;
+    --pre: #0000004d;
+    --border: #00000080;
+    --text: #c2cfb7;
+    --text2: #8d9f85;
+    --a: #b4c2ac;
+    --ahover: #90a080;
+}
+
+.theme-durpy {
+    --bg1: #90a2cd;
+    --bg2: #5f79b7;
+    --banner1: #b9cbdf;
+    --banner2: #97adc7;
+    --div: #afbfd2;
+    --pre: #0000004d;
+    --border: #d5e0fac3;
+    --text: #001224;
+    --text2: #718ca8;
+    --a: #213a5b;
+    --ahover: #1f3046;
+}

@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'themes.css';
+
 @layer base {
     html {
         /*@apply text-default-text dark:text-default-dark-text bg-default-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-bg1 dark:from-default-dark-bg1 to-default-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
-        @apply bg-bit2 bg-[length:8px_8px] text-default-text;
+        @apply bg-default-bg2 text-default-text;
         image-rendering: pixelated;
         /*bg-[center_top_1840px]*/
     }
