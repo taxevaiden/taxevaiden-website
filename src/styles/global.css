@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'themes.css';
-
 @layer base {
     html {
         /*@apply text-default-text dark:text-default-dark-text bg-default-bg2 dark:bg-default-dark-bg2 bg-gradient-to-b from-default-bg1 dark:from-default-dark-bg1 to-default-bg2 dark:to-default-dark-bg2 bg-repeat-x*/
@@ -49,7 +47,7 @@
     }
     
     small {
-        @apply text-xs
+        @apply text-xs text-default-text2
     }
     
     ul {    
@@ -57,14 +55,11 @@
     }
     
     a {
-        @apply text-default-a
+        @apply text-default-a transition-all
     }
     
     a:hover {
-        color: #0b78bc;
-        text-decoration: underline;
-
-        @apply text-default-ahover
+        @apply text-default-ahover underline tracking-wider
     }
 }
 

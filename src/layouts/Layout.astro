@@ -80,7 +80,7 @@ const { description } = Astro.props;
 
                     <MainDiv>
                         <h1>theme</h1>
-                        <p class="text-default-text2">
+                        <p>
                             <small>
                                 ooOOOHHhh my GOD. i am SO BLINDED by this
                                 DEFAULT THEME!!
@@ -92,6 +92,7 @@ const { description } = Astro.props;
                                 >default (light)</option
                             >
                             <option value="theme-dark">dark</option>
+                            <option value="theme-catppuccin">catppuccin</option>
                             <option value="theme-sunset">sunset</option>
                             <option value="theme-matcha">matcha</option>
 							<option value="theme-durpy">DurpyDoo</option>
@@ -104,6 +105,7 @@ const { description } = Astro.props;
                                 // Remove all theme classes
                                 document.documentElement.classList.remove(
                                     "theme-dark",
+                                    "theme-catppuccin",
                                     "theme-sunset",
                                     "theme-matcha",
 									"theme-durpy",
@@ -154,6 +156,10 @@ const { description } = Astro.props;
 
                     <MainDiv>
                         <h1>link me!</h1>
+
+                        <p>go ahead and hotlink<br>
+                        <small>(if this website doesn't die)</small></p>
+
                         <a href="https://taxevaiden.pages.dev"
                             ><img
                                 src={websiteButton.src}

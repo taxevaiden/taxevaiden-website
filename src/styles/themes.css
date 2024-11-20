@@ -1,3 +1,5 @@
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
 :root {
     --bg1: #ffffff;
     --bg2: #808080;
@@ -22,8 +24,22 @@
     --border: #aaacae;
     --text: #ffffff;
     --text2: #686868;
-    --a: #2983bb;
-    --ahover: #3b9dda;
+    --a: #72b9e5;
+    --ahover: #8fd1fa;
+}
+
+.theme-catppuccin {
+    --bg1: var(--ctp-mocha-base);
+    --bg2: var(--ctp-mocha-mantle);
+    --banner1: var(--ctp-mocha-base);
+    --banner2: var(--ctp-mocha-mantle);
+    --div: var(--ctp-mocha-surface0);
+    --pre: #0000004d;
+    --border: var(--ctp-mocha-overlay0);
+    --text: var(--ctp-mocha-text);
+    --text2: var(--ctp-mocha-overlay1);
+    --a: var(--ctp-mocha-blue);
+    --ahover: var(--ctp-mocha-text);
 }
 
 .theme-sunset {
@@ -36,8 +52,8 @@
     --border: #ffffffb3;
     --text: #61312c;
     --text2: #a8856b;
-    --a: #8a6156;
-    --ahover: #4b3c37;
+    --a: #9e3b1f;
+    --ahover: #c5603e;
 }
 
 .theme-matcha {
@@ -50,20 +66,20 @@
     --border: #00000080;
     --text: #c2cfb7;
     --text2: #8d9f85;
-    --a: #b4c2ac;
-    --ahover: #90a080;
+    --a: #91b67c;
+    --ahover: #bad3a1;
 }
 
 .theme-durpy {
-    --bg1: #90a2cd;
-    --bg2: #5f79b7;
+    --bg1: #90b5cd;
+    --bg2: #5f9ab7;
     --banner1: #b9cbdf;
     --banner2: #97adc7;
-    --div: #afbfd2;
+    --div: #afc6d2;
     --pre: #0000004d;
-    --border: #d5e0fac3;
+    --border: #d5effac3;
     --text: #001224;
     --text2: #718ca8;
-    --a: #213a5b;
-    --ahover: #1f3046;
+    --a: #25518a;
+    --ahover: #4571aa;
 }

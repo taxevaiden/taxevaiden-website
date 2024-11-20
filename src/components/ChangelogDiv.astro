@@ -39,6 +39,16 @@ const changes = [
             "cooler background",
         ]
     },
+
+    {
+        title: "mmm..... mocha....",
+        date: "2024-11-19",
+        description: "new theme added",
+        descriptionBulleted: [
+            "catppuccin mocha! i just decided to add it idk,,,,",
+            "that's it",
+        ]
+    },
 ]
 
 interface Props {
@@ -54,7 +64,7 @@ changes.sort((a, b) => (new Date(b.date).getTime()) - (new Date(a.date).getTime(
 <MainDiv>
     {small ? (
         //this is assuming the "small" version is on another page that's not changelog
-        <span><a href="/blog"><h1>changelog</h1></a></span>
+        <span><a href="/changelog"><h1>changelog</h1></a></span>
     ) : (
         <span><h1>changelog</h1></span>
     )}
