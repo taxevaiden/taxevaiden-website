@@ -1,0 +1,64 @@
+<select id="theme-select" class="bg-default-div">
+    <option value="theme-default">default (light)</option>
+    <option value="theme-dark">dark</option>
+    <option value="theme-catppuccin">catppuccin</option>
+    <option value="theme-sunset">sunset</option>
+    <option value="theme-matcha">matcha</option>
+    <option value="theme-durpy">DurpyDoo</option>
+</select>
+
+<script>
+    // Function to update the dropdown and theme
+    function updateThemeDropdown() {
+        const themeSelect = document.getElementById("theme-select") as HTMLSelectElement;
+
+        // Verify the dropdown exists before attempting to manipulate it
+        if (!themeSelect) {
+            console.error("Theme dropdown not found!");
+            return;
+        }
+
+        // Attach the change event listener
+        themeSelect.addEventListener("change", changeTheme);
+
+        // Set the dropdown to the saved theme
+        const savedTheme = localStorage.getItem("theme") || "theme-default";
+        themeSelect.value = savedTheme;
+        applyTheme(savedTheme);
+    }
+
+    // Function to apply a theme
+    function applyTheme(theme) {
+        // Remove all existing theme classes
+        document.documentElement.classList.remove(
+            "theme-dark",
+            "theme-catppuccin",
+            "theme-sunset",
+            "theme-matcha",
+            "theme-durpy",
+            "theme-default"
+        );
+
+        // Add the new theme class
+        document.documentElement.classList.add(theme);
+    }
+
+    // Handle theme changes
+    function changeTheme(event) {
+        const newTheme = event.target.value;
+        applyTheme(newTheme);
+
+        // Save the selected theme
+        localStorage.setItem("theme", newTheme);
+    }
+
+    // Event listener for Astro's page transitions
+    document.addEventListener("astro:page-load", () => {
+        updateThemeDropdown();
+    });
+
+    // Initialize on first load
+    document.addEventListener("DOMContentLoaded", () => {
+        updateThemeDropdown();
+    });
+</script>

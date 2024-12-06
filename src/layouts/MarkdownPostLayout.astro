@@ -1,13 +1,7 @@
 ---
-import Image from 'astro/components/Image.astro';
-import banner from '../images/banner.png'
-import { Code } from 'astro:components';
-import MainDiv from "../components/MainDiv.astro";
-import "../styles/global.css";
-import NavigationDiv from "../components/NavigationDiv.astro";
 
-import websiteButton from '../images/88x31button.gif';
-import websiteIcon from '../images/icons/icon.png'
+import MainDiv from "../components/main/MainDiv.astro";
+import "../styles/global.css";
 
 import Layout from './Layout.astro';
 
@@ -15,6 +9,7 @@ const { frontmatter } = Astro.props;
 
 const title = `${frontmatter.title} | taxevaiden's website`;
 const description = frontmatter.description;
+
 ---
 
 <Layout title={title} description={description}>

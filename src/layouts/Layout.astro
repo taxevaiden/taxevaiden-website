@@ -1,17 +1,10 @@
 ---
-import Image from "astro/components/Image.astro";
-import { Code } from "astro:components";
-import banner from "../images/banner.png";
-import NavigationDiv from "../components/NavigationDiv.astro";
-import SocialsDiv from "../components/SocialsDiv.astro";
-import MainDiv from "../components/MainDiv.astro";
-import SiteButtonContainer from "../components/SiteButtonContainer.astro";
-
-import websiteButton from "../images/88x31button.gif";
-import websiteIcon from "../images/icons/icon.png";
-
 import "../styles/global.css";
 import "../styles/themes.css";
+
+import Footer from "../components/main/Footer.astro";
+import SideBar from "../components/main/SideBar.astro";
+import Header from "../components/main/Header.astro";
 
 interface Props {
     title: string;
@@ -20,204 +13,377 @@ interface Props {
 
 const { title } = Astro.props;
 const { description } = Astro.props;
+
+import CommonHead from "../components/main/CommonHead.astro";
+
+const anims = [
+    "flip",
+    "fade",
+    "rotate",
+    "zoomIn",
+    "zoomOut",
+    "slideLeft",
+    "slideRight",
+    "slideUp",
+    "slideDown",
+];
+
+const randomAnim = anims[Math.floor(Math.random() * anims.length)];
+
+//this is for testing!!
+//const randomAnim = "fade";
+
+const anim = {
+    old: {
+        name: `${randomAnim}-begin`,
+        duration: "0.5s",
+        easing: "linear",
+    },
+    new: {
+        name: `${randomAnim}-end`,
+        duration: "0.5s",
+        easing: "linear",
+    },
+};
+
+const customTransition = {
+    forwards: anim,
+    backwards: anim,
+};
 ---
 
 <!doctype html>
 <html lang="en" class="theme-default">
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-            rel="stylesheet"
-        />
-
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="generator" content={Astro.generator} />
-        <meta content="#ffffff" data-react-helmet="true" name="theme-color" />
-        <meta content={websiteIcon.src} property="og:image" />
-        <link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
+        <CommonHead title={title} description={description} />
     </head>
     <body>
-        <div
-            class="absolute inset-0 h-full bg-gradient-to-b from-default-bg1 to-default-bg2 bg-no-repeat -z-20"
-        >
-        </div>
-        <div class="w-screen h-screen bg-dither-10 fixed -z-20"></div>
-        <div
-            class="max-w-fit mx-auto flex justify-center min-w-screen flex-col border border-default-border border-solid shadow-d relative"
-            style="image-rendering: pixelated;"
-        >
-            <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] -z-10"></div>
-            <div class="fixed inset-0 bg-dither-6 -z-10"></div>
+        <div style="perspective: 1000px">
             <div
-                class="relative text-center z-20 overflow-visible shadow-d w-[46rem] h-[12.9375rem]"
+                style="transform: rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px); transform-origin: center; transform-style: preserve-3d;"
             >
-                <Image
-                    src={banner}
-                    alt="banner"
-                    loading="eager"
-                    width="736"
-                    class="absolute m-0 pointer-events-none z-20"
-                />
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-default-banner1 to-default-banner2"
-                >
-                </div>
-                <div class="absolute inset-0 bg-dither-14"></div>
-                <div
-                    class="border border-default-border border-solid shadow-d h-full z-10"
-                >
-                </div>
-            </div>
-            <SiteButtonContainer class="w-[46rem]" />
-            <div class="flex flex-row max-w-fit">
-                <div class="w-[14rem] basis-auto">
-                    <NavigationDiv />
+                <div transition:animate={customTransition} id="viewport">
+                    <div
+                        class="absolute inset-0 h-full bg-gradient-to-b from-default-bg1 to-default-bg2 bg-no-repeat -z-20"
+                    >
+                    </div>
+                    <div
+                        class="w-screen h-max bg-dither-10 fixed inset-0 -z-20"
+                    >
+                    </div>
+                    <div
+                        class="max-w-fit mx-auto flex justify-center min-w-screen flex-col border border-default-border border-solid shadow-d relative"
+                        style="image-rendering: pixelated;"
+                    >
+                        <Header />
 
-                    <MainDiv>
-                        <h1>theme</h1>
-                        <p>
-                            <small>
-                                ooOOOHHhh my GOD. i am SO BLINDED by this
-                                DEFAULT THEME!!
-                            </small>
-                        </p>
+                        <div class="flex flex-row max-w-fit">
+                            <SideBar />
+                            <main class="w-[32rem] basis-auto">
+                                <slot />
+                            </main>
+                        </div>
 
-                        <select id="theme-select" class="bg-transparent">
-                            <option value="theme-default"
-                                >default (light)</option
-                            >
-                            <option value="theme-dark">dark</option>
-                            <option value="theme-catppuccin">catppuccin</option>
-                            <option value="theme-sunset">sunset</option>
-                            <option value="theme-matcha">matcha</option>
-							<option value="theme-durpy">DurpyDoo</option>
-                        </select>
-
-                        <script>
-                            function changeTheme(event) {
-                                const theme = event.target.value;
-
-                                // Remove all theme classes
-                                document.documentElement.classList.remove(
-                                    "theme-dark",
-                                    "theme-catppuccin",
-                                    "theme-sunset",
-                                    "theme-matcha",
-									"theme-durpy",
-                                    "theme-default"
-                                );
-
-                                // Add the selected theme class
-                                document.documentElement.classList.add(theme);
-
-                                // Store the selected theme in localStorage to persist the selection
-                                localStorage.setItem("theme", theme);
-                            }
-
-                            function loadTheme() {
-                                // Get the saved theme from localStorage or default to 'theme-default'
-                                const savedTheme =
-                                    localStorage.getItem("theme") ||
-                                    "theme-default";
-
-                                // Set the theme class on the root element
-                                document.documentElement.classList.add(
-                                    savedTheme
-                                );
-
-                                // Set the selected value in the <select> menu
-                                document.getElementById("theme-select").value =
-                                    savedTheme;
-                            }
-
-                            // Add event listener after the DOM has loaded
-                            document.addEventListener(
-                                "DOMContentLoaded",
-                                () => {
-                                    // Attach event listener to the theme select dropdown
-                                    document
-                                        .getElementById("theme-select")
-                                        .addEventListener(
-                                            "change",
-                                            changeTheme
-                                        );
-
-                                    // Call loadTheme to apply the saved theme
-                                    loadTheme();
-                                }
-                            );
-                        </script>
-                    </MainDiv>
-
-                    <MainDiv>
-                        <h1>link me!</h1>
-
-                        <p>go ahead and hotlink<br>
-                        <small>(if this website doesn't die)</small></p>
-
-                        <a href="https://taxevaiden.pages.dev"
-                            ><img
-                                src={websiteButton.src}
-                                alt="taxevaiden's website"
-                            /></a
-                        >
-                        <Code
-                            code='<a href="https://taxevaiden.pages.dev"><img src="/src/images/misc/88x31button.gif" alt="taxevaiden&apos;s website"></a>'
-                            lang="html"
-                        />
-                    </MainDiv>
-
-                    <SocialsDiv
-                        links="bluesky,https://bsky.app/profile/taxevaiden.pages.dev;twitter,https://x.com/taxevaiden;youtube,https://www.youtube.com/@taxevaiden"
-                    />
-
-                    <MainDiv>
-                        <h1><a href="https://status.cafe/">status.cafe</a></h1>
-
-                        <div id="statuscafe" class="mb-4">
-                            <div
-                                id="statuscafe-username"
-                                class="mb-2 drop-shadow-t"
-                            >
-                            </div><div
-                                id="statuscafe-content"
-                                class="mx-2 mb-2 drop-shadow-t"
-                            >
-                            </div>
-                        </div><script
-                            src="https://status.cafe/current-status.js?name=aiden20121"
-                            defer></script>
-
-                        <h1>
-                            <a href="https://internetometer.com/">internets</a>
-                        </h1>
-
-                        <a href="http://internetometer.com/give/50492"
-                            ><img
-                                src="http://internetometer.com/image/50492.png"
-                                alt="internetometer"
-                            /></a
-                        >
-                    </MainDiv>
-                </div>
-                <div class="w-[32rem] basis-auto">
-                    <slot />
+                        <Footer />
+                    </div>
                 </div>
             </div>
-
-            <MainDiv class="text-center">
-                <p class="m-0 leading-3">
-                    <small>
-                        | est. june 9, 2024 :: &COPY; 2024 taxevaiden :: powered
-                        by astro, github, cloudflare, and with love :3 |
-                    </small>
-                </p>
-            </MainDiv>
         </div>
     </body>
 </html>
+
+<style is:global>
+    /* flip */
+    @keyframes flip-begin {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(90deg);
+        }
+
+        100% {
+            transform: rotateY(90deg);
+        }
+    }
+
+    @keyframes flip-end {
+        0% {
+            transform: rotateY(-90deg);
+        }
+
+        50% {
+            transform: rotateY(-90deg);
+        }
+
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    /* fade */
+
+    @keyframes fade-begin {
+        0% {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        100% {
+            opacity: 0;
+            z-index: 1;
+        }
+    }
+
+    @keyframes fade-end {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* zoom */
+
+    @keyframes zoomIn-begin {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(6);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(12);
+            opacity: 0;
+        }
+    }
+
+    @keyframes zoomIn-end {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        50% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes zoomOut-begin {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        75% {
+            transform: scale(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(0);
+            opacity: 0;
+        }
+    }
+
+    @keyframes zoomOut-end {
+        0% {
+            transform: scale(12);
+            opacity: 0;
+        }
+
+        50% {
+            transform: scale(6);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* rotate */
+
+    @keyframes rotate-begin {
+        0% {
+            transform: rotateZ(0deg);
+            opacity: 1;
+        }
+
+        50% {
+            transform: rotateZ(180deg);
+            opacity: 1;
+        }
+
+        51% {
+            transform: rotateZ(183.6deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotateZ(360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes rotate-end {
+        0% {
+            transform: rotateZ(0deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: rotateZ(180deg);
+            opacity: 0;
+        }
+
+        51% {
+            transform: rotateZ(183.6deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotateZ(360deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateCounter-begin {
+        0% {
+            transform: rotateZ(0deg);
+            opacity: 1;
+        }
+
+        50% {
+            transform: rotateZ(-180deg);
+            opacity: 1;
+        }
+
+        51% {
+            transform: rotateZ(-183.6deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotateZ(-360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes rotateCounter-end {
+        0% {
+            transform: rotateZ(0deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: rotateZ(-180deg);
+            opacity: 0;
+        }
+
+        51% {
+            transform: rotateZ(-183.6deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotateZ(-360deg);
+            opacity: 1;
+        }
+    }
+
+    /* slide */
+    @keyframes slideLeft-begin {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translateX(-100vw);
+        }
+    }
+
+    @keyframes slideLeft-end {
+        0% {
+            transform: translateX(100vw);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    @keyframes slideRight-begin {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+
+    @keyframes slideRight-end {
+        0% {
+            transform: translateX(-100vw);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    @keyframes slideUp-begin {
+        0% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(-100vh);
+        }
+    }
+
+    @keyframes slideUp-end {
+        0% {
+            transform: translateY(100vh);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes slideDown-begin {
+        0% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(100vh);
+        }
+    }
+
+    @keyframes slideDown-end {
+        0% {
+            transform: translateY(-100vh);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+</style>

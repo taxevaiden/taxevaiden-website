@@ -1,5 +1,5 @@
 ---
-import MainDiv from './MainDiv.astro';
+import MainDiv from '../main/MainDiv.astro';
 
 interface Props {
   links: string; //home,index;about,about
@@ -12,7 +12,7 @@ const linksArray = links.split(";");
 <MainDiv>
     <h1>socials</h1>
 
-    <ul class="list-none">
+    <ul class="list-none list-image-none">
         {linksArray.map(link => {
             const [text, url] = link.split(",");
             return <li><a href={url} class="inline px-2 !m-0">{text}</a></li>;

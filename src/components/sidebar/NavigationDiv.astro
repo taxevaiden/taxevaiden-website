@@ -1,5 +1,5 @@
 ---
-import MainDiv from './MainDiv.astro';
+import MainDiv from '../main/MainDiv.astro';
 
 //interface Props {
 //  links: string; //home,index;about,about
@@ -67,14 +67,14 @@ const links = [
 
 <MainDiv>
     <p class="w-[9.5rem] text-default-text2">
-        the arm was covering "navigation." idk what to do with this blank space so here u go 
+        the arm was covering "navigation". idk what to do with this blank space so here u go 
     </p>
     <h1 class="">navigation</h1>
 
-    <ul class="list-none">
+    <ul class="list-none list-image-none">
         {links.map((link => 
             <li><a href={link.link} class="inline px-2">{link.name}</a></li>
-            <ul class="list-none mb-0">
+            <ul class="list-none list-image-none mb-0">
                 {link.subLinks.map(((subLink, index) => 
                     <li>
                         {subLink.includePage ? (

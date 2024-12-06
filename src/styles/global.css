@@ -19,27 +19,23 @@
     }
     
     body {
-        @apply leading-5
-    }
-
-    h1,h2,h3,p,li,small {
-        @apply drop-shadow-t
+        @apply leading-4
     }
 
     h1,h2,h3 {
-        @apply font-semibold my-3
+        @apply my-4
     }
     
     h1 {
-        @apply text-3xl
+        @apply font-black
     }
     
     h2 {
-        @apply text-2xl
+        @apply font-extrabold
     }
     
     h3 {
-        @apply text-xl
+        @apply font-bold
     }
     
     p {
@@ -51,7 +47,7 @@
     }
     
     ul {    
-        @apply mb-4 list-disc list-inside
+        @apply mb-4 list-image-[url(../images/dither-patterns/8.png)] list-inside
     }
     
     a {

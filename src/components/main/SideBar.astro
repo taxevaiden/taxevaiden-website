@@ -1,0 +1,70 @@
+---
+import NavigationDiv from "../sidebar/NavigationDiv.astro";
+import ThemeSwitcher from "../sidebar/ThemeSwitcher.astro";
+import MainDiv from "./MainDiv.astro";
+import SocialsDiv from "../sidebar/SocialsDiv.astro";
+import { Code } from "astro:components";
+
+import websiteButton from "../../images/88x31button.gif";
+---
+
+<div class="w-[16rem] basis-auto">
+    <NavigationDiv />
+
+    <MainDiv>
+        <h1>theme</h1>
+        <p>
+            <small>
+                ooOOOHHhh my GOD. i am SO BLINDED by this DEFAULT THEME!!
+            </small>
+        </p>
+
+        <ThemeSwitcher />
+    </MainDiv>
+
+    <MainDiv>
+        <h1>link me!</h1>
+
+        <p>
+            go ahead and hotlink<br />
+            <small>(if this website doesn't die)</small>
+        </p>
+
+        <a href="https://taxevaiden.pages.dev"
+            ><img src={websiteButton.src} alt="taxevaiden's website" /></a
+        >
+        <Code
+            code='<a href="https://taxevaiden.pages.dev"><img src="/src/images/misc/88x31button.gif" alt="taxevaiden&apos;s website"></a>'
+            lang="html"
+        />
+    </MainDiv>
+
+    <SocialsDiv
+        links="bluesky,https://bsky.app/profile/taxevaiden.pages.dev;twitter,https://x.com/taxevaiden;youtube,https://www.youtube.com/@taxevaiden"
+    />
+
+    <MainDiv>
+        <h1><a href="https://status.cafe/">status.cafe</a></h1>
+
+        <div id="statuscafe" class="mb-4">
+            <div id="statuscafe-username" class="mb-2 drop-shadow-t"></div><div
+                id="statuscafe-content"
+                class="mx-2 mb-2 drop-shadow-t"
+            >
+            </div>
+        </div><script
+            src="https://status.cafe/current-status.js?name=aiden20121"
+            defer></script>
+
+        <h1>
+            <a href="https://internetometer.com/">internetometer</a>
+        </h1>
+
+        <a href="http://internetometer.com/give/50492"
+            ><img
+                src="http://internetometer.com/image/50492.png"
+                alt="internetometer"
+            /></a
+        >
+    </MainDiv>
+</div>
