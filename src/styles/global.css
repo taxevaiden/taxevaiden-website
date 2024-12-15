@@ -9,53 +9,54 @@
         image-rendering: pixelated;
         /*bg-[center_top_1840px]*/
     }
-    
+
     pre {
-        @apply p-4 my-4 bg-default-pre bg-no-repeat
-    }
-    
-    code {
-        @apply overflow-scroll
-    }
-    
-    body {
-        @apply leading-4
+        @apply p-4 my-4 bg-default-pre bg-no-repeat;
     }
 
-    h1,h2,h3 {
-        @apply my-4
+    code {
+        @apply overflow-scroll;
     }
-    
-    h1 {
-        @apply font-black
+
+    body {
+        @apply leading-4;
     }
-    
-    h2 {
-        @apply font-extrabold
-    }
-    
+
+    h1,
+    h2,
     h3 {
-        @apply font-bold
+        @apply my-4;
     }
-    
+
+    h1 {
+        @apply font-black;
+    }
+
+    h2 {
+        @apply font-extrabold;
+    }
+
+    h3 {
+        @apply font-bold;
+    }
+
     p {
-        @apply mb-4
+        @apply mb-4;
     }
-    
+
     small {
-        @apply text-xs text-default-text2
+        @apply text-xs text-default-text2;
     }
-    
-    ul {    
-        @apply mb-4 list-image-[url(../images/dither-patterns/8.png)] list-inside
+
+    ul {
+        @apply mb-4 list-image-[url(../images/dither-patterns/8.png)] list-inside;
     }
-    
+
     a {
-        @apply text-default-a transition-all
+        @apply text-default-a transition-all;
     }
-    
+
     a:hover {
-        @apply text-default-ahover underline tracking-wider
+        @apply text-default-ahover underline tracking-wider;
     }
 }
-

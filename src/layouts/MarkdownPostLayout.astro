@@ -1,23 +1,28 @@
 ---
-
 import MainDiv from "../components/main/MainDiv.astro";
+
+import GenericComments from "../components/post/GenericComments.astro";
+import Comments from "../components/post/Comments.astro";
+
 import "../styles/global.css";
 
-import Layout from './Layout.astro';
+import Layout from "./Layout.astro";
 
 const { frontmatter } = Astro.props;
 
 const title = `${frontmatter.title} | taxevaiden's website`;
 const description = frontmatter.description;
-
 ---
 
 <Layout title={title} description={description}>
-	<MainDiv>
-		<a href="../../blog">&#129168;&#129168; go back!</a>
-		<h1>{frontmatter.title}</h1>
-		<p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>
-	
-		<slot />
-	</MainDiv>
+    <MainDiv>
+        <a href="../../blog">&#129168;&#129168; go back!</a>
+        <h1>{frontmatter.title}</h1>
+        <p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>
+
+        <slot />
+    </MainDiv>
+    <Comments server:defer>
+        <GenericComments slot="fallback" />
+    </Comments>
 </Layout>

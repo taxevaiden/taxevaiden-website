@@ -5,18 +5,32 @@ interface Props {
     date?: string;
     description: string;
 }
-
 ---
 
 <article class="mb-4">
-    {Astro.props.link ? (
-        <span><a href={Astro.props.link}><h3 class="my-2">{Astro.props.title}</h3></a></span>
-    ) : (
-        <span><h3 class="my-2">{Astro.props.title}</h3></span>
-    )}
-    
-    {Astro.props.date && <p class="-mt-1 mb-2 ml-2"><small class="my-0">{Astro.props.date}</small></p>}
-    <p class="mt-1 ml-2">{Astro.props.description}</p>
+    {
+        Astro.props.link ? (
+            <span>
+                <a href={Astro.props.link}>
+                    <h3 class="my-2 inline">{Astro.props.title}</h3>
+                </a>
+            </span>
+        ) : (
+            <span>
+                <h3 class="my-2 inline">{Astro.props.title}</h3>
+            </span>
+        )
+    }
+
+    {
+        Astro.props.date && (
+            <p class="mb-2 ml-2 inline">
+                <small class="my-0">{Astro.props.date}</small>
+            </p>
+        )
+    }
+
+    <p class="mt-1 mb-1 ml-2">{Astro.props.description}</p>
 
     <!-- add other stuff to the card here..... -->
     <slot />

@@ -1,56 +1,94 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import MainDiv from '../components/main/MainDiv.astro';
-import ChangelogDiv from '../components/ChangelogDiv.astro';
+import Layout from "../layouts/Layout.astro";
+import MainDiv from "../components/main/MainDiv.astro";
+import ChangelogDiv from "../components/ChangelogDiv.astro";
 ---
 
 <Layout title="home | taxevaiden's website" description="honey i'm home!">
-		<MainDiv> 
-			<h1>what's the important stuff that's happening yo?</h1>
-			<p>nothing's happening :pensive:</p>
-		</MainDiv>
+    <MainDiv>
+        <h1>what's the important stuff that's happening yo?</h1>
+        <p>nothing's happening :pensive:</p>
+    </MainDiv>
 
-		<MainDiv>
-			<h1>hello!</h1>
+    <MainDiv>
+        <h1>hello!</h1>
 
-			<p>welcome to my web. usually i just post to my blog or put pointless new stuff on this website.</p>
-			<p>why did i make this?</p>
-			
-			<ul>
-				<li>I wanted to</li>
-				<li>I'm somewhat good at coding</li>
-				<li>I don't know</li>
-			</ul>
+        <p>
+            welcome to my web. usually i just post to my blog or put pointless
+            new stuff on this website.
+        </p>
+        <p>why did i make this?</p>
 
-			<h1 id="important-notes">IMPORTANT NOTES!!!</h1>
-		
-			<ul>
-				<li>this website was made with a 1920x1080 screen using arc (chromium) as the browser</li>
-				<li>enable javascript. it's not required, but if you want things like changing things i recommend you enable javascript</li>
-				<li>you should try refreshing without cache often <b>(ctrl+shift+r)</b> to see the "pointless new stuff" on this website.</li>
-				<li>this website is not mobile friendly. at all. it's not designed for it yet and i plan to work on other things other than mobile support for this website. you can probably just use a tablet for now.</li>
-				<li>adding onto that, this website is intended to be viewed on windows.</li>
-			</ul>
-		</MainDiv>
+        <ul>
+            <li>I wanted to</li>
+            <li>I'm somewhat good at coding</li>
+            <li>I don't know</li>
+        </ul>
 
-		<ChangelogDiv small/>
+        <h1 id="important-notes">IMPORTANT NOTES!!!</h1>
 
-		<MainDiv>
-			<h1 id="qna">Q&A</h1>
+        <ul>
+            <li>
+                this website was made with a 1920x1080 screen using arc
+                (chromium) as the browser
+            </li>
+            <li>
+                enable javascript. it's not required, but if you want things
+                like changing things i recommend you enable javascript
+            </li>
+            <li>
+                you should try refreshing without cache often <b
+                    >(ctrl+shift+r)</b
+                > to see the "pointless new stuff" on this website.
+            </li>
+            <li>
+                this website is not mobile friendly. at all. it's not designed
+                for it yet and i plan to work on other things other than mobile
+                support for this website. you can probably just use a tablet for
+                now.
+            </li>
+            <li>
+                adding onto that, this website is intended to be viewed on
+                windows.
+            </li>
+        </ul>
+    </MainDiv>
 
-			<p>Q: what did you use to make this website?<br>
-			A: i used cloudflare pages to host, astro to make the website, vscode to code the website, and procreate for the cool arts (i feel like i'm missing out for not using ibisPaint X,,)</p>
+    <ChangelogDiv small />
 
-			<p>Q: what happened to the old website?<br>
-			A: the old website's code was terrible. i hated managing it. ok that's all
-			
-			<p>Q: why couldn't you host stuff like this on neocities or nekoweb?<br>
-			A: cloudflare gave me a lot more control, i can do ANything</p>
-			
-			<p>Q: why doesn't this website have stuff that the old one had yet?<br>
-			A: this website is still a WIP. i'm still working on stuff!!</p>
+    <MainDiv>
+        <h1 id="qna">Q&A</h1>
 
-			<p>Q: are you ever adding comments?<br>
-			A: maybe, maybe not. the service i used for comments was uhh,, weird i guess. it was good but oh my god i HATED THAT WATERMARK.... i had to pay to get rid of that i'm POOR</p>
-		</MainDiv>
+        <p>
+            Q: what did you use to make this website?<br />
+            A: i used cloudflare pages to host, astro to make the website, vscode
+            to code the website, and procreate for the cool arts (i feel like i'm
+            missing out for not using ibisPaint X,,)
+        </p>
+
+        <p>
+            Q: what happened to the old website?<br />
+            A: the old website's code was terrible. i hated managing it. ok that's
+            all
+        </p>
+
+        <p>
+            Q: why couldn't you host stuff like this on neocities or nekoweb?<br
+            />
+            A: cloudflare gave me a lot more control, i can do ANything
+        </p>
+
+        <p>
+            Q: why doesn't this website have stuff that the old one had yet?<br
+            />
+            A: this website is still a WIP. i'm still working on stuff!!
+        </p>
+
+        <p>
+            Q: are you ever adding comments?<br />
+            A: maybe, maybe not. the service i used for comments was uhh,, weird
+            i guess. it was good but oh my god i HATED THAT WATERMARK.... i had to
+            pay to get rid of that i'm POOR
+        </p>
+    </MainDiv>
 </Layout>

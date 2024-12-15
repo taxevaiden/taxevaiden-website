@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import MainDiv from '../components/main/MainDiv.astro';
+import MainDiv from "../components/main/MainDiv.astro";
 
 const projectTitles = [
     "this website",
     "the old website",
+    "song of the day",
     "cool sandbox game",
     "a swordfight game",
     "verlet integration tests",
@@ -15,10 +16,21 @@ const projectTitles = [
 const projectDescriptions = [
     "i really don't know what else to say here. it's this website",
     "ah, the good old days..",
+    "get new songs everyday.",
     "i used to make roblox games back in the day. this is one of them! (it's kinda bad)",
     "another roblox game (it's kinda bad)",
     "i made a lot of things with verlet integration and it was very.. stable! (no it wasn't)",
     "i had a big vision. one day. one day chat",
+];
+
+const projectLinks = [
+    null,
+    null,
+    "https://sotd.pages.dev",
+    null,
+    null,
+    null,
+    null,
 ];
 ---
 
@@ -30,12 +42,20 @@ const projectDescriptions = [
 
         <div class="project-list">
             {
-                projectTitles.map((title, index) => (
-                    <Card
-                        title={title}
-                        description={projectDescriptions[index]}
-                    />
-                ))
+                projectTitles.map((title, index) =>
+                    projectLinks[index] ? (
+                        <Card
+                            title={title}
+                            description={projectDescriptions[index]}
+                            link={projectLinks[index]}
+                        />
+                    ) : (
+                        <Card
+                            title={title}
+                            description={projectDescriptions[index]}
+                        />
+                    ),
+                )
             }
         </div>
     </MainDiv>

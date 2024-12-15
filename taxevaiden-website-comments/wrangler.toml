@@ -1,0 +1,7 @@
+name = "taxevaiden-website-comments"
+main = "src/index.ts"
+compatibility_date = "2024-12-13"
+
+kv_namespaces = [
+  { binding = "TAXEVAIDEN_COMMENTS_KV", id = "39245d2908d14ea494c21bdaedaabcf6" }
+]
