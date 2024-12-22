@@ -1,9 +1,6 @@
 ---
 import MainDiv from "../components/main/MainDiv.astro";
 
-import GenericComments from "../components/post/GenericComments.astro";
-import Comments from "../components/post/Comments.astro";
-
 import "../styles/global.css";
 
 import Layout from "./Layout.astro";
@@ -22,7 +19,4 @@ const description = frontmatter.description;
 
         <slot />
     </MainDiv>
-    <Comments server:defer>
-        <GenericComments slot="fallback" />
-    </Comments>
 </Layout>
