@@ -27,7 +27,7 @@ i can't scroll anymore.
 
 i refresh the app and i get greeted with this message.
 
-![tiktok ban message](/src/images/postImages/newyear/ban-message.png)
+![tiktok ban message](../../images/postImages/newyear/ban-message.png)
 
 i'm actually so sad bro as i was scrolling, old tiktoks i already liked, or just old ones (from like 2020) in general was on my for you page.
 
