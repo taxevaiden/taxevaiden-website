@@ -1,20 +1,40 @@
 ---
-const { heading } = Astro.props;
+const { heading, nextHeading, index, length } = Astro.props;
 ---
 
 <li >
     <a href={'#' + heading.slug}>
-        <slot />
+        <span>
+            {
+                index == (length - 1) || ((heading.depth - nextHeading.depth) > (heading.depth - 3)) ? (
+                    [...Array(heading.depth - 2)].map((_, i) => (
+                        i === 0 ? (
+                            <span>&#9492;</span>
+                        ) : (
+                            <span>&#9472;</span>
+                        )
+                    ))
+                ) : (
+                    [...Array(heading.depth - 2)].map((_, i) => (
+                        i === 0 ? (
+                            <span>&#9500;</span>
+                        ) : (
+                            <span>&#9472;</span>
+                        )
+                    ))
+                )
+            }
+        </span>
         {heading.text}
     </a>
-    {
+    <!-- {
         heading.subheadings.length > 0 && (
         <ul class="list-none list-image-none mb-0">
             {heading.subheadings.map((subheading, index) => (
                 
                 <Astro.self heading={subheading}>
                     <span>
-                        {heading.subheadings.length > 1 ? (    
+                        {(heading.subheadings.length > 1) ? (    
                             [...Array(subheading.depth - 2)].map((_, i) => (
                                 i === 0 ? (
                                     <span>&#9500;</span>
@@ -29,7 +49,6 @@ const { heading } = Astro.props;
                                 ) : (
                                     <span>&#9472;</span>
                                 )
-
                             ))
                         )}
                     </span>
@@ -37,5 +56,5 @@ const { heading } = Astro.props;
             ))}
         </ul>
         )
-    }
+    } -->
 </li>

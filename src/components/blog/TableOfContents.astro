@@ -3,34 +3,14 @@ import MainDiv from "../main/MainDiv.astro";
 import TableOfContentsHeading from "../blog/TableOfContentsHeading.astro"
 
 const { headings } = Astro.props;
-const toc = buildToc(headings)
-
-// code from https://kld.dev/building-table-of-contents/
-// thank you
-
-function buildToc(headings) {
-    const toc = [];
-    const parentHeadings = new Map();
-    headings.forEach((h) => {
-        const heading = { ...h, subheadings: [] };
-        parentHeadings.set(heading.depth, heading);
-        if (heading.depth === 2) {
-            toc.push(heading);
-        } else {
-            parentHeadings.get(heading.depth - 1).subheadings.push(heading);
-        }
-    });
-    return toc;
-}
-
 ---
-<MainDiv class="w-96 float-right ml-4 mb-4">
+<MainDiv class="w-72 float-right ml-4 mb-4">
 
   <h1>table of contents</h1>
 
   <ul class="list-none list-image-none">
-    {toc.map((heading) => (
-      <TableOfContentsHeading heading={heading} />
+    {headings.map((heading, index) => (
+      <TableOfContentsHeading heading={heading} nextHeading={headings[Math.min(index + 1, headings.length - 1)]} index={index} length={headings.length} />
     ))}
   </ul>
 </MainDiv>

@@ -7,7 +7,7 @@ pubDate: 2025-1-19
 url: /posts/newyear/
 ---
 
-*Hey um quick note I finished this post on the day this was posted but I never commited this post to theh actual website, so uh here you go - taxevaiden from March 2025*
+*Hey um quick note I finished this post in like January but I never commited this post to theh actual website, so uh here you go - taxevaiden from March 2025*
 
 it's 2025 already! i know i'm like, 18 days late but i've been, uh, pretty busy working on other projects
 
