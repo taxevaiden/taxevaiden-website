@@ -3,7 +3,7 @@ import Image from "astro/components/Image.astro";
 import SiteButtonContainer from "./SiteButtonContainer.astro";
 import banner from "../../images/banner.png";
 
-const bannerWidth = 16+32;
+const bannerWidth = 16+38;
 ---
 
 <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] -z-10"></div>
@@ -26,4 +26,4 @@ const bannerWidth = 16+32;
     <div class="border border-default-border border-solid shadow-d h-full z-10">
     </div>
 </div>
-<SiteButtonContainer class="w-[46rem]" />
+<SiteButtonContainer class=`w-[${bannerWidth}rem]` />

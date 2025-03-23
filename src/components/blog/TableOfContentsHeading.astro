@@ -1,0 +1,28 @@
+---
+const { heading } = Astro.props;
+---
+
+<li class="px-2">
+    <a href={'#' + heading.slug}>
+        <slot />
+        {heading.text}
+    </a>
+    {
+        heading.subheadings.length > 0 && (
+        <ul class="list-none list-image-none mb-0">
+            {heading.subheadings.map((subheading, index) => (
+                
+                <Astro.self heading={subheading}>
+                    <span>
+                    {index === heading.subheadings.length - 1 ? (
+                                <span>&#9492;</span>
+                            ) : (
+                                <span>&#9500;</span>
+                            )}
+                </span>
+                </Astro.self>
+            ))}
+        </ul>
+        )
+    }
+</li>

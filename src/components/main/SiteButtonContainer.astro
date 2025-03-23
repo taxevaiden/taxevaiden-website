@@ -1,4 +1,6 @@
 ---
+const { class } = Astro.props;
+
 import "../../styles/global.css";
 
 import b1 from "../../images/buttons/e26f5c9e.gif"
@@ -109,7 +111,7 @@ const buttons = [
 ]
 ---
 
-<div class=`w-[48rem] overflow-hidden relative bg-default-div border border-default-border border-dotted`>
+<div class=`w-[54rem] overflow-hidden relative bg-default-div border border-default-border border-dotted`>
   <div class="flex flex-nowrap h-[31px] animate-scroll hover:animate-pause">
     {/* Original buttons */}
     {
@@ -176,7 +178,7 @@ const buttons = [
 }
 
 .animate-scroll2 {
-  animation: scroll2 calc(50s / 9) linear infinite;
+  animation: scroll2 calc(50s / 11) linear infinite;
 }
 
 .hover\:animate-pause:hover {

@@ -7,15 +7,15 @@ pubDate: 2025-1-19
 url: /posts/newyear/
 ---
 
-*Hey um quick note I finished this post on the day this was posted but I never commited this post to theh actual website, so uh here you go*
+*Hey um quick note I finished this post on the day this was posted but I never commited this post to theh actual website, so uh here you go - taxevaiden from March 2025*
 
 it's 2025 already! i know i'm like, 18 days late but i've been, uh, pretty busy working on other projects
 
-i really just made this post to talk about what's happening right now, and what i've been doing
+i really just made this post to talk about what's happening right now
 
 ## what is happening?
 
-so um, my attention span may start to heal now
+so um, my attention span may start to heal now.
 
 ### the tiktok ban
 
@@ -34,5 +34,3 @@ i'm actually so sad bro as i was scrolling, old tiktoks i already liked, or just
 i also checked [tiktok.com](https://tiktok.com) and it was down too.
 
 But uh that same day it was REVIVED somehow,,, our president saved it apparently so :shrug:
-
-Anyway i just wanted to make this post to update you guys
