@@ -1,112 +1,133 @@
 ---
 import MainDiv from "../main/MainDiv.astro";
 
-const twtxtUrl = 'https://taxevaiden.pages.dev/twtxt.txt'; // Fetch from the public directory
+const twtxtUrl = "https://taxevaiden.pages.dev/twtxt.txt"; // Fetch from the public directory
 
 // Helper function to format the date
 function formatDate(date) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-  const day = String(date.getDate()).padStart(2, '0');
-  let hours = date.getHours();
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12; // Convert 0 to 12 for 12-hour format
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+    const day = String(date.getDate()).padStart(2, "0");
+    let hours = date.getHours();
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12; // Convert 0 to 12 for 12-hour format
 
-  if (+minutes > 0) {
-
-  }
-  return `${year}-${month}-${day} ${hours}:${minutes} ${ampm}`;
+    if (+minutes > 0) {
+    }
+    return `${year}-${month}-${day} ${hours}:${minutes} ${ampm}`;
 }
 
 function formatRelativeTime(date) {
-  const now = new Date();
-  const diffInSeconds = Math.floor((now - date) / 1000);
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.valueOf() - date.valueOf()) / 1000);
 
-  if (diffInSeconds < 60) {
-    return "posted just now";
-  } else if (diffInSeconds < 3600) {
-    const minutes = Math.floor(diffInSeconds / 60);
-    return `posted ${minutes} minute${minutes > 1 ? 's' : ''} ago`;
-  } else if (diffInSeconds < 86400) {
-    const hours = Math.floor(diffInSeconds / 3600);
-    return `posted ${hours} hour${hours > 1 ? 's' : ''} ago`;
-  } else {
-    // More than a day ago
-    const isSameYear = now.getFullYear() === date.getFullYear();
-    const options = isSameYear
-      ? { month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }
-      : { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+    if (diffInSeconds < 60) {
+        return "posted just now";
+    } else if (diffInSeconds < 3600) {
+        const minutes = Math.floor(diffInSeconds / 60);
+        return `posted ${minutes} minute${minutes > 1 ? "s" : ""} ago`;
+    } else if (diffInSeconds < 86400) {
+        const hours = Math.floor(diffInSeconds / 3600);
+        return `posted ${hours} hour${hours > 1 ? "s" : ""} ago`;
+    } else {
+        // More than a day ago
+        const isSameYear = now.getFullYear() === date.getFullYear();
+        const options = isSameYear
+            ? {
+                  month: "short",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "numeric",
+                  hour12: true,
+              }
+            : {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "numeric",
+                  hour12: true,
+              };
 
-    return date.toLocaleString('en-US', options);
-  }
+        return date.toLocaleString("en-US", options);
+    }
 }
 
 function formatPostTime(date) {
-  const now = new Date();
-  const diffInSeconds = Math.floor((now - date) / 1000);
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.valueOf() - date.valueOf()) / 1000);
 
-  if (diffInSeconds < 60) {
-    return "posted just now";
-  } else if (diffInSeconds < 3600) {
-    const minutes = Math.floor(diffInSeconds / 60);
-    return `posted ${minutes} minute${minutes > 1 ? 's' : ''} ago`;
-  } else if (diffInSeconds < 86400 && now.toDateString() === date.toDateString()) {
-    const hours = Math.floor(diffInSeconds / 3600);
-    return `posted ${hours} hour${hours > 1 ? 's' : ''} ago`;
-  } else if (now.toDateString() === date.toDateString()) {
-    const hours = date.getHours() % 12 || 12;
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
-    return `posted ${hours}:${minutes} ${ampm}`;
-  } else {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const hours = date.getHours() % 12 || 12;
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
-    return `posted ${year}-${month}-${day} ${hours}:${minutes} ${ampm}`;
-  }
+    if (diffInSeconds < 60) {
+        return "posted just now";
+    } else if (diffInSeconds < 3600) {
+        const minutes = Math.floor(diffInSeconds / 60);
+        return `posted ${minutes} minute${minutes > 1 ? "s" : ""} ago`;
+    } else if (
+        diffInSeconds < 86400 &&
+        now.toDateString() === date.toDateString()
+    ) {
+        const hours = Math.floor(diffInSeconds / 3600);
+        return `posted ${hours} hour${hours > 1 ? "s" : ""} ago`;
+    } else if (now.toDateString() === date.toDateString()) {
+        const hours = date.getHours() % 12 || 12;
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const ampm = date.getHours() >= 12 ? "PM" : "AM";
+        return `posted ${hours}:${minutes} ${ampm}`;
+    } else {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = date.getHours() % 12 || 12;
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const ampm = date.getHours() >= 12 ? "PM" : "AM";
+        return `posted ${year}-${month}-${day} ${hours}:${minutes} ${ampm}`;
+    }
 }
 
 // Fetch and parse the twtxt file
 let latestPost = null;
 try {
-  const response = await fetch(twtxtUrl);
-  if (response.ok) {
-    const text = await response.text();
-    const posts = text
-      .split('\n')
-      .filter(line => line.trim() && !line.startsWith('#')) // Ignore comments
-      .map(line => {
-        const [timestamp, ...content] = line.split(/\s+/);
-        const date = new Date(timestamp);
-        return {
-          timestamp: date instanceof Date && !isNaN(date) ? date : null,
-          content: content.join(' '),
-        };
-      })
-      .filter(post => post.timestamp); // Filter out invalid timestamps
-    // Sort by timestamp and get the latest post
-    latestPost = posts.sort((a, b) => b.timestamp - a.timestamp)[0];
-  }
+    const response = await fetch(twtxtUrl);
+    if (response.ok) {
+        const text = await response.text();
+        const posts = text
+            .split("\n")
+            .filter((line) => line.trim() && !line.startsWith("#")) // Ignore comments
+            .map((line) => {
+                const [timestamp, ...content] = line.split(/\s+/);
+                const date = new Date(timestamp);
+                return {
+                    timestamp:
+                        date instanceof Date && !isNaN(date.valueOf()) ? date : null,
+                    content: content.join(" "),
+                };
+            })
+            .filter((post) => post.timestamp); // Filter out invalid timestamps
+        // Sort by timestamp and get the latest post
+        latestPost = posts.sort((a, b) => b.timestamp.valueOf() - a.timestamp.valueOf())[0];
+    }
 } catch (error) {
-  console.error('Failed to fetch twtxt:', error);
+    console.error("Failed to fetch twtxt:", error);
 }
 ---
 
 <MainDiv>
-    <h1 class="mb-4">latest twtxt post <a href="https://github.com/buckket/twtxt#readme">???</a></h1>
+    <h1 class="mb-4">
+        latest twtxt post <a href="https://github.com/buckket/twtxt#readme"
+            >???</a>
+    </h1>
 
-    {latestPost ? (
-      <div class="pl-2 pb-4">
-        <div class="text-sm text-default-text2">
-            {formatPostTime(latestPost.timestamp)}
-        </div>
-        <div class="mt-2">{latestPost.content}</div>
-      </div>
-    ) : (
-      <p>no posts available :((</p>
-    )}
-  </MainDiv>
+    {
+        latestPost ? (
+            <div class="pl-2 pb-4">
+                <div class="text-sm text-default-text2">
+                    {formatPostTime(latestPost.timestamp)}
+                </div>
+                <div class="mt-2">{latestPost.content}</div>
+            </div>
+        ) : (
+            <p>no posts available :((</p>
+        )
+    }
+</MainDiv>

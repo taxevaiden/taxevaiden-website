@@ -2,27 +2,19 @@
 const { heading, nextHeading, index, length } = Astro.props;
 ---
 
-<li >
-    <a href={'#' + heading.slug}>
+<li>
+    <a href={"#" + heading.slug}>
         <span>
             {
-                index == (length - 1) || ((heading.depth - nextHeading.depth) > (heading.depth - 3)) ? (
-                    [...Array(heading.depth - 2)].map((_, i) => (
-                        i === 0 ? (
-                            <span>&#9492;</span>
-                        ) : (
-                            <span>&#9472;</span>
-                        )
-                    ))
-                ) : (
-                    [...Array(heading.depth - 2)].map((_, i) => (
-                        i === 0 ? (
-                            <span>&#9500;</span>
-                        ) : (
-                            <span>&#9472;</span>
-                        )
-                    ))
-                )
+                index == length - 1 || 
+                heading.depth - nextHeading.depth > heading.depth - 3
+                    ? [...Array(heading.depth - 2)].map((_, i) =>
+                        // #9492 and #9500
+                        i != heading.depth - 3 ? <span>&#9474;&nbsp;</span> : <span>&#9492;</span>
+                    )
+                    : [...Array(heading.depth - 2)].map((_, i) =>
+                        i != heading.depth - 3 ? <span>&#9474;&nbsp;</span> : <span>&#9500;</span>
+                    )
             }
         </span>
         {heading.text}

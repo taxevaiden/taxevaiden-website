@@ -8,8 +8,6 @@ import Layout from "./Layout.astro";
 
 const { frontmatter, headings } = Astro.props;
 
-
-
 const title = `${frontmatter.title} | taxevaiden's website`;
 const description = frontmatter.description;
 ---
@@ -18,10 +16,7 @@ const description = frontmatter.description;
     <MainDiv>
         <a href="../../blog">&#129168;&#129168; go back!</a>
 
-        {headings.length > 0 && (
-            <TableOfContents headings={headings} />
-        )}
-        
+        {headings.length > 0 && <TableOfContents headings={headings} />}
 
         <h1>{frontmatter.title}</h1>
         <p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>

@@ -1,16 +1,25 @@
 ---
 import MainDiv from "../main/MainDiv.astro";
-import TableOfContentsHeading from "../blog/TableOfContentsHeading.astro"
+import TableOfContentsHeading from "../blog/TableOfContentsHeading.astro";
 
 const { headings } = Astro.props;
 ---
-<MainDiv class="w-72 float-right ml-4 mb-4">
 
-  <h1>table of contents</h1>
+<div class="shadow-d w-64 float-right p-4 ml-4 mb-4">
+    <h1>table of contents</h1>
 
-  <ul class="list-none list-image-none ml-2">
-    {headings.map((heading, index) => (
-      <TableOfContentsHeading heading={heading} nextHeading={headings[Math.min(index + 1, headings.length - 1)]} index={index} length={headings.length} />
-    ))}
-  </ul>
-</MainDiv>
+    <ul class="list-none list-image-none ml-2">
+        {
+            headings.map((heading, index) => (
+                <TableOfContentsHeading
+                    heading={heading}
+                    nextHeading={
+                        headings[Math.min(index + 1, headings.length - 1)]
+                    }
+                    index={index}
+                    length={headings.length}
+                />
+            ))
+        }
+    </ul>
+</div>
