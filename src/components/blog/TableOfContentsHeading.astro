@@ -2,7 +2,7 @@
 const { heading } = Astro.props;
 ---
 
-<li class="px-2">
+<li >
     <a href={'#' + heading.slug}>
         <slot />
         {heading.text}
@@ -14,12 +14,25 @@ const { heading } = Astro.props;
                 
                 <Astro.self heading={subheading}>
                     <span>
-                    {index === heading.subheadings.length - 1 ? (
-                        {Array.from({ length: heading.depth - subheading.depth}).map(() => <span>&#9492;</span>)}
-                    ) : (
-                        {Array.from({ length: heading.depth - subheading.depth}).map(() => <span>&#9500;</span>)}
-                    )}
-                </span>
+                        {heading.subheadings.length > 1 ? (    
+                            [...Array(subheading.depth - 2)].map((_, i) => (
+                                i === 0 ? (
+                                    <span>&#9500;</span>
+                                ) : (
+                                    <span>&#9472;</span>
+                                )
+                            ))
+                        ) : (
+                            [...Array(subheading.depth - 2)].map((_, i) => (
+                                i === 0 ? (
+                                    <span>&#9492;</span>
+                                ) : (
+                                    <span>&#9472;</span>
+                                )
+
+                            ))
+                        )}
+                    </span>
                 </Astro.self>
             ))}
         </ul>
