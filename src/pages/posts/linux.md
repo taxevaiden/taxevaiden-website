@@ -51,15 +51,15 @@ there are **a lot** of options out there, and that's kind of the joy of using li
 
 i do not know if that is even possible, but let's see anyway!!
 
-## linux distributions
+### linux distributions
 
 let's look at linux distributions first. this is probably important for speed!!
 
-### Ubuntu
+#### Ubuntu
 
 this one is a very popular option out there. most beginners use this distro mainly because it's simple enough that you can change from windows to linux. however uh ubuntu is not free to use in *some* places. i think you have to get a "ubuntu pro" thing to get all the features. i need everything to be free ty very much /lh
 
-### Arch
+#### Arch
 
 "erm, i use Arch Linux!!"
 
@@ -69,23 +69,23 @@ this one is FAMOUS for being probably one of the most complicated to set up. i s
 
 there is another distro though that is arch..
 
-### EndeavourOS
+#### EndeavourOS
 
 endeavouros is basically arch. except when you set up the operating system, it has a ui that actually makes it simple to set up! i might consider this one, because it allows you to pick your own desktop enviornment (if you don't know what that is do NOT worry i will explain later!).
 
-### Void Linux
+#### Void Linux
 
 i saw someone use this and they said it was a lot faster,, even with their shit specs. may try it out! (keyword may)
 
-### HoloISO
+#### HoloISO
 
 i honestly *do not* know if HoloISO would work with my specs. i do have an amd cpu but i don't know about gpu,, i have nvidia. i'll see if it, works.
 
-### Zorin OS (again)
+#### Zorin OS (again)
 
 this was my main linux distro. i personally thought it looked really cool when i got it. *nice and modern,,,, i love it,,,,* but i now want to make everything comic sans and very colorful and i forgot if you could do that in Zorin OS
 
-## desktop enviornments
+### desktop enviornments
 
 a desktop enviornment is, i guess, the ui of the linux distro?
 
@@ -93,17 +93,17 @@ the linux distro is just, code ig. without a desktop enviornment, you're left wi
 
 heehee
 
-### KDE Plasma
+#### KDE Plasma
 
 this desktop environment is pretty popular. this is the same desktop enviornment they use for the steam deck,, so that's cool!
 
 i heard you can customize it a lot.
 
-### GNOME
+#### GNOME
 
 this one is REally popular. most distros i listed either come with gnome, or just have it as an option to be installed. probably the only reason i would get this is for those jelly windows LOL
 
-### Xfce
+#### Xfce
 
 this one is very lightweight, and also very customizable. just searching on google i hear you can use CSS TO CUSTOMIZE IT?? never seen that before. (maybe i just didn't do enough research but oh well -w-")
 
