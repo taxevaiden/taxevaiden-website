@@ -8,7 +8,7 @@ const { headings } = Astro.props;
 
   <h1>table of contents</h1>
 
-  <ul class="list-none list-image-none">
+  <ul class="list-none list-image-none ml-2">
     {headings.map((heading, index) => (
       <TableOfContentsHeading heading={heading} nextHeading={headings[Math.min(index + 1, headings.length - 1)]} index={index} length={headings.length} />
     ))}
