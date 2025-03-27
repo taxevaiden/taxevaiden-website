@@ -29,6 +29,9 @@ export default {
                 d: [
                     "inset 2px 2px rgba(0,0,0,0.75)",
                     "inset -2px -2px rgba(0,0,0,0.5)",
+                    "inset 0px 8px 0px 16px rgba(0,0,0,0.06125)",
+                    "inset 0px 2px 0px 8px rgba(0,0,0,0.06125)",
+                    "inset 0px -2px 0px 4px rgba(0,0,0,0.125)",
                 ],
             },
 

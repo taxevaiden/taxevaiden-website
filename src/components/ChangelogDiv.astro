@@ -103,6 +103,16 @@ const changes = [
             "revised the new year post a little"
         ]
     },
+    {
+        title: "scrollBar",
+        date: "2025-3-27",
+        description: "changed the scrollbar to be like the website,, looks",
+        descriptionBulleted: [
+            "scrollbar (at least on chrome) looks better",
+            "redesigned website A LITTLE BIT",
+            "fixed some formatting issues"
+        ]
+    },
 ]
 
 interface Props {
@@ -126,7 +136,7 @@ changes.sort((a, b) => (new Date(b.date).getTime()) - (new Date(a.date).getTime(
 
     <slot />
 
-    <MainDiv class=` ${small && 'overflow-scroll h-48'}`>
+    <MainDiv class=`pt-8 ${small && 'overflow-scroll h-48'}`>
         {changes.map((change) => (
             <Card title={change.title} date={change.date} description={change.description}>
                 <ul>

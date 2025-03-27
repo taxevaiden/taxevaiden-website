@@ -59,4 +59,24 @@
     a:hover {
         @apply text-default-ahover underline tracking-wider;
     }
+
+    /* width */
+    ::-webkit-scrollbar {
+        @apply w-4
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        @apply bg-default-bg1 bg-dither-12 shadow-d
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        @apply bg-default-bg1 bg-dither-8 shadow-d
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-default-bg1 bg-dither-4
+    }
 }
