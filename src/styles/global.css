@@ -24,22 +24,13 @@
 
     h1,
     h2,
-    h3 {
-        @apply my-4;
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply my-4 font-black;
     }
-
-    h1 {
-        @apply font-black;
-    }
-
-    h2 {
-        @apply font-extrabold;
-    }
-
-    h3 {
-        @apply font-bold;
-    }
-
+    
     p {
         @apply mb-4;
     }
