@@ -1,6 +1,6 @@
 @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
 
-:root {
+/* :root {
     --bg1: #ffffff;
     --bg2: #808080;
     --banner1: #ffffff;
@@ -12,6 +12,20 @@
     --text2: #808080;
     --a: #0d5c8d;
     --ahover: #0b78bc;
+} */
+
+:root {
+    --bg1: #8c00ff;
+    --bg2: #ff5e00;
+    --banner1: #ff0000;
+    --banner2: #00ff15;
+    --div: #f100f9;
+    --pre: #bd00c4;
+    --border: #0a3f11;
+    --text: #00b7ff;
+    --text2: #2600ff;
+    --a: #fffb00;
+    --ahover: #fffd82;
 }
 
 .theme-dark {

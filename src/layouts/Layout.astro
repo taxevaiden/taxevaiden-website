@@ -20,6 +20,16 @@ const anims = [
     "flip",
     "fade",
     "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
+    "rotate",
     "zoomIn",
     "zoomOut",
     "slideLeft",
@@ -33,15 +43,18 @@ const randomAnim = anims[Math.floor(Math.random() * anims.length)];
 //this is for testing!!
 //const randomAnim = "fade";
 
+// Original duration is 0.5s.
+// Change it back when the April Fool's day mood is over.
+
 const anim = {
     old: {
         name: `${randomAnim}-begin`,
-        duration: "0.5s",
+        duration: "2s",
         easing: "linear",
     },
     new: {
         name: `${randomAnim}-end`,
-        duration: "0.5s",
+        duration: "2s",
         easing: "linear",
     },
 };

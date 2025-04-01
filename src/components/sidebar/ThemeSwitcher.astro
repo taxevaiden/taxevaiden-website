@@ -1,10 +1,13 @@
+<!-- Changes here are for April Fool's day
+Original code is commented -->
+
 <select id="theme-select" class="bg-default-div">
-    <option value="theme-default">default (light)</option>
-    <option value="theme-dark">dark</option>
+    <option value="theme-default">default (funny)</option>
+    <!-- <option value="theme-dark">dark</option>
     <option value="theme-catppuccin">catppuccin</option>
     <option value="theme-sunset">sunset</option>
     <option value="theme-matcha">matcha</option>
-    <option value="theme-durpy">DurpyDoo</option>
+    <option value="theme-durpy">DurpyDoo</option> -->
 </select>
 
 <script>
@@ -24,7 +27,8 @@
         themeSelect.addEventListener("change", changeTheme);
 
         // Set the dropdown to the saved theme
-        const savedTheme = localStorage.getItem("theme") || "theme-default";
+        // const savedTheme = localStorage.getItem("theme") || "theme-default";
+        const savedTheme = "theme-default";
         themeSelect.value = savedTheme;
         applyTheme(savedTheme);
     }
@@ -51,7 +55,7 @@
         applyTheme(newTheme);
 
         // Save the selected theme
-        localStorage.setItem("theme", newTheme);
+        // localStorage.setItem("theme", newTheme);
     }
 
     // Event listener for Astro's page transitions
