@@ -20,16 +20,6 @@ const anims = [
     "flip",
     "fade",
     "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
-    "rotate",
     "zoomIn",
     "zoomOut",
     "slideLeft",
@@ -49,12 +39,12 @@ const randomAnim = anims[Math.floor(Math.random() * anims.length)];
 const anim = {
     old: {
         name: `${randomAnim}-begin`,
-        duration: "2s",
+        duration: "0.5s",
         easing: "linear",
     },
     new: {
         name: `${randomAnim}-end`,
-        duration: "2s",
+        duration: "0.5s",
         easing: "linear",
     },
 };
