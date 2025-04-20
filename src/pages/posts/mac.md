@@ -68,6 +68,6 @@ the M1 chip saved me from going insane ngl
 
 i have now installed apps that were macOS only, such as Zed, that code editor. i'm using it to write this post rn. i also installed Arc, just to give it a try on macOS. turned out it was really nice and now i'm keeping it.
 
-i may install more tools that help organize things but uh idk yet
+i may install more tools that help organize things but uh idk yet,
 
 ok bye
