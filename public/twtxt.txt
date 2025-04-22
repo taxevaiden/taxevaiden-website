@@ -24,3 +24,7 @@
 2025-01-11T16:50:32-05:00	i haven't been working on twtGUI as much,, kinda lost motivation but mango-ki made their own twtxt gui client you should check it out! https://github.com/mango-ki/betwtxt
 2025-02-08T12:43:13-05:00	i am goated at osu
 2025-03-15T18:57:16-04:00	I broke my monitor playing osu. NEver crash out guys
+2025-04-21T12:54:53-04:00	ello
+2025-04-21T12:55:56-04:00	testing from macOS Sequoia
+2025-04-21T13:52:06-04:00	testing if twtGUI works on here
+2025-04-21T13:52:31-04:00	gg it does
