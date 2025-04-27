@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainDiv from '../components/main/MainDiv.astro';
+import MainDiv from "../components/main/MainDiv.astro";
 import Post from "../components/Card.astro";
 
 // Import all markdown files using import.meta.glob
@@ -15,20 +15,22 @@ const allPosts = await Promise.all(
             content: module.default || module.content, // Default export or content
             path, // Keep track of the original file path
         };
-    })
+    }),
 );
 
 // Sort the posts by `pubDate` in descending order
 allPosts.sort(
     (a, b) =>
-        new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
+        new Date(b.frontmatter.pubDate).getTime() -
+        new Date(a.frontmatter.pubDate).getTime(),
 );
-
 ---
 
-<Layout title="blog | taxevaiden's website" description="This is the best blog of All Time">
-    <MainDiv>
-        <h1>blog..</h1>
+<Layout
+    title="blog | taxevaiden's website"
+    description="This is the best blog of All Time"
+>
+    <MainDiv title="blog,,">
         <p>welcome to the best blog of All Time</p>
         <p style="margin-bottom: 2em;">
             normally i just post about stuff that's been going on in my life. i

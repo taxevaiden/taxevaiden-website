@@ -155,6 +155,16 @@ const changes = [
             "a new banner is planned soon!",
         ],
     },
+    {
+        title: "doopeedoo",
+        date: "2025-4-27",
+        description: "bit more tweaks",
+        descriptionBulleted: [
+            "changed the DurpyDoo theme a little bit (he said it was mid :pensive:)",
+            "added window titles for the content on the right (before it just said 'window')",
+            "added new window control icons, before it was made up of text and it was hard to work with",
+        ],
+    },
 ];
 
 interface Props {
@@ -166,25 +176,10 @@ const { small = false } = Astro.props;
 changes.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
-<MainDiv>
-    {
-        small ? (
-            //this is assuming the "small" version is on another page that's not changelog
-            <span>
-                <a href="/changelog">
-                    <h1>changelog</h1>
-                </a>
-            </span>
-        ) : (
-            <span>
-                <h1>changelog</h1>
-            </span>
-        )
-    }
-
+<MainDiv title="changelog">
     <slot />
 
-    <MainDiv>
+    <MainDiv title=" ">
         <div class={`-m-4 p-4 ${small && "overflow-scroll h-48"}`}>
             {
                 changes.map((change) => (

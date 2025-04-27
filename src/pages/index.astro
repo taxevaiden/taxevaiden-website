@@ -2,19 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import MainDiv from "../components/main/MainDiv.astro";
 import ChangelogDiv from "../components/ChangelogDiv.astro";
+
+import Card from "../components/Card.astro";
 ---
 
-<Layout title="home | taxevaiden's website" description="stuck in my room all day... heh">
-    <MainDiv>
-        <h1>what's the important stuff that's happening yo?</h1>
-        <p>
-            nothing's happening
-        </p>
+<Layout
+    title="home | taxevaiden's website"
+    description="stuck in my room all day... heh"
+>
+    <MainDiv title="what's the important stuff that's happening yo?">
+        <p>nothing's happening</p>
     </MainDiv>
 
-    <MainDiv>
-        <h1>hello!</h1>
-
+    <MainDiv title="hello!">
         <p>
             welcome to my web. usually i just post to my blog or put pointless
             new stuff on this website.
@@ -58,39 +58,36 @@ import ChangelogDiv from "../components/ChangelogDiv.astro";
 
     <ChangelogDiv small />
 
-    <MainDiv>
-        <h1 id="qna">Q&A</h1>
+    <MainDiv title="Q&A">
+        <div id="qna"></div>
+        <Card
+            title="Q: what did you use to make this website?"
+            description={`A: i used cloudflare pages to host, astro to make the website, vscode
+            (now using Zed) to code the website, and procreate for the cool arts
+            (i feel like i'm missing out for not using ibisPaint X,,)`}
+        />
 
-        <p>
-            Q: what did you use to make this website?<br />
-            A: i used cloudflare pages to host, astro to make the website, vscode
-            to code the website, and procreate for the cool arts (i feel like i'm
-            missing out for not using ibisPaint X,,)
-        </p>
+        <Card
+            title="Q: what happened to the old website?"
+            description={`A: the old website's code was terrible. i hated managing it. ok that's
+            all`}
+        />
 
-        <p>
-            Q: what happened to the old website?<br />
-            A: the old website's code was terrible. i hated managing it. ok that's
-            all
-        </p>
+        <Card
+            title="Q: why couldn't you host stuff like this on neocities or nekoweb?"
+            description={`A: cloudflare gave me a lot more control, i can do ANything`}
+        />
 
-        <p>
-            Q: why couldn't you host stuff like this on neocities or nekoweb?<br
-            />
-            A: cloudflare gave me a lot more control, i can do ANything
-        </p>
+        <Card
+            title="Q: why doesn't this website have stuff that the old one had yet?"
+            description={`A: this website is still a WIP. i'm still working on stuff!!`}
+        />
 
-        <p>
-            Q: why doesn't this website have stuff that the old one had yet?<br
-            />
-            A: this website is still a WIP. i'm still working on stuff!!
-        </p>
-
-        <p>
-            Q: are you ever adding comments?<br />
-            A: maybe, maybe not. the service i used for comments was uhh,, weird
+        <Card
+            title="Q: are you ever adding comments?"
+            description={`A: maybe, maybe not. the service i used for comments was uhh,, weird
             i guess. it was good but oh my god i HATED THAT WATERMARK.... i had to
-            pay to get rid of that i'm POOR
-        </p>
+            pay to get rid of that i'm POOR`}
+        />
     </MainDiv>
 </Layout>

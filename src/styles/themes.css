@@ -1,4 +1,4 @@
-@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
 
 :root {
     --bg1: #ffffff;
@@ -71,11 +71,11 @@
 }
 
 .theme-durpy {
-    --bg1: #90b5cd;
-    --bg2: #5f9ab7;
+    --bg1: #a4b8eb;
+    --bg2: #97a5c7;
     --banner1: #b9cbdf;
     --banner2: #97adc7;
-    --div: #afc6d2;
+    --div: #fff8e7;
     --pre: #0000004d;
     --border: #d5effac3;
     --text: #001224;

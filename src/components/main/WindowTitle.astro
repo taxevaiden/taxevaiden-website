@@ -1,6 +1,10 @@
 ---
 import "../../styles/global.css";
 
+import minimize from "../../images/window/minimize.svg";
+import maximize from "../../images/window/maximize.svg";
+import close from "../../images/window/close.svg";
+
 interface Props {
     title?: string;
     class?: string;
@@ -10,25 +14,25 @@ interface Props {
 <div
     class={`p-0 mb-0 bg-default-div border-2 border-default-border border-solid shadow-d overflow-hidden ${Astro.props.class}`}
 >
-    <p class="ml-4 my-2 select-none inline-block">
+    <p class="ml-4 my-2 select-none inline-block font-bold">
         {Astro.props.title || "window"}
     </p>
 
-    <div class="flex flex-row float-right">
+    <div class="flex flex-row float-right bg-default-div">
         <div
-            class="m-0 border-l-2 border-default-border shadow-d w-8 h-8 text-center select-none py-1.5"
+            class="m-0 border-l-2 border-default-border shadow-d w-8 h-8 select-none"
         >
-            &ndash;
+            <img src={minimize.src} alt="Minimize" />
         </div>
         <div
             class="m-0 border-l-2 border-default-border shadow-d w-8 h-8 text-xs text-center select-none py-1.5"
         >
-            &Square;
+            <img src={maximize.src} alt="Maximize" />
         </div>
         <div
             class="m-0 border-l-2 border-default-border shadow-d w-8 h-8 text-center select-none py-1"
         >
-            x
+            <img src={close.src} alt="Close" />
         </div>
     </div>
     <slot />

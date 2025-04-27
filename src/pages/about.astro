@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MainDiv from '../components/main/MainDiv.astro';
+import MainDiv from "../components/main/MainDiv.astro";
 
 const mainLanguages = [
     "c++",
@@ -14,9 +14,7 @@ const mainLanguages = [
 ---
 
 <Layout title="about | taxevaiden's website" description="who is this guy">
-    <MainDiv>
-        <h1>about</h1>
-
+    <MainDiv title="about">
         <p>hello, i'm aiden.</p>
 
         <p>
@@ -37,25 +35,26 @@ const mainLanguages = [
         </ul>
     </MainDiv>
 
-    <MainDiv>
-        <h1 id="source-code">may i have source code pls :shy:</h1>
-
+    <MainDiv title="may i have source code please :shy:">
         <p>sure, go ahead i don't care</p>
         <p>
             you can use inspect element to get the source code for this website.
             you can also use this at <a href="https://oldevaiden.pages.dev"
-                >oldevaiden.pages.dev</a>
+                >oldevaiden.pages.dev</a
+            >
         </p>
         <p>OR if you want the <i>full</i> source code, here you go:</p>
 
         <ul>
             <li>
                 <a href="https://github.com/taxevaiden/taxevaiden-website"
-                    >taxevaiden-website</a>
+                    >taxevaiden-website</a
+                >
             </li>
             <li>
                 <a href="https://github.com/taxevaiden/taxevaiden-website-old"
-                    >taxevaiden-website-old</a>
+                    >taxevaiden-website-old</a
+                >
             </li>
         </ul>
     </MainDiv>
