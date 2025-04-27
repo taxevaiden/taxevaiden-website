@@ -1,12 +1,13 @@
 ---
-import MainDiv from './main/MainDiv.astro';
-import Card from './Card.astro';
+import MainDiv from "./main/MainDiv.astro";
+import Card from "./Card.astro";
 
 const changes = [
     {
         title: "new changelog! + minor changes,,",
         date: "2024-11-14",
-        description: "(actual date was 2024-11-15 haha) new shiny new changelog. this will be used to know what uh, changes happened. some other changes are:",
+        description:
+            "(actual date was 2024-11-15 haha) new shiny new changelog. this will be used to know what uh, changes happened. some other changes are:",
         descriptionBulleted: [
             "made adding stuff to the socials tab and navigation tab WAY easier for me at least, you won't tell the difference",
             "i also made the navigation bar have some sublinks, you can check them out",
@@ -14,7 +15,7 @@ const changes = [
             "added one site button, and a new button section (these are not sites)",
             "new blog rss! view it with the navigation bar",
             "for more info view the repo because i am too lazy ok ty :)",
-        ]
+        ],
     },
     {
         title: "visual changes",
@@ -23,8 +24,8 @@ const changes = [
         descriptionBulleted: [
             "changed background, it's now like bitmap stuff how should i describe",
             "minor changes that are too detailed to describe",
-            "changed initial changelog to a day before today (ordering, duh)"
-        ]
+            "changed initial changelog to a day before today (ordering, duh)",
+        ],
     },
 
     {
@@ -37,7 +38,7 @@ const changes = [
             "made actual dithering pattern things for use on this website",
             "idk if you noticed but there's like flickering when you scroll, i fixed that",
             "cooler background",
-        ]
+        ],
     },
 
     {
@@ -47,7 +48,7 @@ const changes = [
         descriptionBulleted: [
             "catppuccin mocha! i just decided to add it idk,,,,",
             "that's it",
-        ]
+        ],
     },
 
     {
@@ -58,30 +59,32 @@ const changes = [
             "new view transitions. they look like crappy powerpoint presentations (as intended)",
             "changed formatting to make everything have the same text size",
             "organized a lot of things",
-            "upgraded to astro 5! (idrc what the differences are LOL)"
-        ]
+            "upgraded to astro 5! (idrc what the differences are LOL)",
+        ],
     },
     {
         title: "twtxt",
         date: "2024-12-22",
-        description: "i'm gonna try moving away from bluesky/twiter and use twtxt! it's pretty cool..",
+        description:
+            "i'm gonna try moving away from bluesky/twiter and use twtxt! it's pretty cool..",
         descriptionBulleted: [
             "removed bluesky and twitter links, added discord and twtxt links",
             "site may be slow? idk i'm using servver islands",
-            "removed comments. at least i tried"
-        ]
+            "removed comments. at least i tried",
+        ],
     },
     {
         title: "small layout changes, and table of contents",
         date: "2025-3-22",
-        description: "added a cool new feature to the blog, and also had to change the layout a little bit",
+        description:
+            "added a cool new feature to the blog, and also had to change the layout a little bit",
         descriptionBulleted: [
             "added new table of contents to the blog. you'll see it when you view a post",
             "widened the layout since the ToC took up too much space :(",
             "changed format of the blog page",
             "changed format of the twtxt feed to keep the format consistent",
-            "upgraded astro, (again)"
-        ]
+            "upgraded astro, (again)",
+        ],
     },
     {
         title: "ToC format fix",
@@ -89,8 +92,8 @@ const changes = [
         description: "uh,, just needed to fix one thing",
         descriptionBulleted: [
             "fixed and changed formatting",
-            "now, when there are multiple subheadings the tree visual will appear correctly"
-        ]
+            "now, when there are multiple subheadings the tree visual will appear correctly",
+        ],
     },
     {
         title: "MORE ToC format changes",
@@ -100,8 +103,8 @@ const changes = [
             "changed ToC format a little to be more like the navigation section",
             "reworked the way the ToC is formatted",
             "changed test post (the first post) for testing",
-            "revised the new year post a little"
-        ]
+            "revised the new year post a little",
+        ],
     },
     {
         title: "scrollBar",
@@ -110,34 +113,36 @@ const changes = [
         descriptionBulleted: [
             "scrollbar (at least on chrome) looks better",
             "redesigned website A LITTLE BIT",
-            "fixed some formatting issues"
-        ]
+            "fixed some formatting issues",
+        ],
     },
     {
         title: "sigh",
         date: "2025-4-1",
-        description: "I bet tere is not ONE person wo actually cares. YM god i  ate Evrything",
+        description:
+            "I bet tere is not ONE person wo actually cares. YM god i  ate Evrything",
         descriptionBulleted: [
             "New terrible them,e.",
             "New KEEP EVERYONME OFF tecnolgoy",
             "Embed. Check them out. I'm sooooo fyunny. AAHAAH",
             "Do you actually care? Did tihs guy just put it ehre to have something more?",
             "What's even the point of tihs anyway?",
-            "I am in your walls"
-        ]
+            "I am in your walls",
+        ],
     },
     {
         title: "what? EVER",
         date: "2025-4-8",
-        description: "I'm don't like the fooling around uin the month of April.",
+        description:
+            "I'm don't like the fooling around uin the month of April.",
         descriptionBulleted: [
             "reverted theme changes",
             "reverted the transition duration",
             "added 'funny' theme as an actual theme",
-            "i added new page descriptions for the opengraph tags... i forgot most of them so i just made new ones"
-        ]
+            "i added new page descriptions for the opengraph tags... i forgot most of them so i just made new ones",
+        ],
     },
-]
+];
 
 interface Props {
     small?: boolean;
@@ -145,31 +150,44 @@ interface Props {
 
 const { small = false } = Astro.props;
 
-changes.sort((a, b) => (new Date(b.date).getTime()) - (new Date(a.date).getTime()));
-
+changes.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <MainDiv>
-    {small ? (
-        //this is assuming the "small" version is on another page that's not changelog
-        <span><a href="/changelog"><h1>changelog</h1></a></span>
-    ) : (
-        <span><h1>changelog</h1></span>
-    )}
-    
+    {
+        small ? (
+            //this is assuming the "small" version is on another page that's not changelog
+            <span>
+                <a href="/changelog">
+                    <h1>changelog</h1>
+                </a>
+            </span>
+        ) : (
+            <span>
+                <h1>changelog</h1>
+            </span>
+        )
+    }
 
     <slot />
 
-    <MainDiv class=`pt-8 ${small && 'overflow-scroll h-48'}`>
-        {changes.map((change) => (
-            <Card title={change.title} date={change.date} description={change.description}>
-                <ul>
-                    {change.descriptionBulleted.map((bullet) => (
-                        <li class="pl-2">{bullet}</li>
-                    ))}
-                </ul>
-            </Card>
-        ))}
+    <MainDiv>
+        <div class={`-m-4 p-4 ${small && "overflow-scroll h-48"}`}>
+            {
+                changes.map((change) => (
+                    <Card
+                        title={change.title}
+                        date={change.date}
+                        description={change.description}
+                    >
+                        <ul>
+                            {change.descriptionBulleted.map((bullet) => (
+                                <li class="pl-2">{bullet}</li>
+                            ))}
+                        </ul>
+                    </Card>
+                ))
+            }
+        </div>
     </MainDiv>
-
 </MainDiv>

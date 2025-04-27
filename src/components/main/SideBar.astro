@@ -3,21 +3,16 @@ import NavigationDiv from "../sidebar/NavigationDiv.astro";
 import ThemeSwitcher from "../sidebar/ThemeSwitcher.astro";
 import MainDiv from "./MainDiv.astro";
 import SocialsDiv from "../sidebar/SocialsDiv.astro";
-import TwtxtFeed from "../sidebar/TwtxtFeed.astro"
+import TwtxtFeed from "../sidebar/TwtxtFeed.astro";
 import { Code } from "astro:components";
 
 import websiteButton from "../../images/88x31button.gif";
 ---
 
-<div class="w-[16rem] basis-auto">
-    <MainDiv>
-        <p class="mt-8 w-3/5">hey bro, can you not cover everything?</p>
-    </MainDiv>
-
+<div class="w-[16rem] basis-auto flex flex-col gap-2">
     <NavigationDiv />
 
-    <MainDiv>
-        <h1>theme</h1>
+    <MainDiv title="theme">
         <p>
             <small>
                 ooOOOHHhh my GOD. i am SO BLINDED by this DEFAULT THEME!!
@@ -27,9 +22,7 @@ import websiteButton from "../../images/88x31button.gif";
         <ThemeSwitcher />
     </MainDiv>
 
-    <MainDiv>
-        <h1>link me!</h1>
-
+    <MainDiv title="link me!">
         <p>
             go ahead and hotlink<br />
             <small>(if this website doesn't die)</small>
@@ -50,7 +43,7 @@ import websiteButton from "../../images/88x31button.gif";
 
     <TwtxtFeed server:defer />
 
-    <MainDiv>
+    <MainDiv title="internetometer">
         <!-- <h1><a href="https://status.cafe/">status.cafe</a></h1>
 
         <div id="statuscafe" class="mb-4">

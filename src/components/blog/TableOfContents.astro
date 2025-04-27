@@ -5,9 +5,7 @@ import TableOfContentsHeading from "../blog/TableOfContentsHeading.astro";
 const { headings } = Astro.props;
 ---
 
-<div class="shadow-d w-64 float-right p-4 ml-4 mb-4">
-    <h1>table of contents</h1>
-
+<MainDiv title="ToC" class="w-64 float-right ml-4 mb-4">
     <ul class="list-none list-image-none ml-2">
         {
             headings.map((heading, index) => (
@@ -22,4 +20,4 @@ const { headings } = Astro.props;
             ))
         }
     </ul>
-</div>
+</MainDiv>

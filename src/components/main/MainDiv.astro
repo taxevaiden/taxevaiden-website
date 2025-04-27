@@ -1,12 +1,26 @@
 ---
-import '../../styles/global.css';
+import "../../styles/global.css";
+import WindowTitle from "./WindowTitle.astro";
 
 interface Props {
     class?: string;
+    title?: string;
 }
 
+const randomX = Math.round((Math.random() * 2 - 1) * 1);
+const randomY = Math.round((Math.random() * 2 - 1) * 1);
+
+console.log(randomX, randomY);
 ---
 
-<div class=`p-4 mb-0 bg-default-div border border-default-border border-solid shadow-d overflow-hidden ${Astro.props.class}`>
-    <slot />
+<div
+    class={`shadow-w relative ${Astro.props.class}`}
+    style={`left: ${randomX}px; top: ${randomY}px; position: relative;`}
+>
+    <WindowTitle class="w-full" title={Astro.props.title || "window"} />
+    <div
+        class={`p-4 mb-0 bg-default-div border-2 border-default-border border-solid shadow-d overflow-hidden`}
+    >
+        <slot />
+    </div>
 </div>

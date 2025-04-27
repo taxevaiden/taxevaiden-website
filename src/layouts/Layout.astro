@@ -61,7 +61,7 @@ const customTransition = {
         <CommonHead title={title} description={description} />
     </head>
     <body>
-        <div style="perspective: 1000px">
+        <div>
             <div
                 style="transform: rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px); transform-origin: center; transform-style: preserve-3d;"
             >
@@ -70,19 +70,30 @@ const customTransition = {
                         class="absolute inset-0 h-full bg-gradient-to-b from-default-bg1 to-default-bg2 bg-no-repeat -z-20"
                     >
                     </div>
+                    <div class="absolute inset-0 h-full bg-dither-8"></div>
+                    <div class="w-screen h-max bg-dither-10 absolute"></div>
                     <div
-                        class="w-screen h-max bg-dither-10 fixed inset-0 -z-20"
+                        class="w-full px-6 py-2 fixed border-b-2 border-default-border bg-default-div h-8 shadow-d flex flex-row gap-6 select-none"
                     >
+                        <span class="font-bold">taxevaiden's website</span>
+                        <span>File</span>
+                        <span>Edit</span>
+                        <span>View</span>
+
+                        <span class="text-default-text2"
+                            >these are fake buttons don't try to click them</span
+                        >
                     </div>
                     <div
-                        class="max-w-fit mx-auto flex justify-center min-w-screen flex-col border border-default-border border-solid shadow-d relative"
-                        style="image-rendering: pixelated;"
+                        class="max-w-fit mx-auto mb-4 pt-12 flex flex-col gap-2 justify-center min-w-screen relative"
                     >
                         <Header />
 
-                        <div class="flex flex-row max-w-fit">
+                        <div class="flex flex-row gap-2 max-w-fit">
                             <SideBar />
-                            <main class="w-[38rem] basis-auto">
+                            <main
+                                class="w-[38rem] basis-auto flex flex-col gap-1"
+                            >
                                 <slot />
                             </main>
                         </div>

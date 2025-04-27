@@ -99,23 +99,26 @@ try {
                 const date = new Date(timestamp);
                 return {
                     timestamp:
-                        date instanceof Date && !isNaN(date.valueOf()) ? date : null,
+                        date instanceof Date && !isNaN(date.valueOf())
+                            ? date
+                            : null,
                     content: content.join(" "),
                 };
             })
             .filter((post) => post.timestamp); // Filter out invalid timestamps
         // Sort by timestamp and get the latest post
-        latestPost = posts.sort((a, b) => b.timestamp.valueOf() - a.timestamp.valueOf())[0];
+        latestPost = posts.sort(
+            (a, b) => b.timestamp.valueOf() - a.timestamp.valueOf(),
+        )[0];
     }
 } catch (error) {
     console.error("Failed to fetch twtxt:", error);
 }
 ---
 
-<MainDiv>
+<MainDiv title="latest post">
     <h1 class="mb-4">
-        latest twtxt post <a href="https://github.com/buckket/twtxt#readme"
-            >???</a>
+        taxevaiden - <a href="https://github.com/buckket/twtxt#readme">???</a>
     </h1>
 
     {

@@ -64,18 +64,16 @@ const links = [
     }
 ]
 ---
-
-<MainDiv>
+<MainDiv title="navigation" class="-mt-4">
     <!-- <p class="w-[9rem] mt-8 text-default-text2">
-        the arm was covering "navigation". idk what to do with this blank space so here u go 
+        the arm was covering "navigation". idk what to do with this blank space so here u go
     </p> -->
-    <h1 class="">navigation</h1>
 
     <ul class="list-none list-image-none">
-        {links.map((link => 
+        {links.map((link =>
             <li><a href={link.link} class="inline px-2">{link.name}</a></li>
             <ul class="list-none list-image-none mb-0">
-                {link.subLinks.map(((subLink, index) => 
+                {link.subLinks.map(((subLink, index) =>
                     <li>
                         {subLink.includePage ? (
                             <span><a href={link.link + subLink.link} class="inline px-2">

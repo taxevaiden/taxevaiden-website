@@ -13,14 +13,13 @@ const description = frontmatter.description;
 ---
 
 <Layout title={title} description={description}>
-    <MainDiv>
+    <MainDiv
+        title={`${frontmatter.title} :: ${frontmatter.pubDate.toString().slice(0, 10)}`}
+    >
         <a href="../../blog">&#129168;&#129168; go back!</a>
 
         {headings.length > 0 && <TableOfContents headings={headings} />}
 
-        <h1>{frontmatter.title}</h1>
-        <p><small>{frontmatter.pubDate.toString().slice(0, 10)}</small></p>
-
-        <slot />
+        <div class="mt-4"><slot /></div>
     </MainDiv>
 </Layout>

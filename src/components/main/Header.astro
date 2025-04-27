@@ -3,27 +3,42 @@ import Image from "astro/components/Image.astro";
 import SiteButtonContainer from "./SiteButtonContainer.astro";
 import banner from "../../images/banner.png";
 
-const bannerWidth = 16+38;
+import WindowTitle from "./WindowTitle.astro";
+
+const bannerWidth = 16.5 + 38;
+
+const phrases = [
+    "pringles mustache core",
+    "sleepyhead..",
+    "eat a taki mass",
+    "cbf detected, loser!!",
+    "michealsoft binbows",
+    "macaroniOS",
+    "linus tech tips kernal",
+];
+
+const phrase = phrases[Math.floor(Math.random() * phrases.length)];
 ---
 
-<div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] -z-10"></div>
-<div class="fixed inset-0 bg-dither-6 -z-10"></div>
-<div
-    class=`relative text-center z-20 overflow-visible shadow-d w-[${bannerWidth}rem] h-[170.666666667px]`
->
-    <Image
-        src={banner}
-        alt="banner"
-        loading="eager"
-        width="736"
-        class="absolute m-0 pointer-events-none z-20"
-    />
+<div class="shadow-w">
+    <WindowTitle title={`taxevaiden's website :: ${phrase}`} class="-mb-1" />
     <div
-        class="absolute inset-0 bg-gradient-to-b from-default-banner1 to-default-banner2"
+        class={`relative text-center z-20 overflow-visible w-[${bannerWidth}rem] h-[170.666666667px]`}
     >
+        <Image
+            src={banner}
+            alt="banner"
+            loading="eager"
+            width="736"
+            class="absolute m-0 pointer-events-none z-20"
+        />
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-default-banner1 to-default-banner2 border-2 border-default-border"
+        >
+        </div>
+        <div class="absolute inset-0 bg-dither-14"></div>
+        <div class="border border-default-border border-solid h-full z-10">
+        </div>
     </div>
-    <div class="absolute inset-0 bg-dither-14"></div>
-    <div class="border border-default-border border-solid shadow-d h-full z-10">
-    </div>
+    <SiteButtonContainer class={`w-[${bannerWidth}rem]`} />
 </div>
-<SiteButtonContainer class=`w-[${bannerWidth}rem]` />
