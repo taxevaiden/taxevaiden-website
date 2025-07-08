@@ -35,8 +35,6 @@ it's genuinely so tiring atp
 
 ## conclusion
 
-y'all need to get your fucking shit together.
-
 i just wanted to spill my feelings out since i've been thinking about this for a while and i just didn't want to keep it in my head.
 
 cya in a month or two.
