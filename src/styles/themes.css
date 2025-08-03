@@ -1,6 +1,7 @@
 @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
 
 :root {
+    --scroll: #ffffff;
     --bg1: #ffffff;
     --bg2: #808080;
     --banner1: #ffffff;
@@ -15,6 +16,7 @@
 }
 
 .theme-dark {
+    --scroll: #3a3d40;
     --bg1: #3a3d40;
     --bg2: #202024;
     --banner1: #939393;
@@ -29,6 +31,7 @@
 }
 
 .theme-catppuccin {
+    --scroll: var(--ctp-mocha-base);
     --bg1: var(--ctp-mocha-base);
     --bg2: var(--ctp-mocha-mantle);
     --banner1: var(--ctp-mocha-base);
@@ -43,11 +46,12 @@
 }
 
 .theme-sunset {
+    --scroll: #ff7e5f;
     --bg1: #ff7e5f;
     --bg2: #feb47b;
     --banner1: #ff9a8b;
     --banner2: #f7d5a1;
-    --div: #ffc896d9;
+    --div: #ffc996;
     --pre: #0f0f0080;
     --border: #ffffffb3;
     --text: #61312c;
@@ -57,24 +61,26 @@
 }
 
 .theme-matcha {
-    --bg1: #87b073;
+    --scroll: #a5c994;
+    --bg1: #a5c994;
     --bg2: #839e6d;
-    --banner1: #537450;
-    --banner2: #71975e;
-    --div: #5e7d4dcc;
+    --banner1: #b0d0a1;
+    --banner2: #99a98c;
+    --div: #9abe87;
     --pre: #0000004d;
     --border: #00000080;
-    --text: #c2cfb7;
-    --text2: #8d9f85;
-    --a: #91b67c;
-    --ahover: #bad3a1;
+    --text: #4a6047;
+    --text2: #43603acc;
+    --a: #345724;
+    --ahover: #5a9421;
 }
 
 .theme-durpy {
+    --scroll: #fff8e7;
     --bg1: #a4b8eb;
     --bg2: #97a5c7;
-    --banner1: #b9cbdf;
-    --banner2: #97adc7;
+    --banner1: #fff8e7;
+    --banner2: #f2ecdf;
     --div: #fff8e7;
     --pre: #0000004d;
     --border: #d5effac3;
@@ -85,6 +91,7 @@
 }
 
 .theme-funny {
+    --scroll: #8c00ff;
     --bg1: #8c00ff;
     --bg2: #ff5e00;
     --banner1: #ff0000;

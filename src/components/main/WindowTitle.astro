@@ -1,39 +1,84 @@
 ---
 import "../../styles/global.css";
 
-import minimize from "../../images/window/minimize.svg";
-import maximize from "../../images/window/maximize.svg";
-import close from "../../images/window/close.svg";
-
 interface Props {
-    title?: string;
-    class?: string;
+  title?: string;
+  class?: string;
 }
 ---
 
 <div
-    class={`p-0 mb-0 bg-default-div border-2 border-default-border border-solid shadow-d overflow-hidden ${Astro.props.class}`}
+  class={`flex flex-row p-0 mb-0 bg-default-div border-x-2 border-t-2 border-default-border border-solid overflow-hidden ${Astro.props.class}`}
 >
-    <p class="ml-4 my-2 select-none inline-block font-bold">
-        {Astro.props.title || "window"}
-    </p>
+  <div class="flex-1 px-4 py-2 overflow-hidden h-8 select-none inline-block font-bold shadow-d">
+    {Astro.props.title || "window"}
+  </div>
 
-    <div class="flex flex-row float-right bg-default-div">
-        <div
-            class="m-0 border-l-2 border-default-border shadow-d w-8 h-8 select-none"
-        >
-            <img src={minimize.src} alt="Minimize" />
-        </div>
-        <div
-            class="m-0 border-l-2 border-default-border shadow-d w-8 h-8 text-xs text-center select-none py-1.5"
-        >
-            <img src={maximize.src} alt="Maximize" />
-        </div>
-        <div
-            class="m-0 border-l-2 border-default-border shadow-d w-8 h-8 text-center select-none py-1"
-        >
-            <img src={close.src} alt="Close" />
-        </div>
+  <div class="flex flex-row bg-default-div">
+    <div
+      class="m-0 border-default-border shadow-d w-8 h-8 select-none text-default-text"
+    >
+      <svg
+        version="1.1"
+        width="32"
+        height="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="12px" height="2px" x="10px" y="15px" fill="currentcolor"
+        ></rect>
+      </svg>
     </div>
-    <slot />
+    <div
+      class="m-0 border-default-border shadow-d w-8 h-8 text-xs text-center select-none py-1.5"
+    >
+      <svg
+        version="1.1"
+        width="32"
+        height="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          width="12px"
+          height="12px"
+          x="10px"
+          y="4px"
+          fill="none"
+          stroke="currentcolor"
+          stroke-width="2"></rect>
+      </svg>
+    </div>
+    <div
+      class="m-0 border-default-border shadow-d w-8 h-8 text-center select-none py-1"
+    >
+      <!-- an x made up of rectangles (it's messy i know) -->
+      <svg
+        version="1.1"
+        width="32"
+        height="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="2px" height="2px" x="11px" y="6px" fill="currentcolor"
+        ></rect>
+        <rect width="2px" height="2px" x="13px" y="8px" fill="currentcolor"
+        ></rect>
+        <rect width="2px" height="2px" x="19px" y="6px" fill="currentcolor"
+        ></rect>
+        <rect width="2px" height="2px" x="17px" y="8px" fill="currentcolor"
+        ></rect>
+
+        <rect width="2px" height="4px" x="15px" y="10px" fill="currentcolor"
+        ></rect>
+
+        <rect width="2px" height="2px" x="17px" y="14px" fill="currentcolor"
+        ></rect>
+        <rect width="2px" height="2px" x="19px" y="16px" fill="currentcolor"
+        ></rect>
+        <rect width="2px" height="2px" x="13px" y="14px" fill="currentcolor"
+        ></rect>
+        <rect width="2px" height="2px" x="11px" y="16px" fill="currentcolor"
+        ></rect>
+      </svg>
+    </div>
+  </div>
+  <slot />
 </div>

@@ -58,16 +58,20 @@
 
     /* Track */
     ::-webkit-scrollbar-track {
-        @apply bg-default-bg1 bg-dither-12 shadow-d
+        @apply bg-default-scroll bg-dither-12 shadow-d
     }
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        @apply bg-default-bg1 bg-dither-8 shadow-d
+        @apply bg-[#00000024] shadow-d
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        @apply bg-default-bg1 bg-dither-4
+        @apply bg-[#0000003b]
+    }
+
+    ::-webkit-scrollbar-corner {
+        @apply bg-default-scroll bg-dither-12 shadow-d
     }
 }

@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         default: {
+          scroll: "var(--scroll)",
           bg1: "var(--bg1)",
           bg2: "var(--bg2)",
           banner1: "var(--banner1)",
