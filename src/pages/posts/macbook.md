@@ -106,3 +106,5 @@ it has some things i'm not a fan of, but i can learn to get used to it overtime
 i don't really have anything else to say
 
 ok bye
+
+P.S. this line was written from the macbook! it's getting pretty hot but um i'll replace the thermal paste soon,, BUT it's actually pretty nice to use despite vscode being a electron app (i think) so yeah that's nice
