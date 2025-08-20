@@ -12,12 +12,12 @@ interface Props {
 const randomX = Math.floor((Math.random() * 2 - 1) * 10);
 const randomY = Math.floor((Math.random() * 2 - 1) * 2);
 
-const randStyle = Astro.props.random ? `` : `left: ${randomX}px; top: ${randomY}px; position: relative;`;
+const randStyle = Astro.props.random ? `` : `left: ${randomX}px; top: ${randomY}px;`;
 ---
 
 <div
     class={`shadow-w relative ${Astro.props.class}`}
-    style={`${randStyle} ${Astro.props.style}`}
+    style={`${randStyle} ${Astro.props.style} position: relative;`}
 >
     <WindowTitle class="w-full" title={Astro.props.title || "window"} />
     <div

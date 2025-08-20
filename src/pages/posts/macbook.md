@@ -38,13 +38,15 @@ how is it actually using this thing?
 one short answer: <br>
 it's really nice
 
-Now now you may be yelling at me saying "Why couldn't you just get an Apple Silicon laptop??? Better cooling, performance, screen, basically everything??" and that is because i do not need them
+Now now you may be yelling at me saying "Why couldn't you just get an Apple Silicon laptop??? Better cooling, performance, screen, basically everything??" and that is because i don't really need one if i already have this
 
 macs nowadays aren't as easy to repair, and this macbook does me just fine if i want to just do basic stuff like talk on discord. now, yes, it's obviously not as fast, and not as clear (since this model isn't the retina model), but i can forgive its flaws
 
 it boots up just fine. it loads google just fine. it loads messages just fine. basically everything loads just fine, maybe like a few hundred miliseconds or a few seconds slower, but i don't really mind.
 
 i'm uh planning on using this as my personal laptop for a few years until i get sick of it and maybe get a newer laptop
+
+(for some reason this is so much better than my other HP laptop????)
 
 ## some things i do like
 
@@ -56,7 +58,7 @@ when you put the macbook to sleep, there's a little light that turns on
 
 really convenient to know that it's sleeping and also just turned on in the first place
 
-### the battery indicator on the side of the laptop
+### the battery indicator
 
 again. very very convenient
 

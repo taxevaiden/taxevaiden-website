@@ -31,13 +31,16 @@
         @apply mt-8 mb-4;
     }
 
-    h1,
-    h2 {
+    h1 {
         @apply font-black;
     }
 
+    h2 {
+        @apply font-extrabold;
+    }
+
     h3 {
-        @apply font-bold
+        @apply font-bold;
     }
 
     h4,
@@ -63,7 +66,7 @@
     }
 
     a:hover {
-        @apply text-default-ahover underline tracking-wider;
+        @apply text-default-ahover underline;
     }
 
     /* width */

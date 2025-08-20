@@ -4,8 +4,8 @@ export default {
 
   theme: {
     fontFamily: {
-      sans: ["MS Gothic", "Open Sans", "sans-serif"],
-      mono: ["MS Gothic", "Open Sans", "sans-serif"],
+      sans: ["JetBrains Mono", "system-ui", "sans-serif"],
+      mono: ["JetBrains Mono", "system-ui", "sans-serif"],
     },
 
     extend: {
@@ -31,7 +31,7 @@ export default {
           "inset 0px 0px 0px 2px rgba(0,0,0,0.25)",
           "inset 0px 0px 0px 4px rgba(0,0,0,0.25)",
         ],
-        w: ["4px 4px rgba(0,0,0,0.25)"],
+        w: ["0px 4px 0px 2px rgba(0,0,0,0.5)"],
       },
 
       backgroundImage: {

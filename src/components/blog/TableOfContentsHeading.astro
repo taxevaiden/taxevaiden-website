@@ -3,21 +3,25 @@ const { heading, nextHeading, index, length } = Astro.props;
 ---
 
 <li>
-    <a href={"#" + heading.slug}>
+    <a class={`flex flex-row`} href={"#" + heading.slug}>
         <span>
             {
                 index == length - 1 || 
-                heading.depth - nextHeading.depth > heading.depth - 3
-                    ? [...Array(heading.depth - 2)].map((_, i) =>
+                heading.depth - nextHeading.depth > heading.depth - 2
+                    ? [...Array(heading.depth - 1)].map((_, i) =>
                         // #9492 and #9500
-                        i != heading.depth - 3 ? <span>&#9474;&nbsp;</span> : <span>&#9492;</span>
+                        i != heading.depth - 2 ? <span class="h-full" style={heading.depth - 2 > 0 ? `margin-left: .5em` : null}>&#9474;&nbsp;</span> : <span class="h-full ml-[.14em]">&#9492;&nbsp;</span>
                     )
-                    : [...Array(heading.depth - 2)].map((_, i) =>
-                        i != heading.depth - 3 ? <span>&#9474;&nbsp;</span> : <span>&#9500;</span>
+                    : [...Array(heading.depth - 1)].map((_, i) =>
+                        i != heading.depth - 2 ? <span class="h-full" style={heading.depth - 2 > 0 ? `margin-left: .5em` : null}>&#9474;&nbsp;</span> : <span class="h-full" style={heading.depth - 1 > 0 ? `margin-left: .326em` : null}>&#9500;&nbsp;&ThinSpace;</span>
                     )
             }
         </span>
-        {heading.text}
+
+        <span>
+            {heading.text}
+        </span>
+        
     </a>
     <!-- {
         heading.subheadings.length > 0 && (

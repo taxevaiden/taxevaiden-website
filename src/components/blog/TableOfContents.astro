@@ -2,20 +2,23 @@
 import MainDiv from "../main/MainDiv.astro";
 import TableOfContentsHeading from "../blog/TableOfContentsHeading.astro";
 
-const { headings } = Astro.props;
+const { headings, title } = Astro.props;
 ---
 
-<MainDiv title="ToC" class="w-64 float-right ml-4 mb-4">
+<MainDiv title="ToC" class="w-80 float-right !absolute top-10 left-2/3 z-30" random>
     <ul class="list-none list-image-none ml-2">
+        <li>
+            <a href="#">{title}</a>
+        </li>
         {
             headings.map((heading, index) => (
                 <TableOfContentsHeading
                     heading={heading}
                     nextHeading={
-                        headings[Math.min(index + 1, headings.length - 1)]
+                        headings[Math.min(index + 1, headings.length)]
                     }
                     index={index}
-                    length={headings.length}
+                    length={headings.length }
                 />
             ))
         }

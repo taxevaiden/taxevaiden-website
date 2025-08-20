@@ -4,6 +4,28 @@ import MainDiv from "../components/main/MainDiv.astro";
 import ChangelogDiv from "../components/ChangelogDiv.astro";
 
 import Card from "../components/Card.astro";
+
+// Import all markdown files using import.meta.glob
+const allPostsGlob = import.meta.glob("./posts/*.md");
+
+// Resolve all posts into an array
+const allPosts = await Promise.all(
+    Object.entries(allPostsGlob).map(async ([path, resolver]) => {
+        const module = await resolver();
+        return {
+            frontmatter: module.frontmatter,
+            content: module.default || module.content, // Default export or content
+            path, // Keep track of the original file path
+        };
+    }),
+);
+
+// Sort the posts by `pubDate` in descending order
+allPosts.sort(
+    (a, b) =>
+        new Date(b.frontmatter.pubDate).getTime() -
+        new Date(a.frontmatter.pubDate).getTime(),
+);
 ---
 
 <Layout
@@ -30,21 +52,23 @@ import Card from "../components/Card.astro";
 
         <ul>
             <li>
-                this website was made with a 1440p screen on chrome
+                this website was made with a 1440p screen on chrome. if you have a low-resolution display the background and other elements may look funky
             </li>
             <li>
-                enable javascript if you want to change the theme
-            </li>
-            <li>
-                refresh without cache often (<b>ctrl + shift + r</b> or <b>cmd + shift + r</b>)
+                you don't really have to enable javascript to navigate the site, but if you want to change the theme enable it!
             </li>
             <li>
                 this website is not mobile friendly at all. you can use a tablet ig but using a phone is not great
             </li>
-            <li>
-                this website is intended to be viewed on windows, but uh it works fine anywhere else
-            </li>
         </ul>
+    </MainDiv>
+
+    <MainDiv title="latest blog post">
+        <Card
+        title={allPosts[0].frontmatter.title}
+        date={allPosts[0].frontmatter.pubDate}
+        description={allPosts[0].frontmatter.description}
+        link={allPosts[0].frontmatter.url}></Card>
     </MainDiv>
 
     <ChangelogDiv small />
