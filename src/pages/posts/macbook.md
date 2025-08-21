@@ -74,7 +74,8 @@ the ports on here include:
 
 - magsafe 1
 - ethernet port
-- firewire thunderbolt 2 port
+- firewire port
+- thunderbolt 2 port
 - two usb-a ports
 - an sd card slot
 - headphone jack
