@@ -2,45 +2,36 @@
 import Layout from "../layouts/Layout.astro";
 import MainDiv from "../components/main/MainDiv.astro";
 
-const mainLanguages = [
-    "c++",
-    "c#",
-    "lua",
-    "html",
-    "css",
-    "js",
-    "astro (learning as i am typing this!)",
-];
+const mainLanguages = ["c++", "c#", "rust", "lua", "the web languages"];
 ---
 
 <Layout title="about | taxevaiden's website" description="who is this guy">
     <MainDiv title="about">
-        <p>i'm aiden</p>
+        <p>hello! i'm aiden,</p>
 
         <p>
-            i am a uh front-end dev <br>
-            i sometimes make changes to this website,, but other than that i just play some games
+            mostly frontend dev but i sometimes do backend too (especially with
+            twtGUI)
         </p>
-
-        <p>i don't really draw as much anymore, i'll make doodles from time to time but i Think i like doing this more,,</p>
 
         <p>
-            i also make random stuff from time to time. some of those random
-            stuff are projects that were supposed to be finished, but now
-            they're not! i wonder why.. (i'm lazy)
+            i pp farm on osu a lot When i'm not doing that i mostly just play
+            ultrakill (best game) or terraria (also best game)
         </p>
-        <p>here are some programming languages that i either just know how to use or use on the daily</p>
+
+        <p>
+            here are some programming languages that i either just know how to
+            use or work with on the daily
+        </p>
 
         <ul>
             {mainLanguages.map((mainLanguage) => <li>{mainLanguage}</li>)}
         </ul>
     </MainDiv>
 
-    <MainDiv title="may i have source code please :shy:">
-        <p>
-            use inspect element
-        </p>
-        <p>or if you want the <i>full</i> source code, here you go:</p>
+    <MainDiv title="may i have source code please">
+        <p>use inspect element</p>
+        <p>or if you want to look at the source code on github</p>
 
         <ul>
             <li>
@@ -49,6 +40,9 @@ const mainLanguages = [
                 >
             </li>
             <li>
+                (this is my old website, over at <a
+                    href="https://oldevaiden.pages.dev">oldevaiden.pages.dev</a
+                >)
                 <a href="https://github.com/taxevaiden/taxevaiden-website-old"
                     >taxevaiden-website-old</a
                 >

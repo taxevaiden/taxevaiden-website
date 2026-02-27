@@ -28,47 +28,33 @@ allPosts.sort(
 );
 ---
 
-<Layout
-    title="home | taxevaiden's website"
-    description="stuck in my room all day... heh"
->
-    <MainDiv title="what's the important stuff that's happening yo?">
-        <p>nothing's happening</p>
-    </MainDiv>
-
+<Layout title="home | taxevaiden's website" description="home sweet home">
     <MainDiv title="hello!">
         <p>
-            welcome to my site. i usually post something to the blog every one or two months
+            welcome to my site. i usually post something to the blog every once
+            in a while
         </p>
-        <p>why did i make this?</p>
 
         <ul>
-            <li>I wanted to</li>
-            <li>I'm somewhat good at coding</li>
-            <li>I don't know</li>
-        </ul>
-
-        <h1 id="important-notes">IMPORTANT NOTES!!!</h1>
-
-        <ul>
+            <li>this website was developed with a 1440p screen on chrome</li>
             <li>
-                this website was made with a 1440p screen on chrome. if you have a low-resolution display the background and other elements may look funky
+                you don't really have to enable javascript to navigate the site,
+                but if you want to change the theme enable it!
             </li>
             <li>
-                you don't really have to enable javascript to navigate the site, but if you want to change the theme enable it!
-            </li>
-            <li>
-                this website is not mobile friendly at all. you can use a tablet ig but using a phone is not great
+                this website is not mobile friendly at all. using a tablet is
+                fine but using a phone is Not great.
             </li>
         </ul>
     </MainDiv>
 
     <MainDiv title="latest blog post">
         <Card
-        title={allPosts[0].frontmatter.title}
-        date={allPosts[0].frontmatter.pubDate}
-        description={allPosts[0].frontmatter.description}
-        link={allPosts[0].frontmatter.url}></Card>
+            title={allPosts[0].frontmatter.title}
+            date={allPosts[0].frontmatter.pubDate}
+            description={allPosts[0].frontmatter.description}
+            link={allPosts[0].frontmatter.url}
+        />
     </MainDiv>
 
     <ChangelogDiv small />
@@ -76,23 +62,18 @@ allPosts.sort(
     <MainDiv title="Q&A">
         <div id="qna"></div>
         <Card
-            title="Q: what did you use to make this website?"
-            description={`A: vscode (also zed if i feel like i wanna learn something), astro, github + cloudflare pages to host, and procreate for the cool art stuff you see!`}
+            title="Q: what'd you use to create the site?"
+            description={`A: vscode + zed, astro (a web framework), tailwindcss, cloudflare for hosting, and procreate for that guy in the banner`}
         />
 
         <Card
             title="Q: what happened to the old website?"
-            description={`pure html css and js imo is terrible to maintain,, so i made This one. i love components`}
+            description={`pure html css and js is absolutely Terrible to manage dude i'm not dealing w that shit`}
         />
 
         <Card
-            title="Q: why couldn't you host stuff like this on neocities or nekoweb?"
-            description={`A: they have limits, cloudflare + github doesn't. they're both still really great for having your own website though`}
-        />
-
-        <Card
-            title="Q: are you ever adding comments?"
-            description={`A: my answer before to that was probably no, but now that i have my own server (that's literally just my old laptop, i'll probably talk about it soon) i'm thinking about hosting comments on there,, we'll see`}
+            title="Q: why not nekoweb/neocities?"
+            description={`A: they have limits, cloudflare + github doesn't. they're both still really great for hosting your own website though`}
         />
     </MainDiv>
 </Layout>

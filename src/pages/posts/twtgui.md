@@ -67,7 +67,9 @@ i do think the custom titlebar was cool. i don't know if you could implement it 
 
 ### iced
 
-iced is a gui framework inspired by [The Elm Architecture](https://guide.elm-lang.org/architecture/). instead of defining what something like a button does in an if statement for when it's clicked (which is what i had to do with egui):
+iced is a gui framework inspired by [The Elm Architecture](https://guide.elm-lang.org/architecture/). 
+
+instead of defining what something like a button does in an if statement for when it's clicked (which is what i had to do with egui):
 
 ```rs
 if button.clicked() {
@@ -90,11 +92,12 @@ Message::ButtonClicked => {
 }
 ```
 
+(this is very basic don't copy this code)
+
 this makes the code a lot managable for me
 
 messages can also just be used everywhere, which is very useful for threads when they're finished downloading!
 
-(this is very basic don't copy this code)
 
 [halloy, an IRC client](https://halloy.chat/index.html) also uses iced, so i could ~~steal~~ look at their code to see how they implement some things
 
@@ -103,15 +106,17 @@ it already started to look great!
 
 ![the iced client, showing the inital timeline](../../images/postImages/twtgui/icedtwtGUI.png)
 
-then i implemented the [twtxt v2 specification](https://twtxt.dev), developed by the devs of [twtxt.net](https://twtxt.net). i haven't really looked into it but twtxt.net is a [yarn.social](https://yarn.social/) pod which is "a decentralised self-hosted social media based on the Twtxt format." if you're looking for an alternative to twitter/bluesky you could check it out (and maybe even host one yourself)
+then i implemented the [twtxt v2 specification](https://twtxt.dev), developed by the people who made [twtxt.net](https://twtxt.net). i haven't really looked into it but twtxt.net is a [yarn.social](https://yarn.social/) pod which is "a decentralised self-hosted social media based on the Twtxt format." if you're looking for an alternative to twitter/bluesky you could check it out (and maybe even host one yourself)
 
-the twtxt v2 specification adds on a couple of extensions to the twtxt format, like metadata defining the feed's author, description, and even its avatar, or tweet hashes. tweet hashes and metadata were easy to implement. i had to change my downloading code a litte to allow for avatars to be downloaded, but with only these two added, twtGUI was looking cooler than before!
+the twtxt v2 specification adds on a couple of extensions to the twtxt format, like metadata defining the feed's author, description, and even its avatar, or tweet hashes. tweet hashes and metadata were easy to implement but i did have to change my downloading code a litte to allow for avatars to be downloaded, 
+
+but with only these two added, twtGUI was looking cooler than before!
 
 ![the iced client, in the view page with cool avatars!](../../images/postImages/twtgui/icedtwtGUI2.png)
 
 i was going to implement the twtxt v2 specification for the c++ client, but then i realized how painful it would be. like i could parse the metadata, but at what cost? where would i display an avatar on a QListView with my own delegate for rich text? how would i do it with the rest of the c++ code not falling apart?
 
-i also implemented the tweet subject extension (which allowed for threads and replies). i only have a basic implementation--for now it just shows what a tweet is replying to.
+anyways i also implemented the tweet subject extension (which allowed for threads and replies). i only have a basic implementation--for now it just shows what a tweet is replying to.
 
 ![replies](../../images/postImages/twtgui/twtGUIreplies.png)
 

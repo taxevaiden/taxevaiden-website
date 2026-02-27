@@ -9,10 +9,12 @@ interface Props {
     random?: boolean;
 }
 
-const randomX = Math.floor((Math.random() * 2 - 1) * 10);
+const randomX = Math.floor((Math.random() * 2 - 1) * 4);
 const randomY = Math.floor((Math.random() * 2 - 1) * 2);
 
-const randStyle = Astro.props.random ? `` : `left: ${randomX}px; top: ${randomY}px;`;
+const randStyle = Astro.props.random
+    ? ``
+    : `left: ${randomX}px; top: ${randomY}px;`;
 ---
 
 <div

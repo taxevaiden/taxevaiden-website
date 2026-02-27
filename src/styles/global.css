@@ -46,9 +46,9 @@
     h4,
     h5,
     h6 {
-        @apply font-semibold
+        @apply font-semibold;
     }
-    
+
     p {
         @apply mb-4;
     }
@@ -71,25 +71,25 @@
 
     /* width */
     ::-webkit-scrollbar {
-        @apply w-4
+        @apply w-4;
     }
 
     /* Track */
     ::-webkit-scrollbar-track {
-        @apply bg-default-scroll bg-dither-12 shadow-d
+        @apply bg-default-scroll bg-dither-12 shadow-d;
     }
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        @apply bg-[#00000024] shadow-d
+        @apply bg-[#00000024] shadow-d;
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        @apply bg-[#0000003b]
+        @apply bg-[#0000003b];
     }
 
     ::-webkit-scrollbar-corner {
-        @apply bg-default-scroll bg-dither-12 shadow-d
+        @apply bg-default-scroll bg-dither-12 shadow-d;
     }
 }
