@@ -9,7 +9,7 @@ url: /posts/twtgui/
 
 for a while now i've been working on a GUI client for the twtxt protocol ([what is twtxt?](https://twtxt.readthedocs.io/en/latest/))
 
-i started making one when i was first introduced to twtxt by mango-ki. i started using it and thought it was pretty neat, but i was getting tired of having to use the terminal. (this was the first [twtxt client by buckket](https://github.com/buckket/twtxt)) so i made by own!
+i first started making twtGUI when i was introduced to twtxt by mango-ki. i played around with twtxt and it was pretty neat, but i was getting tired of having to use the terminal. (this was the first [twtxt client by buckket](https://github.com/buckket/twtxt)) so i made by own!
 
 ## electron
 
