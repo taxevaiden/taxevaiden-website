@@ -52,4 +52,4 @@
 2026-03-01T03:08:27Z	(#nsjupfq) ok good it works now
 2026-03-01T03:09:23Z	(#nsjupfq) i was hashing with the feed's name the whole time and not using the url.........
 2026-03-01T03:10:17Z	NOW replies work
-2026-03-01T04:21:27Z	(#6fycn4q) @<mango-ki https://nekoa.me/twtxt.txt> hello mango! (you gotta wrap the hash in parentheses lol `(#abc1234)` i wrote it wrong in the blog post, i will fix that rq)
+2026-03-01T04:21:27Z	(#6fycn4q) @<mango-ki https://nekoa.me/twtxt.txt> hello mango! (you gotta wrap the hash in parentheses lol `(#abc1234)` i wrote the way you define who you follow wrong in the blog post, i will fix that rq)
