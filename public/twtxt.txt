@@ -4,11 +4,9 @@
 # nick = taxevaiden
 # avatar = https://taxevaiden.pages.dev/_astro/icon.DO8rmDZ6.png
 # url = https://taxevaiden.pages.dev/twtxt.txt
-# following = 4
+# following = 2
 # follow = mango-ki https://nekoa.me/twtxt.txt
 # follow = baldo https://baldo.cat/twtxt.txt
-# follow = kiwu https://twtxt.net/user/kiwu/twtxt.txt
-# follow = prologic https://twtxt.net/user/prologic/twtxt.txt
 # link = GitHub https://github.com/taxevaiden
 2024-12-13T18:37:04-05:00	first twtxt post gamers
 2024-12-13T18:37:55-05:00	wow
