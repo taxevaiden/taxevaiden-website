@@ -37,3 +37,4 @@
 2026-02-28T00:03:54Z	The more i look past at the past shit i've said/made the more i regret Oh well
 2026-03-01T00:38:41Z	are you are you
 2026-03-01T00:38:52Z	this is coming from twtGUI written in rust!!
+2026-03-01T02:07:29Z	https://files.catbox.moe/naj3dg.png progress on the new twtGUI,,, i still have to implement pre/post-tweet scripts so i can automate committing twtxt.txt to my site
