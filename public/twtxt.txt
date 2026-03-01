@@ -38,3 +38,5 @@
 2026-03-01T00:38:41Z	are you are you
 2026-03-01T00:38:52Z	this is coming from twtGUI written in rust!!
 2026-03-01T02:07:29Z	https://files.catbox.moe/naj3dg.png progress on the new twtGUI,,, i still have to implement pre/post-tweet scripts so i can automate committing twtxt.txt to my site
+2026-03-01T02:31:02Z	(#h4eynnq) oh and a settings page too....... pmo
+2026-03-01T02:31:50Z	(#h4eynnq) i said i wasn't going to add one in some server But, people change (in one month)
