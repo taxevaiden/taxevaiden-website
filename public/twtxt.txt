@@ -4,9 +4,12 @@
 # nick = taxevaiden
 # avatar = https://taxevaiden.pages.dev/_astro/icon.DO8rmDZ6.png
 # url = https://taxevaiden.pages.dev/twtxt.txt
-# following = 2
+# following = 5
 # follow = mango-ki https://nekoa.me/twtxt.txt
 # follow = baldo https://baldo.cat/twtxt.txt
+# follow = joetroll https://joetroll.is-a.dev/twtxt.txt
+# follow = prologic https://twtxt.net/user/prologic/twtxt.txt
+# follow = bender https://twtxt.net/user/bender/twtxt.txt
 # link = GitHub https://github.com/taxevaiden
 2024-12-13T18:37:04-05:00	first twtxt post gamers
 2024-12-13T18:37:55-05:00	wow
@@ -53,3 +56,7 @@
 2026-03-01T03:09:23Z	(#nsjupfq) i was hashing with the feed's name the whole time and not using the url.........
 2026-03-01T03:10:17Z	NOW replies work
 2026-03-01T04:21:27Z	(#6fycm4q) @<mango-ki https://nekoa.me/twtxt.txt> hello mango! (you gotta wrap the hash in parentheses lol `(#abc1234)` i wrote the way you define who you follow wrong in the blog post, i will fix that rq)
+2026-03-01T18:59:20Z	(#2hzfgbq) and now they work even better!
+2026-03-01T19:03:13Z	hooh.. https://files.catbox.moe/5rms11.png
+2026-03-01T19:17:55Z	optimized threading a little, let's see if it worked..
+2026-03-01T19:18:09Z	(#tyqxnba) wow that's fast!
