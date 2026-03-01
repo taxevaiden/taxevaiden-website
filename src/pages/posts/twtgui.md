@@ -141,8 +141,9 @@ if you're reading this post and you have a twtxt feed but you don't have some me
 # description = My (awesome) personal feed!
 # url = https://example.com/twtxt.txt
 # avatar = https://example.com/avatar.png
-# following = jane https://example.com/twtxt.txt
-# following = joe https://example.com/twtxt.txt
+# following = 2
+# follow = jane https://example.com/twtxt.txt
+# follow = joe https://example.com/twtxt.txt
 ```
 
 at the top of your file and you're done

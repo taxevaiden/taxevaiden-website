@@ -45,10 +45,11 @@
 2026-03-01T03:01:34Z	hello??
 2026-03-01T03:01:54Z	(#y6xdviq) is this ragebait unheard of??
 2026-03-01T03:02:06Z	oh my fucking god why did the hash change????
-2026-03-01T03:04:07Z	is there an issue with the way i'm appending lines to the twtxt.txt why is this happening 
-2026-03-01T03:04:48Z	dude i literally did the hashes wrong 
+2026-03-01T03:04:07Z	is there an issue with the way i'm appending lines to the twtxt.txt why is this happening
+2026-03-01T03:04:48Z	dude i literally did the hashes wrong
 2026-03-01T03:04:52Z	ahjghghgaheg dunioashunigwjilag 3nilawekqfgumdreuikmvt j4q3im gb y78imqw3vt6y 7m8o935s9,0p b8y89awo
 2026-03-01T03:08:08Z	(#nsjupfq) fixed????
 2026-03-01T03:08:27Z	(#nsjupfq) ok good it works now
 2026-03-01T03:09:23Z	(#nsjupfq) i was hashing with the feed's name the whole time and not using the url.........
 2026-03-01T03:10:17Z	NOW replies work
+2026-03-01T04:21:27Z	(#6fycn4q) @<mango-ki https://nekoa.me/twtxt.txt> hello mango! (you gotta wrap the hash in parentheses lol `(#abc1234)` i think i typed it wrong in the blog post, i will fix that rq)
