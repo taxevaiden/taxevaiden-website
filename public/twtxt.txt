@@ -1,7 +1,13 @@
-# taxevaiden's twtxt!!<!<!<!<>!>!>!!
-# hello :)                                                                                                                                                                                                                                                                             
-
-
+# taxevaiden's twtxt!!
+# hello :)
+#
+# nick = taxevaiden
+# avatar = https://taxevaiden.pages.dev/_astro/icon.DO8rmDZ6.png
+# url = https://taxevaiden.pages.dev/twtxt.txt
+# following = 2
+# follow = mango-ki https://nekoa.me/twtxt.txt
+# follow = baldo https://baldo.cat/twtxt.txt
+# link = GitHub https://github.com/taxevaiden
 2024-12-13T18:37:04-05:00	first twtxt post gamers
 2024-12-13T18:37:55-05:00	wow
 2024-12-16T21:21:24-05:00	sigma
@@ -28,4 +34,6 @@
 2025-04-21T12:55:56-04:00	testing from macOS Sequoia
 2025-04-21T13:52:06-04:00	testing if twtGUI works on here
 2025-04-21T13:52:31-04:00	gg it does
-2026-02-28T00:03:54Z	The more i look past at the past shit i've said/made the more i regret Oh well 
+2026-02-28T00:03:54Z	The more i look past at the past shit i've said/made the more i regret Oh well
+2026-03-01T00:38:41Z	are you are you
+2026-03-01T00:38:52Z	this is coming from twtGUI written in rust!!
