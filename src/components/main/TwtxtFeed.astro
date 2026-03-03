@@ -97,12 +97,22 @@ try {
             .map((line) => {
                 const [timestamp, ...content] = line.split(/\s+/);
                 const date = new Date(timestamp);
+                let joined_content = content.join(" ");
+                joined_content = joined_content
+                    .replaceAll("\\u2028", "<br>")
+                    .trim();
+                joined_content = joined_content
+                    .replace(/\(#[0-9a-z]+\)/gi, "")
+                    .trim();
+                joined_content = joined_content
+                    .replace(/@<([^>\s]+)\s+([^>]+)>/g, "<a href='$2'>@$1</a>")
+                    .replace(/@<([^>\s]+)>/g, "<a href='$1'>@$1</a>");
                 return {
                     timestamp:
                         date instanceof Date && !isNaN(date.valueOf())
                             ? date
                             : null,
-                    content: content.join(" "),
+                    content: joined_content,
                 };
             })
             .filter((post) => post.timestamp); // Filter out invalid timestamps
@@ -130,7 +140,7 @@ try {
                 <div class="text-sm text-default-text2">
                     {formatPostTime(latestPost.timestamp)}
                 </div>
-                <div class="mt-2">{latestPost.content}</div>
+                <div class="mt-2" set:html={latestPost.content} />
             </div>
         ) : (
             <p>no posts available :((</p>

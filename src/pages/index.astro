@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import MainDiv from "../components/main/MainDiv.astro";
 import ChangelogDiv from "../components/ChangelogDiv.astro";
+import TwtxtFeed from "../components/main/TwtxtFeed.astro";
 
 import Card from "../components/Card.astro";
 
@@ -47,6 +48,8 @@ allPosts.sort(
             </li>
         </ul>
     </MainDiv>
+
+    <TwtxtFeed server:defer />
 
     <MainDiv title="latest blog post">
         <Card
