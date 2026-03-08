@@ -4,9 +4,10 @@
 # nick = taxevaiden
 # avatar = https://taxevaiden.pages.dev/_astro/icon.DO8rmDZ6.png
 # url = https://taxevaiden.pages.dev/twtxt.txt
-# following = 2
+# following = 3
 # follow = mango-ki https://nekoa.me/twtxt.txt
 # follow = joetroll https://joetroll.is-a.dev/twtxt.txt
+# follow = baldo https://baldo.cat/twtxt.txt
 # link = GitHub https://github.com/taxevaiden
 2024-12-13T18:37:04-05:00	first twtxt post gamers
 2024-12-13T18:37:55-05:00	wow
@@ -66,3 +67,10 @@
 2026-03-04T02:11:25Z	implementing markdown,\u2028| i wonder | how much | it can do|\u2028|-|-|-|\u2028| can | it do | tables? |
 2026-03-04T02:14:09Z	[lmaoooo it works great!!](https://files.catbox.moe/f28s9j.png)\u2028again you have to clear your cache when you pull to the latest commit :))
 2026-03-07T18:00:07Z	testing from macOS,\u2028works fine but behaves weirdly when resizing for some reason ??\u2028i'll implement markdown images soon\u2028\u2028![](https://files.catbox.moe/43z218.png)
+2026-03-08T01:38:03Z	(#ywuhmva) ok turns out it's because of my changes in code\u2028whoops! its ok
+2026-03-08T02:21:02Z	![](https://taxevaiden.pages.dev/_astro/icon.DO8rmDZ6.png)\u2028testing if images work cause catbox is blocking the twtGUI downloads for some reason
+2026-03-08T02:22:36Z	(#vklcoiq) `Failed to load image https://files.catbox.moe/43z218.png: error sending request for url (https://files.catbox.moe/43z218.png)`\u2028thank you catbox!
+2026-03-08T02:29:06Z	i guess im using discord cdn now!! i think it's because it started multiple requests to catbox in a short timespan,, i'll have to fix that\u2028\u2028anyway, here's images!\u2028\u2028![two cats mango and baldo](https://cdn.discordapp.com/attachments/1398028191448174784/1480028322753675414/image.png?ex=69ae2f49&is=69acddc9&hm=aec3932446c683912aafbc174462fa36669faad911287e622400dbfe189e92dc&)
+2026-03-08T02:30:33Z	(#cfcxjeq) btw you will have to format images the markdown way for images to work: `![alt text](image source)`
+2026-03-08T02:34:49Z	(#cfcxjeq) oh no the hashes are changing again
+2026-03-08T02:38:13Z	(#cfcxjeq) ok i fixed it
