@@ -4,24 +4,32 @@ interface Props {
     description: string;
 }
 
-const { title } = Astro.props;
-const { description } = Astro.props;
+const { title, description } = Astro.props;
 
 import { ClientRouter } from "astro:transitions";
 import websiteIcon from "../../images/icons/icon.png";
 ---
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>{title}</title>
-<meta name="description" content={description} />
 <meta name="generator" content={Astro.generator} />
-<meta content="#ffffff" data-react-helmet="true" name="theme-color" />
-<meta content={websiteIcon.src} property="og:image" />
-<link rel="icon" type="image/svg+xml" href={websiteIcon.src} />
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content={description} />
+
+<meta property="og:site_name" content="taxevaiden" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={websiteIcon.src} />
+<meta property="og:type" content="website" />
+
+<title>{title}</title>
+<link rel="icon" type="image/png" href={websiteIcon.src} />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet"
+/>
 
 <ClientRouter />

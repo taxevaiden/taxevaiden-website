@@ -4,7 +4,7 @@ import MainDiv from "../main/MainDiv.astro";
 const twtxtUrl = "https://taxevaiden.pages.dev/twtxt.txt"; // Fetch from the public directory
 
 // Helper function to format the date
-function formatDate(date) {
+function formatDate(date: Date) {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
     const day = String(date.getDate()).padStart(2, "0");
@@ -18,7 +18,7 @@ function formatDate(date) {
     return `${year}-${month}-${day} ${hours}:${minutes} ${ampm}`;
 }
 
-function formatRelativeTime(date) {
+function formatRelativeTime(date: Date) {
     const now = new Date();
     const diffInSeconds = Math.floor((now.valueOf() - date.valueOf()) / 1000);
 
@@ -54,7 +54,7 @@ function formatRelativeTime(date) {
     }
 }
 
-function formatPostTime(date) {
+function formatPostTime(date: Date) {
     const now = new Date();
     const diffInSeconds = Math.floor((now.valueOf() - date.valueOf()) / 1000);
 
