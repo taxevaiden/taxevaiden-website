@@ -2,7 +2,7 @@
 # hello :)
 #
 # nick = taxevaiden
-# avatar = https://taxevaiden.pages.dev/_astro/icon.DO8rmDZ6.png
+# avatar = https://taxevaiden.pages.dev/avatar.png
 # url = https://taxevaiden.pages.dev/twtxt.txt
 # following = 2
 # follow = mango-ki https://nekoa.me/twtxt.txt
