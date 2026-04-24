@@ -108,7 +108,7 @@ it already started to look great!
 
 then i implemented the [twtxt v2 specification](https://twtxt.dev), developed by the people who made [twtxt.net](https://twtxt.net). i haven't really looked into it but twtxt.net is a [yarn.social](https://yarn.social/) pod which is "a decentralised self-hosted social media based on the Twtxt format." if you're looking for an alternative to twitter/bluesky you could check it out (and maybe even host one yourself)
 
-the twtxt v2 specification adds on a couple of extensions to the twtxt format, like metadata defining the feed's author, description, and even its avatar, or tweet hashes. tweet hashes and metadata were easy to implement but i did have to change my downloading code a litte to allow for avatars to be downloaded, 
+the twtxt v2 specification adds on a couple of extensions to the twtxt protocol, like metadata defining the feed's author, description, and even its avatar, or tweet hashes. tweet hashes and metadata were easy to implement but i did have to change my downloading code a litte to allow for avatars to be downloaded, 
 
 but with only these two added, twtGUI was looking cooler than before!
 
