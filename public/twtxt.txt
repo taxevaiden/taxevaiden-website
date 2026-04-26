@@ -15,8 +15,6 @@
 2024-12-22T22:47:03-05:00	I hate Html so much
 2024-12-23T13:50:04-05:00	Please work
 2024-12-23T13:50:21-05:00	did that work or not
-2024-12-23T13:50:59-05:00	GET OUT OF EHRE IT DID????
-2024-12-23T14:45:37-05:00	I'm gonna crash out
 2024-12-23T16:23:34-05:00	why does this happen to only me
 2024-12-23T17:54:57-05:00	everytrhing works now
 2024-12-23T17:55:07-05:00	Took this piece of shit long  enough
@@ -34,7 +32,6 @@
 2025-04-21T12:55:56-04:00	testing from macOS Sequoia
 2025-04-21T13:52:06-04:00	testing if twtGUI works on here
 2025-04-21T13:52:31-04:00	gg it does
-2026-02-28T00:03:54Z	The more i look past at the past shit i've said/made the more i regret Oh well
 2026-03-01T00:38:41Z	are you are you
 2026-03-01T00:38:52Z	this is coming from twtGUI written in rust!!
 2026-03-01T02:07:29Z	https://files.catbox.moe/naj3dg.png progress on the new twtGUI,,, i still have to implement pre/post-tweet scripts so i can automate committing twtxt.txt to my site
@@ -82,3 +79,4 @@
 2026-03-22T19:30:45Z	(#3nzmfaa) @<taxevaiden https://taxevaiden.pages.dev/twtxt.txt> the anime was at #1 for a few days but frieren fans review bombed it to #2,\u2028unfortunate
 2026-03-28T01:33:44Z	![yapbox](https://files.catbox.moe/kbhdzc.png)\u2028side project
 2026-04-24T06:25:37Z	hooh... new twtGUI design... i also added a github action to automate building so you can now grab the latest release here!!!!!!!: https://github.com/taxevaiden/twtGUI/releases/latest\u2028\u2028![](https://files.catbox.moe/sme2e9.png)
+2026-04-26T09:21:56Z	i needa fix my sleep schedule bruh its 5:21 am...
